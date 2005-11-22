@@ -1,0 +1,6 @@
+Before commiting your own changes:
+
+1. Update your workspace with the current version from repository
+2. Rebuild the project
+3. Run all junit-tests
+4. ONLY if this all are working fine, check your code in.

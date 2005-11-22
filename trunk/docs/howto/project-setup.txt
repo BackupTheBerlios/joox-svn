@@ -1,0 +1,4 @@
+Add the following folder to the workspace:
+classes
+javadoc
+temp
