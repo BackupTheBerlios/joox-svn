@@ -1,0 +1,1 @@
+For project-setup look at docs/project-setup.txt

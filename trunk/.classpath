@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="source"/>
+	<classpathentry kind="src" path="java/source"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="output" path="classes"/>
+	<classpathentry kind="lib" path="java/libraries/commons-lang-2.0.jar"/>
+	<classpathentry kind="lib" path="java/libraries/junit.jar"/>
+	<classpathentry kind="output" path="java/classes"/>
 </classpath>
