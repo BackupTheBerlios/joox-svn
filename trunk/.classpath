@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="src" path="java/source"/>
+	<classpathentry output="java/classes/main" kind="src" path="java/sources/main"/>
+	<classpathentry output="java/classes/demo" kind="src" path="java/sources/demo"/>
+	<classpathentry output="java/classes/test" kind="src" path="java/sources/test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="java/libraries/commons-lang-2.0.jar"/>
-	<classpathentry kind="lib" path="java/libraries/junit.jar"/>
-	<classpathentry kind="output" path="java/classes"/>
+	<classpathentry kind="lib" path="java/libraries/logging-log4j-1.2.13/dist/lib/log4j-1.2.13.jar"/>
+	<classpathentry kind="lib" path="java/libraries/junit4.1/junit-4.1.jar"/>
+	<classpathentry kind="lib" path="java/libraries/commons-cli-1.0/commons-cli-1.0.jar"/>
+	<classpathentry kind="lib" path="java/libraries/commons-configuration-1.2/commons-configuration-1.2.jar"/>
+	<classpathentry kind="lib" path="java/libraries/commons-lang-2.1/commons-lang-2.1.jar"/>
+	<classpathentry kind="var" path="ASPECTJRT_LIB"/>
+	<classpathentry kind="output" path="java/classes/default"/>
 </classpath>

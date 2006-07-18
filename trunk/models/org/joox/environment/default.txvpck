@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="V574ng9eknlx4na-7w79du">
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="Package Diagram"/>
+		<reference referencedUin="jdt:e_class:src:org.joox.environment.Environment">
+			<property name="bounds" value="15,15,200,303"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="jdt:l_ast:src:org.joox.environment.Environment:environment">
+				<property name="sourceAnchor" value="220,319"/>
+				<property name="targetAnchor" value="216,323"/>
+				<property name="bendpoints" value="249,319,249,352,216,352"/>
+				<property name="smooth_bendpoints" value="249,319,249,352,216,352"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.environment.DefaultEnvironment">
+			<property name="bounds" value="52,375,125,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.environment.DefaultEnvironment:Environment">
+				<property name="sourceAnchor" value="119,380"/>
+				<property name="targetAnchor" value="119,323"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.environment.EnvironmentException">
+			<property name="bounds" value="275,15,200,134"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+		</reference>
+	</view>
+</nodeSet>

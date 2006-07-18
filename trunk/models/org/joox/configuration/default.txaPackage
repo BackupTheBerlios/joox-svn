@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<node uin="1g64yenu70c7w-y4vt6j">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="- Configurationen implementieren&#10;- Updatetime konfigurierbar"/>
+	</node>
+	<node uin="3obiqenwv095c-28i3ct">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="TODO: 1:1 Kopie der Global-Property"/>
+		<link uin="ieje0renwv0jyn68psbc">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::3obiqenwv095c-28i3ct" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.configuration.PropertyConfiguration" role="Supplier"></participant>
+		</link>
+	</node>
+</nodeSet>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc destdir="javadoc" access="package" use="true" notree="false" nonavbar="false" noindex="false" splitindex="true" author="false" version="false" nodeprecatedlist="false" nodeprecated="false" packagenames="test.org.joox.configuration,org.joox.tutorial,org.joox.base,org.joox.configuration" sourcepath="source" classpath="classes;libraries/junit.jar;libraries/icu4jdocs_2_6_1.jar;libraries/icu4j_2_6_1.jar;libraries/jlfgr-1_0.jar;joox_07_00_0123.jar" overview="F:\workspace\joox\project.html" doctitle="JOOX - The Java Toolbox"/>
+    </target>
+</project>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<node uin="80gzfenu7663gct9kfy">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="TODO: System.out und System.err umlenken"/>
+		<link uin="ieje0renwuor4eq2ovr7">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::80gzfenu7663gct9kfy" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.SysErrLogStream" role="Supplier"></participant>
+		</link>
+		<link uin="ieje0renwupehz-sbwedr">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::80gzfenu7663gct9kfy" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.SysOutLogStream" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="i51xuenwunlup-s6kmm8">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="TODO: Channels implementieren"/>
+		<link uin="ieje0renwuvniotjfyj7">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::i51xuenwunlup-s6kmm8" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.FileLogChannel" role="Supplier"></participant>
+		</link>
+		<link uin="ieje0renwuvr1u-jpvhdj">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::i51xuenwunlup-s6kmm8" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.NetLogChannel" role="Supplier"></participant>
+		</link>
+		<link uin="ieje0renwuvvh4c5s7mj">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::i51xuenwunlup-s6kmm8" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.SyslogChannel" role="Supplier"></participant>
+		</link>
+		<link uin="ieje0renwuvzk96uynfw">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::i51xuenwunlup-s6kmm8" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.JmsChannel" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="5257menwuq10qvhamj1">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="TODO: Threads spezifische Loglevels"/>
+		<link uin="ieje0renwwbq94-s4ivjc">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::5257menwuq10qvhamj1" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.AbstractLogger" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="5257menwuq5l83guoig">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="TODO: Stopwatch an Logging-Channels anpassen"/>
+		<link uin="ieje0renwutcyvf4v8x6">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::5257menwuq5l83guoig" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.Stopwatch" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="3vbc3enwuxp3z-eds7pq">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="TODO: Berechnung der Levelmask komplettieren"/>
+		<link uin="ieje0renygyby7-hvso94">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::3vbc3enwuxp3z-eds7pq" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.LoggingConfiguration" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="3vbc3enwuyfda-78y5k9">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="TODO: Auf Java5 umbauen"/>
+		<link uin="ieje0renwv6do5-am7rvr">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::3vbc3enwuyfda-78y5k9" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.AbstractLogger" role="Supplier"></participant>
+		</link>
+		<link uin="ieje0renwv6lqxx3nyc9">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::3vbc3enwuyfda-78y5k9" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.StartupLogger" role="Supplier"></participant>
+		</link>
+		<link uin="ieje0renwv6opa-jn4vdf">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::3vbc3enwuyfda-78y5k9" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.DefaultLogger" role="Supplier"></participant>
+		</link>
+		<link uin="ieje0renwv77n4-jmj4su">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::3vbc3enwuyfda-78y5k9" role="Client"></participant>
+			<participant referencedUin="jdt:e_class:src:org.joox.logging.LoggingConfiguration" role="Supplier"></participant>
+		</link>
+	</node>
+	<node uin="c3isuenwv3h0s-v8plp7">
+		<property name="$metaclass" value="Note"/>
+		<property name="$name" value="Note1"/>
+		<property name="$note_text" value="TODO: Ausgabe Objekt.ID implementieren"/>
+		<link uin="ieje0renwwc2p1jnts5n">
+			<property name="$metaclass" value="Note Link"/>
+			<participant referencedUin="design:node:::c3isuenwv3h0s-v8plp7" role="Client"></participant>
+			<participant referencedUin="jdt:e_method:src:org.joox.logging.AbstractLogger.in:in~QString;~QObject;..." role="Supplier"></participant>
+		</link>
+	</node>
+</nodeSet>

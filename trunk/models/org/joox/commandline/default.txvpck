@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="V574ng9ekp706p1-qqbes">
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="Package Diagram"/>
+		<reference referencedUin="jdt:e_class:src:org.joox.commandline.CommandlineParser">
+			<property name="bounds" value="5,5,200,309"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::6voj7enu7663g-uvazq3">
+			<property name="bounds" value="-201,-20,264,437"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,255,128"/>
+		</reference>
+	</view>
+</nodeSet>

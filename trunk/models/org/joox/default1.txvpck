@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="V574ng9eknl7us399weub">
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="Package Diagram"/>
+		<reference referencedUin="design:view:::V574ng9ekp6nzuu-te1yqs">
+			<property name="bounds" value="13,15,123,96"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="192,192,192"/>
+		</reference>
+		<reference referencedUin="design:view:::V574ng9ekp706p1-qqbes">
+			<property name="bounds" value="935,15,106,70"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,128,128"/>
+		</reference>
+		<reference referencedUin="design:view:::V574ng9eknnv8gx-im33c1">
+			<property name="bounds" value="275,275,82,96"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::V574ng9ekp6l4jo-m4uki2">
+			<property name="bounds" value="335,15,256,203"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,255,128"/>
+		</reference>
+		<reference referencedUin="design:view:::V574ng9eknlx4na-7w79du">
+			<property name="bounds" value="175,15,119,96"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+		</reference>
+		<reference referencedUin="design:view:::V574ng9ekp5hlpg-wy0itc">
+			<property name="bounds" value="115,275,104,83"/>
+			<property name="location_set_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="design:view:::6voj7enu7663g-uvazq3">
+			<property name="bounds" value="635,15,251,515"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,255,128"/>
+		</reference>
+	</view>
+</nodeSet>

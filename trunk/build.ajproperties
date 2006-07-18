@@ -1,0 +1,3 @@
+src.includes = java/sources/main/,\
+               java/sources/demo/,\
+               java/sources/test/

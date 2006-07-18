@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="V574ng9ekp6nzuu-te1yqs">
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="Package Diagram"/>
+		<reference referencedUin="jdt:e_class:src:org.joox.core.ReloadableClassLoader">
+			<property name="bounds" value="1,0,200,212"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,255,255"/>
+			<reference referencedUin="jdt:l_ast:src:org.joox.core.ReloadableClassLoader:instance">
+				<property name="sourceAnchor" value="206,213"/>
+				<property name="targetAnchor" value="202,217"/>
+				<property name="bendpoints" value="235,213,235,246,202,246"/>
+				<property name="smooth_bendpoints" value="235,213,235,246,202,246"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.core.Classpath">
+			<property name="bounds" value="1,259,200,212"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,255,255"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.core.Stringhelper">
+			<property name="bounds" value="239,0,200,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+		</reference>
+	</view>
+</nodeSet>

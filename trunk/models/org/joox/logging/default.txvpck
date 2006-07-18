@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<nodeSet  version="1.1">
+	<view uin="6voj7enu7663g-uvazq3">
+		<property name="$defaultDiagram" value="true"/>
+		<property name="$metaclass" value="Package Diagram"/>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.CommandlineParser">
+			<property name="bounds" value="302,5,128,186"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="hideOperation" value="true"/>
+			<reference referencedUin="label:$name:jdt:e_class:src:org.joox.logging.CommandlineParser">
+				<property name="bounds" value="355,206,33,13"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.Field">
+			<property name="bounds" value="615,15,401,121"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<property name="bounds_setted_by_user" value="true"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.SyslogChannel">
+			<property name="bounds" value="1675,1077,179,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,128,128"/>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.SyslogChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="1799,1058"/>
+				<property name="targetAnchor" value="969,864"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.SyslogChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="1680,1093"/>
+				<property name="targetAnchor" value="969,868"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.AbstractLogReader">
+			<property name="bounds" value="1104,624,122,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,128,128"/>
+			<reference referencedUin="jdt:l_impl:src:org.joox.logging.AbstractLogReader:LogReader">
+				<property name="sourceAnchor" value="1170,628"/>
+				<property name="targetAnchor" value="1170,580"/>
+			</reference>
+			<reference referencedUin="jdt:l_impl:src:org.joox.commandline.logging.AbstractLogReader:LogReader">
+				<property name="sourceAnchor" value="1108,629"/>
+				<property name="targetAnchor" value="1108,580"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.SysOutLogStream">
+			<property name="bounds" value="1595,94,200,391"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,255,128"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.JavaLoggingChannel">
+			<property name="bounds" value="395,1315,179,173"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,255"/>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.JavaLoggingChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="552,1318"/>
+				<property name="targetAnchor" value="874,888"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.JavaLoggingChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="553,1320"/>
+				<property name="targetAnchor" value="875,889"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.Log4JChannel">
+			<property name="bounds" value="595,1275,181,189"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,255"/>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.Log4JChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="727,1279"/>
+				<property name="targetAnchor" value="888,888"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.Log4JChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="728,1280"/>
+				<property name="targetAnchor" value="889,889"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.FileLogChannel">
+			<property name="bounds" value="795,1235,262,228"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,255,128"/>
+			<property name="collapsedCompartments" value=""/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="property:e_property:jdt=e_class=src=org.joox.logging.FileLogChannel:name">
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.FileLogChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="906,1240"/>
+				<property name="targetAnchor" value="906,889"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.FileLogChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="906,1240"/>
+				<property name="targetAnchor" value="906,889"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.LogReader">
+			<property name="bounds" value="1125,495,80,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,128,128"/>
+			<reference referencedUin="label:$name:jdt:e_class:src:org.joox.logging.LogReader">
+				<property name="bounds" value="1144,590,52,13"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.Justify">
+			<property name="bounds" value="733,195,166,134"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.Justify:CENTER">
+				<property name="sourceAnchor" value="904,326"/>
+				<property name="targetAnchor" value="896,334"/>
+				<property name="bendpoints" value="937,326,937,367,896,367"/>
+				<property name="smooth_bendpoints" value="937,326,937,367,896,367"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.Justify:RIGHT">
+				<property name="sourceAnchor" value="904,322"/>
+				<property name="targetAnchor" value="892,334"/>
+				<property name="bendpoints" value="941,322,941,371,892,371"/>
+				<property name="smooth_bendpoints" value="941,322,941,371,892,371"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.Justify:CENTER">
+				<property name="sourceAnchor" value="803,362"/>
+				<property name="targetAnchor" value="791,374"/>
+				<property name="bendpoints" value="840,362,840,411,791,411"/>
+				<property name="smooth_bendpoints" value="840,362,840,411,791,411"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.Justify:RIGHT">
+				<property name="sourceAnchor" value="803,370"/>
+				<property name="targetAnchor" value="799,374"/>
+				<property name="bendpoints" value="832,370,832,403,799,403"/>
+				<property name="smooth_bendpoints" value="832,370,832,403,799,403"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.Justify:LEFT">
+				<property name="sourceAnchor" value="904,330"/>
+				<property name="targetAnchor" value="900,334"/>
+				<property name="bendpoints" value="933,330,933,363,900,363"/>
+				<property name="smooth_bendpoints" value="933,330,933,363,900,363"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.Justify:BLOCK">
+				<property name="sourceAnchor" value="904,318"/>
+				<property name="targetAnchor" value="888,334"/>
+				<property name="bendpoints" value="945,318,945,375,888,375"/>
+				<property name="smooth_bendpoints" value="945,318,945,375,888,375"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.Justify:LEFT">
+				<property name="sourceAnchor" value="803,366"/>
+				<property name="targetAnchor" value="795,374"/>
+				<property name="bendpoints" value="836,366,836,407,795,407"/>
+				<property name="smooth_bendpoints" value="836,366,836,407,795,407"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.Justify:BLOCK">
+				<property name="sourceAnchor" value="803,358"/>
+				<property name="targetAnchor" value="787,374"/>
+				<property name="bendpoints" value="844,358,844,415,787,415"/>
+				<property name="smooth_bendpoints" value="844,358,844,415,787,415"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.Log4JLogger">
+			<property name="bounds" value="575,641,200,108"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.Log4JLogger:org.joox.logging.LogProperty2.AbstractLogger">
+				<property name="sourceAnchor" value="412,860"/>
+				<property name="targetAnchor" value="412,692"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.Log4JLogger:AbstractLogger">
+				<property name="sourceAnchor" value="580,684"/>
+				<property name="targetAnchor" value="505,684"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.Log4JLogger:AbstractLogger">
+				<property name="sourceAnchor" value="580,684"/>
+				<property name="targetAnchor" value="505,684"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.Log4JLogger:channel">
+				<property name="sourceAnchor" value="690,754"/>
+				<property name="targetAnchor" value="690,1280"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.Log4JLogger:channel">
+				<property name="location_set_by_user" value="true"/>
+				<property name="sourceAnchor" value="689,753"/>
+				<property name="targetAnchor" value="689,1279"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.AbstractLogger">
+			<property name="bounds" value="300,155,200,563"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="jdt:l_impl:src:org.joox.commandline.logging.AbstractLogger:Logger">
+				<property name="sourceAnchor" value="405,160"/>
+				<property name="targetAnchor" value="405,100"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:org.joox.logging.AbstractLogger.getMethod:getMethod">
+				<property name="bounds" value="51,368,0,0"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:org.joox.logging.AbstractLogger.getInset:getInset">
+				<property name="bounds" value="91,330,0,0"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_field:src:org.joox.logging.AbstractLogger.property">
+				<property name="bounds" value="31,54,0,0"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:org.joox.logging.AbstractLogger.getThread1:getThread1">
+				<property name="bounds" value="11,355,0,0"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:org.joox.logging.AbstractLogger.format:format~QString;~QObject;">
+				<property name="bounds" value="-2,330,0,0"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.AbstractLogger:property">
+				<property name="sourceAnchor" value="332,436"/>
+				<property name="targetAnchor" value="440,436"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:org.joox.logging.AbstractLogger.newData:newData">
+				<property name="bounds" value="22,355,0,0"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_impl:src:org.joox.logging.AbstractLogger:Logger">
+				<property name="sourceAnchor" value="405,160"/>
+				<property name="targetAnchor" value="405,100"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:org.joox.logging.AbstractLogger.getStack:getStack">
+				<property name="bounds" value="51,330,0,0"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.JmsChannel">
+			<property name="bounds" value="1875,1035,179,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,128,128"/>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.JmsChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="1598,1090"/>
+				<property name="targetAnchor" value="969,871"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.JmsChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="1879,1060"/>
+				<property name="targetAnchor" value="969,862"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.Stopwatch">
+			<property name="bounds" value="1473,555,184,121"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,255,128"/>
+			<reference referencedUin="jdt:e_field:src:org.joox.logging.Stopwatch.textout">
+				<property name="bounds" value="0,1,182,13"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.JavaLogger">
+			<property name="bounds" value="435,775,200,108"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.JavaLogger:channel">
+				<property name="sourceAnchor" value="507,888"/>
+				<property name="targetAnchor" value="507,1318"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.JavaLogger:channel">
+				<property name="sourceAnchor" value="509,888"/>
+				<property name="targetAnchor" value="509,1320"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.JavaLogger:org.joox.logging.LogProperty2.AbstractLogger">
+				<property name="sourceAnchor" value="310,860"/>
+				<property name="targetAnchor" value="310,692"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.JavaLogger:AbstractLogger">
+				<property name="sourceAnchor" value="472,780"/>
+				<property name="targetAnchor" value="472,723"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.JavaLogger:AbstractLogger">
+				<property name="sourceAnchor" value="472,780"/>
+				<property name="targetAnchor" value="472,723"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.LogChannel">
+			<property name="bounds" value="815,654,171,82"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="label:$name:jdt:e_class:src:org.joox.logging.LogChannel">
+				<property name="bounds" value="893,751,47,13"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.DefaultLogger">
+			<property name="bounds" value="135,775,200,121"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<property name="bounds_setted_by_user" value="true"/>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.DefaultLogger:property">
+				<property name="sourceAnchor" value="240,900"/>
+				<property name="targetAnchor" value="240,956"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:org.joox.logging.DefaultLogger.println1:println1~I~QObject;">
+				<property name="bounds" value="-1,57,0,0"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.DefaultLogger:org.joox.logging.LogProperty2.AbstractLogger">
+				<property name="sourceAnchor" value="139,760"/>
+				<property name="targetAnchor" value="259,591"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.DefaultLogger:AbstractLogger">
+				<property name="sourceAnchor" value="322,780"/>
+				<property name="targetAnchor" value="322,723"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.DefaultLogger:AbstractLogger">
+				<property name="sourceAnchor" value="322,780"/>
+				<property name="targetAnchor" value="322,722"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.DefaultLogger:property">
+				<property name="sourceAnchor" value="240,901"/>
+				<property name="targetAnchor" value="240,957"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:org.joox.logging.DefaultLogger.printout:printout~I~QString;">
+				<property name="bounds" value="-3,57,0,0"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.LoggingConfiguration">
+			<property name="bounds" value="135,952,200,407"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.LoggingConfiguration:lnkNetLogChannel">
+				<property name="sourceAnchor" value="340,1254"/>
+				<property name="targetAnchor" value="1000,1254"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.LoggingConfiguration:lnkSysOutLogChannel">
+				<property name="sourceAnchor" value="340,1140"/>
+				<property name="targetAnchor" value="1480,1140"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.LoggingConfiguration:lnkSysOutLogChannel">
+				<property name="sourceAnchor" value="340,1160"/>
+				<property name="targetAnchor" value="1400,1160"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.LoggingConfiguration:lnkFileLogChannel">
+				<property name="sourceAnchor" value="340,1302"/>
+				<property name="targetAnchor" value="799,1302"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.LoggingConfiguration:myself">
+				<property name="sourceAnchor" value="340,1358"/>
+				<property name="targetAnchor" value="336,1364"/>
+				<property name="bendpoints" value="371,1358,371,1395,336,1395"/>
+				<property name="smooth_bendpoints" value="371,1358,371,1395,336,1395"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.LoggingConfiguration:lnkLog4JChannel">
+				<property name="sourceAnchor" value="340,1322"/>
+				<property name="targetAnchor" value="600,1322"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.LoggingConfiguration:lnkLog4JChannel">
+				<property name="sourceAnchor" value="340,1300"/>
+				<property name="targetAnchor" value="600,1300"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.LoggingConfiguration:lnkJmsChannel">
+				<property name="sourceAnchor" value="340,1060"/>
+				<property name="targetAnchor" value="1879,1060"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.LoggingConfiguration:myself">
+				<property name="sourceAnchor" value="340,1358"/>
+				<property name="targetAnchor" value="336,1364"/>
+				<property name="bendpoints" value="371,1358,371,1395,336,1395"/>
+				<property name="smooth_bendpoints" value="371,1358,371,1395,336,1395"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.LoggingConfiguration:lnkSysErrLogChannel">
+				<property name="sourceAnchor" value="340,1201"/>
+				<property name="targetAnchor" value="1200,1201"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.LoggingConfiguration:lnkSyslogChannel">
+				<property name="sourceAnchor" value="340,1080"/>
+				<property name="targetAnchor" value="1800,1080"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.LoggingConfiguration:lnkJavaLoggingChannel">
+				<property name="sourceAnchor" value="340,1342"/>
+				<property name="targetAnchor" value="400,1342"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.LoggingConfiguration:lnkSyslogChannel">
+				<property name="sourceAnchor" value="340,1100"/>
+				<property name="targetAnchor" value="1680,1100"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.LoggingConfiguration:lnkFileLogChannel">
+				<property name="sourceAnchor" value="340,1260"/>
+				<property name="targetAnchor" value="800,1260"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.LoggingConfiguration:lnkJmsChannel">
+				<property name="sourceAnchor" value="340,1122"/>
+				<property name="targetAnchor" value="1599,1122"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.LoggingConfiguration:lnkNetLogChannel">
+				<property name="sourceAnchor" value="340,1220"/>
+				<property name="targetAnchor" value="1080,1220"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:e_method:src:org.joox.logging.LogProperty.run:run">
+				<property name="bounds" value="0,25,198,13"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.LoggingConfiguration:lnkSysErrLogChannel">
+				<property name="sourceAnchor" value="340,1180"/>
+				<property name="targetAnchor" value="1280,1180"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.LoggingConfiguration:lnkJavaLoggingChannel">
+				<property name="sourceAnchor" value="340,1340"/>
+				<property name="targetAnchor" value="400,1340"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.NetLogReader">
+			<property name="bounds" value="1119,762,92,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,128,128"/>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.NetLogReader:AbstractLogReader">
+				<property name="sourceAnchor" value="1108,767"/>
+				<property name="targetAnchor" value="1108,709"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.NetLogReader:AbstractLogReader">
+				<property name="sourceAnchor" value="1170,766"/>
+				<property name="targetAnchor" value="1170,708"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.Logger">
+			<property name="bounds" value="355,15,90,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="collapsedCompartments" value="Attribute,Operation"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="label:$name:jdt:e_class:src:org.joox.logging.Logger">
+				<property name="bounds" value="405,110,0,0"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.SysErrLogChannel">
+			<property name="bounds" value="1275,1156,179,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.SysErrLogChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="1245,1161"/>
+				<property name="targetAnchor" value="949,889"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.SysErrLogChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="1316,1161"/>
+				<property name="targetAnchor" value="958,889"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.AbstractLogChannel">
+			<property name="bounds" value="838,804,126,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="jdt:l_impl:src:org.joox.logging.AbstractLogChannel:LogChannel">
+				<property name="sourceAnchor" value="904,808"/>
+				<property name="targetAnchor" value="904,740"/>
+			</reference>
+			<reference referencedUin="jdt:l_impl:src:org.joox.commandline.logging.AbstractLogChannel:LogChannel">
+				<property name="sourceAnchor" value="905,809"/>
+				<property name="targetAnchor" value="905,741"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.LoggingException">
+			<property name="bounds" value="1465,722,200,134"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.SysOutLogChannel">
+			<property name="bounds" value="1475,1116,179,80"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.SysOutLogChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="1483,1121"/>
+				<property name="targetAnchor" value="969,878"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.SysOutLogChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="1414,1121"/>
+				<property name="targetAnchor" value="969,882"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.StartupLogger">
+			<property name="bounds" value="15,590,200,147"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.StartupLogger:AbstractLogger">
+				<property name="sourceAnchor" value="220,659"/>
+				<property name="targetAnchor" value="305,659"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.StartupLogger:AbstractLogger">
+				<property name="sourceAnchor" value="220,665"/>
+				<property name="targetAnchor" value="305,665"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.StartupLogger:org.joox.logging.LogProperty2.AbstractLogger">
+				<property name="sourceAnchor" value="570,760"/>
+				<property name="targetAnchor" value="460,600"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.SysErrLogStream">
+			<property name="bounds" value="1355,94,200,391"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,255,128"/>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.NetLogChannel">
+			<property name="bounds" value="1075,1195,179,108"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="255,128,128"/>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.commandline.logging.NetLogChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="1064,1200"/>
+				<property name="targetAnchor" value="923,889"/>
+			</reference>
+			<reference referencedUin="jdt:l_gnt:src:org.joox.logging.NetLogChannel:AbstractLogChannel">
+				<property name="sourceAnchor" value="1133,1200"/>
+				<property name="targetAnchor" value="932,889"/>
+			</reference>
+		</reference>
+		<reference referencedUin="jdt:e_class:src:org.joox.logging.Format">
+			<property name="bounds" value="735,395,160,147"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="background_color" value="128,255,128"/>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.Format:OCT">
+				<property name="sourceAnchor" value="800,561"/>
+				<property name="targetAnchor" value="788,573"/>
+				<property name="bendpoints" value="837,561,837,610,788,610"/>
+				<property name="smooth_bendpoints" value="837,561,837,610,788,610"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.Format:OCT">
+				<property name="sourceAnchor" value="900,535"/>
+				<property name="targetAnchor" value="888,547"/>
+				<property name="bendpoints" value="937,535,937,584,888,584"/>
+				<property name="smooth_bendpoints" value="937,535,937,584,888,584"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.Format:DEC">
+				<property name="sourceAnchor" value="800,553"/>
+				<property name="targetAnchor" value="780,573"/>
+				<property name="bendpoints" value="845,553,845,618,780,618"/>
+				<property name="smooth_bendpoints" value="845,553,845,618,780,618"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.Format:DEC">
+				<property name="sourceAnchor" value="900,543"/>
+				<property name="targetAnchor" value="896,547"/>
+				<property name="bendpoints" value="929,543,929,576,896,576"/>
+				<property name="smooth_bendpoints" value="929,543,929,576,896,576"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.Format:HEX">
+				<property name="sourceAnchor" value="900,539"/>
+				<property name="targetAnchor" value="892,547"/>
+				<property name="bendpoints" value="933,539,933,580,892,580"/>
+				<property name="smooth_bendpoints" value="933,539,933,580,892,580"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.Format:BIN">
+				<property name="sourceAnchor" value="800,557"/>
+				<property name="targetAnchor" value="784,573"/>
+				<property name="bendpoints" value="841,557,841,614,784,614"/>
+				<property name="smooth_bendpoints" value="841,557,841,614,784,614"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.Format:HEX">
+				<property name="sourceAnchor" value="800,565"/>
+				<property name="targetAnchor" value="792,573"/>
+				<property name="bendpoints" value="833,565,833,606,792,606"/>
+				<property name="smooth_bendpoints" value="833,565,833,606,792,606"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.Format:CHR">
+				<property name="sourceAnchor" value="900,527"/>
+				<property name="targetAnchor" value="880,547"/>
+				<property name="bendpoints" value="945,527,945,592,880,592"/>
+				<property name="smooth_bendpoints" value="945,527,945,592,880,592"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.logging.Format:BIN">
+				<property name="sourceAnchor" value="900,531"/>
+				<property name="targetAnchor" value="884,547"/>
+				<property name="bendpoints" value="941,531,941,588,884,588"/>
+				<property name="smooth_bendpoints" value="941,531,941,588,884,588"/>
+			</reference>
+			<reference referencedUin="jdt:l_ast:src:org.joox.commandline.logging.Format:CHR">
+				<property name="sourceAnchor" value="800,569"/>
+				<property name="targetAnchor" value="796,573"/>
+				<property name="bendpoints" value="829,569,829,602,796,602"/>
+				<property name="smooth_bendpoints" value="829,569,829,602,796,602"/>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::80gzfenu7663gct9kfy">
+			<property name="bounds" value="1453,15,244,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="background_color" value="255,0,64"/>
+			<property name="font" value="1|Tahoma|8|0|WINDOWS|1|-11|0|0|0|400|0|0|0|0|3|2|1|34|Tahoma;"/>
+			<reference referencedUin="design:link:::ieje0renwupehz-sbwedr:80gzfenu7663gct9kfy">
+				<property name="sourceAnchor" value="1651,45"/>
+				<property name="targetAnchor" value="1651,99"/>
+			</reference>
+			<reference referencedUin="design:link:::ieje0renwuor4eq2ovr7:80gzfenu7663gct9kfy">
+				<property name="sourceAnchor" value="1509,45"/>
+				<property name="targetAnchor" value="1509,99"/>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::i51xuenwunlup-s6kmm8">
+			<property name="bounds" value="1656,1415,183,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="background_color" value="255,0,64"/>
+			<property name="font" value="1|Tahoma|8|0|WINDOWS|1|-11|0|0|0|400|0|0|0|0|3|2|1|34|Tahoma;"/>
+			<reference referencedUin="design:link:::ieje0renwuvr1u-jpvhdj:i51xuenwunlup-s6kmm8">
+				<property name="sourceAnchor" value="1711,1420"/>
+				<property name="targetAnchor" value="1259,1280"/>
+			</reference>
+			<reference referencedUin="design:link:::ieje0renwuvniotjfyj7:i51xuenwunlup-s6kmm8">
+				<property name="sourceAnchor" value="1661,1432"/>
+				<property name="targetAnchor" value="1062,1432"/>
+			</reference>
+			<reference referencedUin="design:link:::ieje0renwuvvh4c5s7mj:i51xuenwunlup-s6kmm8">
+				<property name="sourceAnchor" value="1762,1420"/>
+				<property name="targetAnchor" value="1762,1162"/>
+			</reference>
+			<reference referencedUin="design:link:::ieje0renwuvzk96uynfw:i51xuenwunlup-s6kmm8">
+				<property name="sourceAnchor" value="1762,1420"/>
+				<property name="targetAnchor" value="1944,1120"/>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::5257menwuq10qvhamj1">
+			<property name="bounds" value="28,235,205,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="background_color" value="255,0,64"/>
+			<property name="font" value="1|Tahoma|8|0|WINDOWS|1|-11|0|0|0|400|0|0|0|0|3|2|1|34|Tahoma;"/>
+			<reference referencedUin="design:link:::ieje0renwwbq94-s4ivjc:5257menwuq10qvhamj1">
+				<property name="sourceAnchor" value="230,252"/>
+				<property name="targetAnchor" value="305,252"/>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::5257menwuq5l83guoig">
+			<property name="bounds" value="1715,515,267,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="background_color" value="255,0,64"/>
+			<property name="font" value="1|Tahoma|8|0|WINDOWS|1|-11|0|0|0|400|0|0|0|0|3|2|1|34|Tahoma;"/>
+			<reference referencedUin="design:link:::ieje0renwutcyvf4v8x6:5257menwuq5l83guoig">
+				<property name="sourceAnchor" value="1810,545"/>
+				<property name="targetAnchor" value="1662,591"/>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::3vbc3enwuxp3z-eds7pq">
+			<property name="bounds" value="32,1415,260,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="background_color" value="255,0,64"/>
+			<property name="font" value="1|Tahoma|8|0|WINDOWS|1|-11|0|0|0|400|0|0|0|0|3|2|1|34|Tahoma;"/>
+			<reference referencedUin="design:link:::ieje0renygyby7-hvso94:3vbc3enwuxp3z-eds7pq">
+				<property name="location_set_by_user" value="true"/>
+				<property name="sourceAnchor" value="118,1420"/>
+				<property name="targetAnchor" value="254,1363"/>
+				<property name="bendpoints" value="120,1420"/>
+				<property name="smooth_bendpoints" value="120,1420"/>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::3vbc3enwuyfda-78y5k9">
+			<property name="bounds" value="115,424,160,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="background_color" value="255,0,64"/>
+			<property name="font" value="1|Tahoma|8|0|WINDOWS|1|-11|0|0|0|400|0|0|0|0|3|2|1|34|Tahoma;"/>
+			<reference referencedUin="design:link:::ieje0renwv77n4-jmj4su:3vbc3enwuyfda-78y5k9">
+				<property name="sourceAnchor" value="260,454"/>
+				<property name="targetAnchor" value="260,957"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="design:link:::ieje0renwv6opa-jn4vdf:3vbc3enwuyfda-78y5k9">
+				<property name="sourceAnchor" value="240,454"/>
+				<property name="targetAnchor" value="240,780"/>
+				<property name="location_set_by_user" value="true"/>
+			</reference>
+			<reference referencedUin="design:link:::ieje0renwv6lqxx3nyc9:3vbc3enwuyfda-78y5k9">
+				<property name="sourceAnchor" value="170,454"/>
+				<property name="targetAnchor" value="170,595"/>
+			</reference>
+			<reference referencedUin="design:link:::ieje0renwv6do5-am7rvr:3vbc3enwuyfda-78y5k9">
+				<property name="sourceAnchor" value="272,441"/>
+				<property name="targetAnchor" value="305,441"/>
+			</reference>
+		</reference>
+		<reference referencedUin="design:node:::c3isuenwv3h0s-v8plp7">
+			<property name="bounds" value="29,315,231,25"/>
+			<property name="location_set_by_user" value="true"/>
+			<property name="$shortcutReference" value="true"/>
+			<property name="background_color" value="255,0,64"/>
+			<property name="font" value="1|Tahoma|8|0|WINDOWS|1|-11|0|0|0|400|0|0|0|0|3|2|1|34|Tahoma;"/>
+			<reference referencedUin="design:link:::ieje0renwwc2p1jnts5n:c3isuenwv3h0s-v8plp7">
+				<property name="sourceAnchor" value="251,326"/>
+				<property name="targetAnchor" value="306,326"/>
+			</reference>
+		</reference>
+	</view>
+</nodeSet>
