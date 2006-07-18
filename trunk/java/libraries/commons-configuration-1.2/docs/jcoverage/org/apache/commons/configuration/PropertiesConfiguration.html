@@ -1,0 +1,4501 @@
+<html>
+<head>
+<title>unit tests coverage</title>
+<link rel ="stylesheet" type="text/css" href="../../../../style.css" title="Style">
+</head>
+<body>
+<span class="title">Coverage report</span>
+<p>
+  <table cellspacing="0" cellpadding="0" class="report">
+  <tr class="report">
+    <th class="report">&nbsp;</th>
+    <th class="report">%line</th>
+    <th class="report">%branch</th>
+  </tr>
+  <tr class="report">
+    <td class="reportText"><span class="text">org.apache.commons.configuration.PropertiesConfiguration$PropertiesReader</span></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">100%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="100"></td><td class="percentUnCovered" width="0.0"></td></tr></table></td></tr></table></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">100%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="100"></td><td class="percentUnCovered" width="0.0"></td></tr></table></td></tr></table></td>
+  </tr>
+  </table>
+  <p>
+  <table cellspacing="0" cellpadding="0" class="src">
+    <tr>
+      <td class="numLine">&nbsp;1</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;2</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Copyright 2001-2005 The Apache Software Foundation.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;3</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;4</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the "License")</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;5</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * you may not use this file except in compliance with the License.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;6</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * You may obtain a copy of the License at</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;7</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;8</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *     http://www.apache.org/licenses/LICENSE-2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;9</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;10</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;11</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * distributed under the License is distributed on an "AS IS" BASIS,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;12</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;13</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * See the License for the specific language governing permissions and</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;14</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * limitations under the License.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;15</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;16</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;17</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">package</span> org.apache.commons.configuration;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;18</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;19</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.BufferedReader;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;20</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.File;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;21</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.FilterWriter;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;22</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.IOException;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;23</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.LineNumberReader;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;24</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.Reader;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;25</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.StringReader;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;26</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.Writer;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;27</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.net.URL;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;28</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.util.Date;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;29</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.util.Iterator;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;30</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.util.List;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;31</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;32</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> org.apache.commons.lang.ArrayUtils;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;33</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> org.apache.commons.lang.StringEscapeUtils;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;34</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> org.apache.commons.lang.StringUtils;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;35</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;36</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;37</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * This is the "classic" Properties loader which loads the values from</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;38</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * a single or multiple files (which can be chained with "include =".</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;39</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * All given path references are either absolute or relative to the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;40</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * file name supplied in the constructor.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;41</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;42</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * In this class, empty PropertyConfigurations can be built, properties</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;43</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * added and later saved. include statements are (obviously) not supported</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;44</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * if you don't construct a PropertyConfiguration from a file.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;45</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;46</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;The properties file syntax is explained here, basically it follows</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;47</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * the syntax of the stream parsed by {@link java.util.Properties#load} and</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;48</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * adds several useful extensions:</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;49</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;50</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;ul&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;51</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;52</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   Each property has the syntax &#60;code&#62;key &#38;lt;separator&#62; value&#60;/code&#62;. The</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;53</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   separators accepted are &#60;code&#62;'='&#60;/code&#62;, &#60;code&#62;':'&#60;/code&#62; and any white</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;54</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   space character. Examples:</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;55</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;pre&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;56</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  key1 = value1</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;57</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  key2 : value2</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;58</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  key3   value3&#60;/pre&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;59</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;60</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;61</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   The &#60;i&#62;key&#60;/i&#62; may use any character, separators must be escaped:</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;62</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;pre&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;63</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  key\:foo = bar&#60;/pre&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;64</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;65</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;66</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   &#60;i&#62;value&#60;/i&#62; may be separated on different lines if a backslash</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;67</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   is placed at the end of the line that continues below.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;68</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;69</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;70</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   &#60;i&#62;value&#60;/i&#62; can contain &#60;em&#62;value delimiters&#60;/em&#62; and will then be interpreted</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;71</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   as a list of tokens. Default value delimiter is the comma ','. So the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;72</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   following property definition</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;73</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;pre&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;74</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  key = This property, has multiple, values</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;75</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;/pre&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;76</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   will result in a property with three values. You can change the value</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;77</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   delmiter using the &#60;code&#62;{@link AbstractConfiguration#setDelimiter(char)}&#60;/code&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;78</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   method. Setting the delimiter to 0 will disable value splitting completely.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;79</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;80</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;81</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   Commas in each token are escaped placing a backslash right before</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;82</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   the comma.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;83</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;84</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;85</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   If a &#60;i&#62;key&#60;/i&#62; is used more than once, the values are appended</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;86</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   like if they were on the same line separated with commas.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;87</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;88</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;89</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   Blank lines and lines starting with character '#' or '!' are skipped.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;90</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;91</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;92</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   If a property is named "include" (or whatever is defined by</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;93</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   setInclude() and getInclude() and the value of that property is</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;94</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   the full path to a file on disk, that file will be included into</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;95</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   the configuration. You can also pull in files relative to the parent</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;96</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   configuration file. So if you have something like the following:</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;97</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;98</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   include = additional.properties</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;99</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;100</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   Then "additional.properties" is expected to be in the same</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;101</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   directory as the parent configuration file.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;102</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;103</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   The properties in the included file are added to the parent configuration,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;104</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *   they do not replace existing properties with the same key.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;105</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;106</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *  &#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;107</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;/ul&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;108</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;109</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;Here is an example of a valid extended properties file:</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;110</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;111</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;&#60;pre&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;112</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      # lines starting with # are comments</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;113</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;114</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      # This is the simplest property</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;115</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      key = value</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;116</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;117</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      # A long property may be separated on multiple lines</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;118</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      longvalue = aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa \</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;119</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *                  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;120</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;121</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      # This is a property with many tokens</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;122</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      tokens_on_a_line = first token, second token</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;123</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;124</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      # This sequence generates exactly the same result</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;125</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      tokens_on_multiple_lines = first token</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;126</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      tokens_on_multiple_lines = second token</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;127</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;128</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      # commas may be escaped in tokens</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;129</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      commas.escaped = Hi\, what'up?</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;130</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;131</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      # properties can reference other properties</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;132</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      base.prop = /base</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;133</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      first.prop = ${base.prop}/first</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;134</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *      second.prop = ${first.prop}/second</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;135</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;/pre&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;136</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;137</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @see java.util.Properties#load</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;138</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;139</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:stefano@apache.org"&#62;Stefano Mazzocchi&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;140</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:jon@latchkey.com"&#62;Jon S. Stevens&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;141</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:daveb@miceda-data"&#62;Dave Bryson&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;142</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:geirm@optonline.net"&#62;Geir Magnusson Jr.&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;143</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:leon@opticode.co.za"&#62;Leon Messerschmidt&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;144</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:kjohnson@transparent.com"&#62;Kent Johnson&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;145</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:dlr@finemaltcoding.com"&#62;Daniel Rall&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;146</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:ipriha@surfeu.fi"&#62;Ilkka Priha&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;147</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:jvanzyl@apache.org"&#62;Jason van Zyl&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;148</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:mpoeschl@marmot.at"&#62;Martin Poeschl&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;149</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:hps@intermeta.de"&#62;Henning P. Schmiedehausen&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;150</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:epugh@upstate.com"&#62;Eric Pugh&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;151</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:oliver.heger@t-online.de"&#62;Oliver Heger&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;152</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author &#60;a href="mailto:ebourg@apache.org"&#62;Emmanuel Bourg&#60;/a&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;153</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @version $Id: PropertiesConfiguration.java 354264 2005-12-06 03:10:27Z ebourg $</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;154</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;155</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">public</span> <span class="keyword">class</span> PropertiesConfiguration <span class="keyword">extends</span> AbstractFileConfiguration</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;156</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;{</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;157</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;158</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * This is the name of the property that can point to other</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;159</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * properties file for including other properties files.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;160</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;161</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> String include = <span class="string">"include"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;162</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;163</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* The list of possible key/value separators */</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;164</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span>[] SEPARATORS = <span class="keyword">new</span> <span <span class="keyword">class</span>="keyword">char</span>[] {'=', ':'};</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;165</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;166</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* The white space characters used as key/value separators. */</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;167</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">char</span>[] WHITE_SPACE = <span class="keyword">new</span> <span <span class="keyword">class</span>="keyword">char</span>[]{' ', '\t', '\f'};</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;168</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;169</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;170</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The default encoding (ISO-8859-1 as specified by</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;171</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * http://java.sun.com/j2se/1.5.0/docs/api/java/util/Properties.html)</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;172</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;173</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String DEFAULT_ENCODING = <span class="string">"ISO-8859-1"</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;174</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;175</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* Constant for the platform specific line separator.*/</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;176</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String LINE_SEPARATOR = System.getProperty(<span class="string">"line.separator"</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;177</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;178</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* Constant for the radix of hex numbers.*/</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;179</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> HEX_RADIX = 16;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;180</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;181</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* Constant for the length of a unicode literal.*/</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;182</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> UNICODE_LEN = 4;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;183</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;184</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* Allow file inclusion or not */</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;185</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">boolean</span> includesAllowed;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;186</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;187</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* Comment header of the .properties file */</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;188</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String header;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;189</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;190</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">// initialization block to set the encoding before loading the file in the constructors</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;191</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;192</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        setEncoding(DEFAULT_ENCODING);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;193</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;194</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;195</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;196</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Creates an empty PropertyConfiguration object which can be</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;197</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * used to synthesize a new Properties file by adding values and</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;198</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * then saving().</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;199</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;200</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> PropertiesConfiguration()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;201</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;202</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        setIncludesAllowed(false);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;203</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;204</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;205</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;206</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Creates and loads the extended properties from the specified file.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;207</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The specified file can contain "include = " properties which then</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;208</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * are loaded and merged into the properties.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;209</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;210</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param fileName The name of the properties file to load.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;211</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException Error while loading the properties file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;212</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;213</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> PropertiesConfiguration(String fileName) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;214</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;215</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">super</span>(fileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;216</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;217</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;218</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;219</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Creates and loads the extended properties from the specified file.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;220</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The specified file can contain "include = " properties which then</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;221</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * are loaded and merged into the properties.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;222</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;223</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param file The properties file to load.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;224</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException Error while loading the properties file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;225</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;226</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> PropertiesConfiguration(File file) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;227</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;228</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">super</span>(file);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;229</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;230</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;231</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;232</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Creates and loads the extended properties from the specified URL.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;233</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * The specified file can contain "include = " properties which then</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;234</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * are loaded and merged into the properties.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;235</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;236</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param url The location of the properties file to load.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;237</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException Error while loading the properties file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;238</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;239</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> PropertiesConfiguration(URL url) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;240</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;241</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">super</span>(url);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;242</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;243</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;244</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;245</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Gets the property value for including other properties files.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;246</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * By default it is "include".</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;247</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;248</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return A String.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;249</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;250</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">static</span> String getInclude()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;251</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;252</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> PropertiesConfiguration.include;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;253</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;254</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;255</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;256</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Sets the property value for including other properties files.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;257</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * By default it is "include".</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;258</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;259</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param inc A String.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;260</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;261</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> setInclude(String inc)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;262</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;263</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        PropertiesConfiguration.include = inc;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;264</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;265</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;266</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;267</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Controls whether additional files can be loaded by the include = &#60;xxx&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;268</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * statement or not. Base rule is, that objects created by the empty</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;269</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * C'tor can not have included files.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;270</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;271</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param includesAllowed includesAllowed True if Includes are allowed.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;272</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;273</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">void</span> setIncludesAllowed(<span class="keyword">boolean</span> includesAllowed)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;274</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;275</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.includesAllowed = includesAllowed;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;276</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;277</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;278</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;279</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Reports the status of file inclusion.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;280</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;281</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return True if include files are loaded.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;282</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;283</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> getIncludesAllowed()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;284</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;285</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">this</span>.includesAllowed;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;286</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;287</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;288</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;289</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Return the comment header.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;290</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;291</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return the comment header</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;292</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @since 1.1</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;293</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;294</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getHeader()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;295</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;296</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> header;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;297</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;298</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;299</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;300</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Set the comment header.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;301</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;302</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param header the header to use</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;303</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @since 1.1</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;304</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;305</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setHeader(String header)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;306</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;307</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.header = header;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;308</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;309</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;310</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;311</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Load the properties from the given reader.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;312</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Note that the &#60;code&#62;clear()&#60;/code&#62; method is not called, so</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;313</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * the properties contained in the loaded file will be added to the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;314</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * actual set of properties.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;315</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;316</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param in An InputStream.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;317</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;318</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;319</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;320</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> load(Reader in) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;321</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;322</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        PropertiesReader reader = <span class="keyword">new</span> PropertiesReader(in);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;323</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">boolean</span> oldAutoSave = isAutoSave();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;324</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        setAutoSave(false);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;325</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;326</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;327</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;328</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">while</span> (<span class="keyword">true</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;329</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;330</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                String line = reader.readProperty();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;331</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;332</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (line == <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;333</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;334</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">break</span>; <span class="comment">// EOF</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;335</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;336</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;337</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="comment">// parse the line</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;338</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                String[] property = parseProperty(line);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;339</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                String key = property[0];</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;340</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                String value = property[1];</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;341</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;342</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="comment">// Though some software (e.g. autoconf) may produce</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;343</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="comment">// empty values like foo=\n, emulate the behavior of</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;344</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="comment">// java.util.Properties by setting the value to the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;345</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="comment">// empty string.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;346</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;347</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (StringUtils.isNotEmpty(getInclude()) &#38;&#38; key.equalsIgnoreCase(getInclude()))</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;348</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;349</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">if</span> (getIncludesAllowed())</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;350</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;351</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        String [] files = StringUtils.split(value, getDelimiter());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;352</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &#60; files.length; i++)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;353</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;354</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                            loadIncludeFile(files[i].trim());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;355</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;356</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;357</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;358</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;359</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;360</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    addProperty(StringEscapeUtils.unescapeJava(key), unescapeJava(value, getDelimiter()));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;361</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;362</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;363</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;364</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;365</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">catch</span> (IOException ioe)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;366</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;367</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(<span class="string">"Could not load configuration from input stream."</span>, ioe);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;368</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;369</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">finally</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;370</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;371</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            setAutoSave(oldAutoSave);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;372</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;373</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;374</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;375</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;376</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Save the configuration to the specified stream.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;377</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;378</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param writer the output stream used to save the configuration</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;379</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;380</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;381</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> save(Writer writer) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;382</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;383</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        enterNoReload();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;384</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;385</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;386</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            PropertiesWriter out = <span class="keyword">new</span> PropertiesWriter(writer, getDelimiter());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;387</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;388</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (header != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;389</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;390</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                BufferedReader reader = <span class="keyword">new</span> BufferedReader(<span <span class="keyword">class</span>="keyword">new</span> StringReader(header));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;391</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                String line;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;392</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">while</span> ((line = reader.readLine()) != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;393</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;394</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.writeComment(line);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;395</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;396</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                out.writeln(<span class="keyword">null</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;397</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;398</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;399</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            out.writeComment(<span class="string">"written by PropertiesConfiguration"</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;400</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            out.writeComment(<span class="keyword">new</span> Date().toString());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;401</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            out.writeln(<span class="keyword">null</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;402</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;403</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            Iterator keys = getKeys();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;404</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">while</span> (keys.hasNext())</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;405</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;406</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                String key = (String) keys.next();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;407</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                Object value = getProperty(key);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;408</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;409</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (value instanceof List)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;410</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;411</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.writeProperty(key, (List) value);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;412</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;413</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;414</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;415</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.writeProperty(key, value);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;416</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;417</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;418</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;419</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            out.flush();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;420</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;421</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">catch</span> (IOException e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;422</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;423</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(e.getMessage(), e);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;424</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;425</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">finally</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;426</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;427</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            exitNoReload();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;428</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;429</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;430</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;431</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;432</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Extend the setBasePath method to turn includes</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;433</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * on and off based on the existence of a base path.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;434</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;435</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param basePath The new basePath to set.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;436</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;437</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setBasePath(String basePath)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;438</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;439</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">super</span>.setBasePath(basePath);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;440</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        setIncludesAllowed(StringUtils.isNotEmpty(basePath));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;441</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;442</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;443</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;444</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * This class is used to read properties lines.  These lines do</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;445</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * not terminate with new-line chars but rather when there is no</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;446</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * backslash sign a the end of the line.  This is used to</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;447</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * concatenate multiple lines for readability.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;448</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;449</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> PropertiesReader <span class="keyword">extends</span> LineNumberReader</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;450</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;451</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;452</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * Constructor.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;453</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;454</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @param reader A Reader.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;455</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;456</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">public</span> PropertiesReader(Reader reader)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;457</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;458</td>
+      <td class="nbHitsCovered">&nbsp;1161</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">super</span>(reader);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;459</td>
+      <td class="nbHitsCovered">&nbsp;1161</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;460</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;461</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;462</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * Read a property. Returns null if Stream is</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;463</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * at EOF. Concatenates lines ending with "&#92;&#34.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;464</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * Skips lines beginning with "#" or "!" and empty lines.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;465</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;466</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @return A string containing a property value or null</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;467</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;468</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @throws IOException in case of an I/O error</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;469</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;470</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">public</span> String readProperty() throws IOException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;471</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;472</td>
+      <td class="nbHitsCovered">&nbsp;28377</td>
+      <td class="src"><pre class="src">&nbsp;            StringBuffer buffer = <span class="keyword">new</span> StringBuffer();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;473</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;474</td>
+      <td class="nbHitsCovered">&nbsp;29691</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">while</span> (<span class="keyword">true</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;475</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;476</td>
+      <td class="nbHitsCovered">&nbsp;54153</td>
+      <td class="src"><pre class="src">&nbsp;                String line = readLine();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;477</td>
+      <td class="nbHitsCovered">&nbsp;54153</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (line == <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;478</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;479</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="comment">// EOF</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;480</td>
+      <td class="nbHitsCovered">&nbsp;1158</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">return</span> <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;481</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;482</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;483</td>
+      <td class="nbHitsCovered">&nbsp;52995</td>
+      <td class="src"><pre class="src">&nbsp;                line = line.trim();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;484</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;485</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="comment">// skip comments and empty lines</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;486</td>
+      <td class="nbHitsCovered">&nbsp;52995</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (StringUtils.isEmpty(line) || (line.charAt(0) == '#') || (line.charAt(0) == '!'))</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;487</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;488</td>
+      <td class="nbHitsCovered">&nbsp;438</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">continue</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;489</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;490</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;491</td>
+      <td class="nbHitsCovered">&nbsp;28533</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (checkCombineLines(line))</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;492</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;493</td>
+      <td class="nbHitsCovered">&nbsp;1314</td>
+      <td class="src"><pre class="src">&nbsp;                    line = line.substring(0, line.length() - 1);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;494</td>
+      <td class="nbHitsCovered">&nbsp;1314</td>
+      <td class="src"><pre class="src">&nbsp;                    buffer.append(line);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;495</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;496</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;497</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;498</td>
+      <td class="nbHitsCovered">&nbsp;27219</td>
+      <td class="src"><pre class="src">&nbsp;                    buffer.append(line);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;499</td>
+      <td class="nbHitsCovered">&nbsp;27219</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">break</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;500</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;501</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;502</td>
+      <td class="nbHitsCovered">&nbsp;27219</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> buffer.toString();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;503</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;504</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;505</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;506</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * Checks if the passed in line should be combined with the following.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;507</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * This is true, if the line ends with an odd number of backslashes.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;508</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;509</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @param line the line</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;510</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @return a flag if the lines should be combined</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;511</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;512</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> checkCombineLines(String line)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;513</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;514</td>
+      <td class="nbHitsCovered">&nbsp;28533</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">int</span> bsCount = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;515</td>
+      <td class="nbHitsCovered">&nbsp;33369</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">for</span> (<span class="keyword">int</span> idx = line.length() - 1; idx &#62;= 0 &#38;&#38; line.charAt(idx) == '&#92;&#92;'; idx--)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;516</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;517</td>
+      <td class="nbHitsCovered">&nbsp;4836</td>
+      <td class="src"><pre class="src">&nbsp;                bsCount++;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;518</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;519</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;520</td>
+      <td class="nbHitsCovered">&nbsp;28533</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> bsCount % 2 == 1;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;521</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;522</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    } <span class="comment">// class PropertiesReader</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;523</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;524</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;525</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * This class is used to write properties lines.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;526</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;527</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> PropertiesWriter <span class="keyword">extends</span> FilterWriter</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;528</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;529</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">/*<span class="comment">* The delimiter for multi-valued properties.*/</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;530</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">private</span> <span class="keyword">char</span> delimiter;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;531</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;532</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;533</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * Constructor.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;534</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;535</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @param writer a Writer object providing the underlying stream</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;536</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @param delimiter the delimiter character for multi-valued properties</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;537</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;538</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">public</span> PropertiesWriter(Writer writer, <span class="keyword">char</span> delimiter)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;539</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;540</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">super</span>(writer);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;541</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">this</span>.delimiter = delimiter;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;542</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;543</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;544</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;545</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * Write a property.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;546</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;547</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @param key the key of the property</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;548</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @param value the value of the property</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;549</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;550</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @throws IOException if an I/O error occurs</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;551</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;552</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">public</span> <span class="keyword">void</span> writeProperty(String key, Object value) throws IOException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;553</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;554</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            write(escapeKey(key));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;555</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            write(<span class="string">" = "</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;556</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (value != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;557</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;558</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                String v = StringEscapeUtils.escapeJava(String.valueOf(value));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;559</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                v = StringUtils.replace(v, String.valueOf(delimiter), <span class="string">"&#92;&#92;"</span> + delimiter);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;560</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                write(v);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;561</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;562</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;563</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            writeln(<span class="keyword">null</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;564</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;565</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;566</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;567</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * Write a property.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;568</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;569</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @param key The key of the property</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;570</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @param values The array of values of the property</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;571</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;572</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @throws IOException if an I/O error occurs</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;573</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;574</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">public</span> <span class="keyword">void</span> writeProperty(String key, List values) throws IOException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;575</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;576</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &#60; values.size(); i++)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;577</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;578</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                writeProperty(key, values.get(i));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;579</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;580</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;581</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;582</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;583</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * Write a comment.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;584</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;585</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @param comment the comment to write</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;586</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @throws IOException if an I/O error occurs</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;587</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;588</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">public</span> <span class="keyword">void</span> writeComment(String comment) throws IOException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;589</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;590</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            writeln(<span class="string">"# "</span> + comment);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;591</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;592</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;593</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;594</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * Escape the separators in the key.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;595</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;596</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @param key the key</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;597</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @return the escaped key</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;598</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @since 1.2</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;599</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;600</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">private</span> String escapeKey(String key)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;601</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;602</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            StringBuffer newkey = <span class="keyword">new</span> StringBuffer();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;603</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;604</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &#60; key.length(); i++)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;605</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;606</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">char</span> c = key.<span <span class="keyword">class</span>="keyword">char</span>At(i);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;607</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;608</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (ArrayUtils.contains(SEPARATORS, c) || ArrayUtils.contains(WHITE_SPACE, c))</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;609</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;610</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="comment">// escape the separator</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;611</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    newkey.append('&#92;&#92;');</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;612</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    newkey.append(c);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;613</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;614</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;615</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;616</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    newkey.append(c);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;617</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;618</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;619</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;620</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> newkey.toString();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;621</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;622</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;623</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;624</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * Helper method for writing a line with the platform specific line</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;625</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * ending.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;626</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;627</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @param s the content of the line (may be &#60;b&#62;null&#60;/b&#62;)</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;628</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         * @throws IOException if an error occurs</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;629</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">         */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;630</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">private</span> <span class="keyword">void</span> writeln(String s) throws IOException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;631</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;632</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (s != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;633</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;634</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                write(s);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;635</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;636</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            write(LINE_SEPARATOR);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;637</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;638</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;639</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    } <span class="comment">// class PropertiesWriter</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;640</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;641</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;642</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;p&#62;Unescapes any Java literals found in the &#60;code&#62;String&#60;/code&#62; to a</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;643</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * &#60;code&#62;Writer&#60;/code&#62;.&#60;/p&#62; This is a slightly modified version of the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;644</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * StringEscapeUtils.unescapeJava() function in commons-lang that doesn't</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;645</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * drop escaped separators (i.e '\,').</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;646</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;647</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param str  the &#60;code&#62;String&#60;/code&#62; to unescape, may be null</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;648</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param delimiter the delimiter for multi-valued properties</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;649</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return the processed string</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;650</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws IllegalArgumentException if the Writer is &#60;code&#62;null&#60;/code&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;651</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;652</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">static</span> String unescapeJava(String str, <span class="keyword">char</span> delimiter)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;653</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;654</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (str == <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;655</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;656</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;657</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;658</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> sz = str.length();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;659</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        StringBuffer out = <span class="keyword">new</span> StringBuffer(sz);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;660</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        StringBuffer unicode = <span class="keyword">new</span> StringBuffer(UNICODE_LEN);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;661</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">boolean</span> hadSlash = false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;662</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">boolean</span> inUnicode = false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;663</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &#60; sz; i++)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;664</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;665</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">char</span> ch = str.<span <span class="keyword">class</span>="keyword">char</span>At(i);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;666</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (inUnicode)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;667</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;668</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="comment">// if in unicode, then we're reading unicode</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;669</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="comment">// values in somehow</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;670</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                unicode.append(ch);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;671</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (unicode.length() == UNICODE_LEN)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;672</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;673</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="comment">// unicode now contains the four hex digits</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;674</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="comment">// which represents our unicode character</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;675</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;676</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;677</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="keyword">int</span> value = Integer.parseInt(unicode.toString(), HEX_RADIX);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;678</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        out.append((<span class="keyword">char</span>) value);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;679</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        unicode.setLength(0);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;680</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        inUnicode = false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;681</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        hadSlash = false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;682</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;683</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">catch</span> (NumberFormatException nfe)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;684</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;685</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationRuntimeException(<span class="string">"Unable to parse unicode value: "</span> + unicode, nfe);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;686</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;687</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;688</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">continue</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;689</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;690</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;691</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (hadSlash)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;692</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;693</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="comment">// handle an escaped value</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;694</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                hadSlash = false;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;695</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;696</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (ch == '&#92;&#92;')</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;697</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;698</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.append('&#92;&#92;');</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;699</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;700</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span> <span class="keyword">if</span> (ch == '\'')</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;701</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;702</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.append('\'');</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;703</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;704</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span> <span class="keyword">if</span> (ch == '&#92;&#34')</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;705</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;706</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.append('<span class="string">"');</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;707</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;708</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span> <span class="keyword">if</span> (ch == 'r')</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;709</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;710</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.append('\r');</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;711</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;712</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span> <span class="keyword">if</span> (ch == 'f')</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;713</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;714</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.append('\f');</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;715</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;716</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span> <span class="keyword">if</span> (ch == 't')</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;717</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;718</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.append('\t');</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;719</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;720</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span> <span class="keyword">if</span> (ch == 'n')</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;721</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;722</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.append('\n');</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;723</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;724</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span> <span class="keyword">if</span> (ch == 'b')</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;725</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;726</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.append('\b');</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;727</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;728</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span> <span class="keyword">if</span> (ch == delimiter)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;729</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;730</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.append('&#92;&#92;');</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;731</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.append(delimiter);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;732</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;733</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span> <span class="keyword">if</span> (ch == 'u')</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;734</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;735</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="comment">// uh-oh, we're in unicode country....</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;736</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    inUnicode = <span class="keyword">true</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;737</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;738</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;739</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;740</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    out.append(ch);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;741</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;742</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;743</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">continue</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;744</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;745</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">else</span> <span class="keyword">if</span> (ch == '&#92;&#92;')</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;746</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;747</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                hadSlash = <span class="keyword">true</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;748</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">continue</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;749</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;750</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            out.append(ch);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;751</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;752</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;753</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (hadSlash)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;754</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;755</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="comment">// then we're in the weird case of a \ at the end of the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;756</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="comment">// string, let's output it anyway.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;757</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            out.append('&#92;&#92;');</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;758</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;759</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;760</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> out.toString();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;761</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;762</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;763</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;764</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Parse a property line and return the key and the value in an array.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;765</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;766</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param line the line to parse</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;767</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return an array with the property's key and value</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;768</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @since 1.2</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;769</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;770</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String[] parseProperty(String line)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;771</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;772</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// sorry for this spaghetti code, please replace it as soon as</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;773</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// possible with a regexp when the Java 1.3 requirement is dropped</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;774</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;775</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        String[] result = <span class="keyword">new</span> String[2];</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;776</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        StringBuffer key = <span class="keyword">new</span> StringBuffer();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;777</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        StringBuffer value = <span class="keyword">new</span> StringBuffer();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;778</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;779</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// state of the automaton:</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;780</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// 0: key parsing</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;781</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// 1: antislash found while parsing the key</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;782</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// 2: separator crossing</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;783</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// 3: value parsing</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;784</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">int</span> state = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;785</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;786</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">for</span> (<span class="keyword">int</span> pos = 0; pos &#60; line.length(); pos++)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;787</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;788</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">char</span> c = line.<span <span class="keyword">class</span>="keyword">char</span>At(pos);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;789</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;790</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">switch</span> (state)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;791</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;792</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">case</span> 0:</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;793</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">if</span> (c == '&#92;&#92;')</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;794</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;795</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        state = 1;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;796</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;797</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">else</span> <span class="keyword">if</span> (ArrayUtils.contains(WHITE_SPACE, c))</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;798</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;799</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="comment">// switch to the separator crossing state</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;800</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        state = 2;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;801</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;802</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">else</span> <span class="keyword">if</span> (ArrayUtils.contains(SEPARATORS, c))</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;803</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;804</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="comment">// switch to the value parsing state</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;805</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        state = 3;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;806</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;807</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;808</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;809</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        key.append(c);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;810</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;811</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;812</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">break</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;813</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;814</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">case</span> 1:</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;815</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">if</span> (ArrayUtils.contains(SEPARATORS, c) || ArrayUtils.contains(WHITE_SPACE, c))</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;816</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;817</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="comment">// this is an escaped separator or white space</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;818</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        key.append(c);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;819</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;820</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;821</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;822</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="comment">// another escaped character, the '\' is preserved</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;823</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        key.append('&#92;&#92;');</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;824</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        key.append(c);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;825</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;826</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;827</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="comment">// return to the key parsing state</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;828</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    state = 0;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;829</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;830</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">break</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;831</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;832</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">case</span> 2:</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;833</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">if</span> (ArrayUtils.contains(WHITE_SPACE, c))</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;834</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;835</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="comment">// do nothing, eat all white spaces</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;836</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        state = 2;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;837</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;838</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">else</span> <span class="keyword">if</span> (ArrayUtils.contains(SEPARATORS, c))</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;839</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;840</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="comment">// switch to the value parsing state</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;841</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        state = 3;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;842</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;843</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;844</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;845</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="comment">// any other character indicates we encoutered the beginning of the value</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;846</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        value.append(c);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;847</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;848</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="comment">// switch to the value parsing state</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;849</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        state = 3;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;850</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;851</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;852</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">break</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;853</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;854</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">case</span> 3:</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;855</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    value.append(c);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;856</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">break</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;857</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;858</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;859</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;860</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        result[0] = key.toString().trim();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;861</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        result[1] = value.toString().trim();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;862</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;863</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> result;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;864</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;865</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;866</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;867</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Helper method for loading an included properties file. This method is</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;868</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * called by &#60;code&#62;load()&#60;/code&#62; when an &#60;code&#62;include&#60;/code&#62; property</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;869</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * is encountered. It tries to resolve relative file names based on the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;870</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * current base path. If this fails, a resolution based on the location of</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;871</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * this properties file is tried.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;872</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;873</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param fileName the name of the file to load</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;874</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if loading fails</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;875</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;876</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">void</span> loadIncludeFile(String fileName) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;877</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;878</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        URL url = ConfigurationUtils.locate(getBasePath(), fileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;879</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (url == <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;880</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;881</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            URL baseURL = getURL();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;882</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (baseURL != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;883</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;884</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                url = ConfigurationUtils.locate(baseURL.toString(), fileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;885</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;886</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;887</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;888</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (url == <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;889</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;890</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(<span class="string">"Cannot resolve include file "</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;891</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    + fileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;892</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;893</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        load(url);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;894</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;895</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;}</pre></td>
+    </tr>
+  </table>
+<p><table cellpadding="0" cellspacing="0" class="report">  <tr class="report">    <td class="reportText"><span class="text">    This report is generated by <a href="http://www.jcoverage.com">jcoverage</a>, <a href="http://maven.apache.org">Maven</a> and <a href="http://maven.apache.org/reference/plugins/jcoverage/">Maven JCoverage Plugin</a>.    </span></td>  </tr></table>
+</body>
+</html>

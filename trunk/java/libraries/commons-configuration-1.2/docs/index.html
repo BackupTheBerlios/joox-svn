@@ -1,0 +1,1279 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+  
+  
+  
+
+
+
+    
+	
+	
+
+    
+    
+
+    
+    
+      
+      
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+          <title>
+            Configuration - 
+          Configuration
+        
+          </title>
+        
+        
+        
+        
+        
+          <style type="text/css" media="all">
+             @import url("./style/tigris.css");
+             @import url("./style/maven.css");
+             @import url("./style/project.css");
+          </style>
+          <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        
+
+        
+
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+
+
+       
+          <meta name="author" content="Pete Kazmier"></meta>
+          <meta name="email" content="pete@kazmier.com"></meta>
+        
+          <meta name="author" content="Martin Poeschl"></meta>
+          <meta name="email" content="mpoeschl@marmot.at"></meta>
+        
+          <meta name="author" content="Jason van Zyl"></meta>
+          <meta name="email" content="jason@zenplex.com"></meta>
+        
+          <meta name="author" content="Eric Pugh"></meta>
+          <meta name="email" content="epugh@upstate.com"></meta>
+        
+          <meta name="author" content="Tim O&apos;Brien"></meta>
+          <meta name="email" content="tobrien@discursive.com"></meta>
+        
+        
+        
+        
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org">
+                    <img border="0" name="organization-logo" alt="The Apache Software Foundation" src="http://jakarta.apache.org/images/original-jakarta-logo.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/configuration/">
+                      <img border="0" alt="Commons Configuration" src="./images/logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+<script type="text/javascript">
+<!--
+  var myWidth = 0, myHeight = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else if( document.documentElement &&
+      ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    //IE 6+ in 'standards compliant mode'
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    //IE 4 compatible
+    myWidth = document.body.clientWidth;
+    myHeight = document.body.clientHeight;
+  }
+  // window.alert( 'Width = ' + myWidth );
+  if (myWidth < 850) {
+    document['organization-logo'].src='http://jakarta.apache.org/images/original-jakarta-logo.gif';
+  }
+// -->
+</script>
+
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: Dec 17, 2005
+                  | Doc for 1.2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                    
+    
+    
+      
+      
+      
+      <a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Jakarta Commons</a>
+      
+    
+  
+                  
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+				
+    <div>
+      <strong>About Us</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Home</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/contributors.html" class="externalLink" title="External Link">Contributors</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/license.html" class="externalLink" title="External Link">License</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/components.html" class="externalLink" title="External Link">Components</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/sandbox/index.html" class="externalLink" title="External Link">Sandbox</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/dormant/index.html" class="externalLink" title="External Link">Dormant</a>
+      	
+      </small>
+	  
+    </div>
+  
+    </div>
+  
+                
+    <div>
+      <strong>Configuration</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="index.html">Home</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/downloads/downloads_commons-configuration.cgi" class="externalLink" title="External Link">Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="overview.html">Using Configuration</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_properties.html">Properties Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_xml.html">XML Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_configurationfactory.html">ConfigurationFactory Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_compositeconfiguration.html">Composite Config Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="dependencies.html">Runtime Dependencies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="building.html">Building</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tasks-report.html">Roadmap</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html">Javadoc (latest)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs_1.1/index.html">Javadoc (Release 1.1)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs_1.0/index.html">Javadoc (Release 1.0)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://svn.apache.org/repos/asf/jakarta/commons/proper/configuration/" class="externalLink" title="External Link">SVN</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Extensions</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/turbine/fulcrum/fulcrum-configuration/index.html" class="externalLink" title="External Link">Avalon Component</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="index.html">About Commons Configuration</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="downloads.html">Downloads</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="project-info.html">Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="maven-reports.html">Project Reports</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+    <div>
+      <strong>General Information</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Charter</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/volunteering.html" class="externalLink" title="External Link">Volunteering</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/patches.html" class="externalLink" title="External Link">Contributing Patches</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/building.html" class="externalLink" title="External Link">Building Components</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/releases/index.html" class="externalLink" title="External Link">Releasing Components</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://wiki.apache.org/jakarta-commons/FrontPage" class="externalLink" title="External Link">Wiki</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Jakarta Community</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/getinvolved.html" class="externalLink" title="External Link">Get Involved</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/mail.html" class="externalLink" title="External Link">Mailing Lists</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Related</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://db.apache.org/commons/" class="externalLink" title="External Link">DB Commons</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://xml.apache.org/commons/" class="externalLink" title="External Link">XML Commons</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Built by Maven"><img style="border: 1px solid black" alt="Built by Maven" src="./images/logos/maven-feather.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Intro">Intro</a>
+        </h3>
+      
+      <p>
+      	Commons Configuration provides a generic configuration interface which enables
+        an application to read configuration data from a variety of sources. Commons Configuration
+      	provides typed access to single, and multi-valued configuration parameters as demonstrated
+        by the following code:
+
+
+    <div id="source">
+      <pre>
+Double double = config.getDouble("number");
+Integer integer = config.getInteger("number");
+</pre>
+    </div>
+  
+
+      </p><p>
+		Configuration parameters may be loaded from the following sources:
+
+        <ul>
+          <li>Properties files</li>
+          <li>XML documents</li>
+          <li>Property list files (.plist)</li>
+          <li>JNDI</li>
+          <li>JDBC Datasource</li>
+          <li>System properties</li>
+          <li>Applet parameters</li>
+          <li>Servlet parameters</li>
+        </ul>
+
+        Different configuration sources can be mixed using a <code>ConfigurationFactory</code> and
+		a <code>CompositeConfiguration</code>. Additional sources of configuration parameters can
+        be created by using custom configuration objects. This customization can be achieved by
+		extending <code>AbstractConfiguration</code> or <code>AbstractFileConfiguration</code>.
+      </p><p>
+		The full Javadoc API documentation is available <a href="apidocs/index.html">here</a>.
+	  </p>
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Latest Release">Latest Release</a>
+        </h3>
+      
+      <p>
+        The latest release of Apache Jakarta Commons Configuration is available from <a href="downloads.html">here</a>. 
+        It is also available from <a href="http://www.ibiblio.org/maven/commons-configuration/jars">IBiblio</a>.
+        The <a href="changes-report.html">Changes Report</a> explains all of the changes and bug fixes that have been made.
+      </p>
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="History">History</a>
+        </h3>
+      
+      <p>
+        Commons Configuration started as code in Apache JServ.  The JServ code was subsequently
+        added to <a href="http://jakarta.apache.org/turbine">Jakarta Turbine</a>. After Jakarta
+        Turbine, this configuration interface moved to <a href="http://jakarta.apache.org/velocity">Jakarta Velocity</a>
+        and underwent various improvements.  After Velocity, this code was introduced to the
+        <a href="http://jakarta.apache.org/commons">Jakarta Commons</a> as <code>ExtendedProperties</code>.
+        Configuration began life in the Commons as a Sandbox component, and was promoted to the
+        Commons Proper in late 2003.
+      </p>
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Bugs">Bugs</a>
+        </h3>
+      
+      <p>Bugs may be reported via the Bugzilla Management system. The following links may prove useful:</p><ul>
+        <li><a href="http://issues.apache.org/bugzilla/createaccount.cgi">Create a Bugzilla account</a></li>
+        <li><a href="http://issues.apache.org/bugzilla/enter_bug.cgi?product=Commons&amp;component=Configuration">Submit a bug report</a></li>
+        <li><a href="http://issues.apache.org/bugzilla/buglist.cgi?product=Commons&amp;component=Configuration&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED">All open Configuration bugs</a></li>
+        <li><a href="http://issues.apache.org/bugzilla/buglist.cgi?product=Commons&amp;component=Configuration">All Configuration bugs</a></li>
+      </ul>
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2005, The Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rss version="0.91">
+  <channel>
+    <title>Checkstyle report</title>
+    <link>http://jakarta.apache.org/commons/configuration/</link>
+    <description>Checkstyle report</description>
+    <language>en-us</language>
+    <copyright>Copyright 2004 The Apache Software Foundation</copyright>
+    <item>
+      <title>File: 111 , Errors: 80 , Warnings: 0 , Infos: 0</title>
+      <link>http://jakarta.apache.org/commons/configuration//checkstyle-report.html</link>
+      <description>
+        <p>Click
+          <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html">here</a>for the full Checkstyle report.</p>
+        <table border="1" summary="Files">
+          <thead>
+            <tr>
+              <th>Files</th>
+              <th style="width:30px">I</th>
+              <th style="width:30px">W</th>
+              <th style="width:30px">E</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/AbstractFileConfiguration.java">org/apache/commons/configuration/AbstractFileConfiguration.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/AbstractHierarchicalFileConfiguration.java">org/apache/commons/configuration/AbstractHierarchicalFileConfiguration.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>34</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/DataConfiguration.java">org/apache/commons/configuration/DataConfiguration.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/MapConfiguration.java">org/apache/commons/configuration/MapConfiguration.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/XMLPropertiesConfiguration.java">org/apache/commons/configuration/XMLPropertiesConfiguration.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/plist/PropertyListConfiguration.java">org/apache/commons/configuration/plist/PropertyListConfiguration.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/plist/XMLPropertyListConfiguration.java">org/apache/commons/configuration/plist/XMLPropertyListConfiguration.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/reloading/FileChangedReloadingStrategy.java">org/apache/commons/configuration/reloading/FileChangedReloadingStrategy.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/reloading/InvariantReloadingStrategy.java">org/apache/commons/configuration/reloading/InvariantReloadingStrategy.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/web/AppletConfiguration.java">org/apache/commons/configuration/web/AppletConfiguration.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/web/ServletConfiguration.java">org/apache/commons/configuration/web/ServletConfiguration.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/web/ServletContextConfiguration.java">org/apache/commons/configuration/web/ServletContextConfiguration.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/web/ServletFilterConfiguration.java">org/apache/commons/configuration/web/ServletFilterConfiguration.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="http://jakarta.apache.org/commons/configuration//checkstyle-report.html#org/apache/commons/configuration/web/ServletRequestConfiguration.java">org/apache/commons/configuration/web/ServletRequestConfiguration.java</a>
+              </td>
+              <td>0</td>
+              <td>0</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+      </description>
+    </item>
+  </channel>
+</rss>

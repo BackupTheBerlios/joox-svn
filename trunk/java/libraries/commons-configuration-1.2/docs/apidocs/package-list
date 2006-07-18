@@ -1,0 +1,5 @@
+org.apache.commons.configuration
+org.apache.commons.configuration.beanutils
+org.apache.commons.configuration.plist
+org.apache.commons.configuration.reloading
+org.apache.commons.configuration.web

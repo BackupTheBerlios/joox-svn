@@ -1,0 +1,1323 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+  
+  
+  
+
+
+
+    
+	
+	
+
+    
+    
+
+    
+    
+      
+      
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+          <title>
+            Configuration - 
+          Building
+        
+          </title>
+        
+        
+        
+        
+        
+          <style type="text/css" media="all">
+             @import url("./style/tigris.css");
+             @import url("./style/maven.css");
+             @import url("./style/project.css");
+          </style>
+          <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        
+
+        
+
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+
+
+       
+          <meta name="author" content="Oliver Heger"></meta>
+          <meta name="email" content="oheger@apache.org"></meta>
+        
+        
+        
+        
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org">
+                    <img border="0" name="organization-logo" alt="The Apache Software Foundation" src="http://jakarta.apache.org/images/original-jakarta-logo.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/configuration/">
+                      <img border="0" alt="Commons Configuration" src="./images/logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+<script type="text/javascript">
+<!--
+  var myWidth = 0, myHeight = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else if( document.documentElement &&
+      ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    //IE 6+ in 'standards compliant mode'
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    //IE 4 compatible
+    myWidth = document.body.clientWidth;
+    myHeight = document.body.clientHeight;
+  }
+  // window.alert( 'Width = ' + myWidth );
+  if (myWidth < 850) {
+    document['organization-logo'].src='http://jakarta.apache.org/images/original-jakarta-logo.gif';
+  }
+// -->
+</script>
+
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: Dec 17, 2005
+                  | Doc for 1.2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                    
+    
+    
+      
+      
+      
+      <a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Jakarta Commons</a>
+      
+    
+  
+                  
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+				
+    <div>
+      <strong>About Us</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Home</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/contributors.html" class="externalLink" title="External Link">Contributors</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/license.html" class="externalLink" title="External Link">License</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/components.html" class="externalLink" title="External Link">Components</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/sandbox/index.html" class="externalLink" title="External Link">Sandbox</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/dormant/index.html" class="externalLink" title="External Link">Dormant</a>
+      	
+      </small>
+	  
+    </div>
+  
+    </div>
+  
+                
+    <div>
+      <strong>Configuration</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html">Home</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/downloads/downloads_commons-configuration.cgi" class="externalLink" title="External Link">Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="overview.html">Using Configuration</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_properties.html">Properties Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_xml.html">XML Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_configurationfactory.html">ConfigurationFactory Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_compositeconfiguration.html">Composite Config Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="dependencies.html">Runtime Dependencies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="building.html">Building</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tasks-report.html">Roadmap</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html">Javadoc (latest)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs_1.1/index.html">Javadoc (Release 1.1)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs_1.0/index.html">Javadoc (Release 1.0)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://svn.apache.org/repos/asf/jakarta/commons/proper/configuration/" class="externalLink" title="External Link">SVN</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Extensions</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/turbine/fulcrum/fulcrum-configuration/index.html" class="externalLink" title="External Link">Avalon Component</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html">About Commons Configuration</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="downloads.html">Downloads</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="project-info.html">Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="maven-reports.html">Project Reports</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+    <div>
+      <strong>General Information</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Charter</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/volunteering.html" class="externalLink" title="External Link">Volunteering</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/patches.html" class="externalLink" title="External Link">Contributing Patches</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/building.html" class="externalLink" title="External Link">Building Components</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/releases/index.html" class="externalLink" title="External Link">Releasing Components</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://wiki.apache.org/jakarta-commons/FrontPage" class="externalLink" title="External Link">Wiki</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Jakarta Community</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/getinvolved.html" class="externalLink" title="External Link">Get Involved</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/mail.html" class="externalLink" title="External Link">Mailing Lists</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Related</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://db.apache.org/commons/" class="externalLink" title="External Link">DB Commons</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://xml.apache.org/commons/" class="externalLink" title="External Link">XML Commons</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Built by Maven"><img style="border: 1px solid black" alt="Built by Maven" src="./images/logos/maven-feather.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Overview">Overview</a>
+        </h3>
+      
+      <p>
+            Commons Configuration can be built using
+            <a href="http://maven.apache.org">maven</a> or
+            <a href="http://ant.apache.org">ant</a>. While building on a JDK
+            1.4 and higher should be no problem for JDK 1.3 (which is the
+            minimum required JDK) some preparations are necessary. This is
+            covered in full detail in the Building with JDK 1.3 section below.
+          </p>
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Maven Goals">Maven Goals</a>
+        </h3>
+      
+      <p>
+            Maven 1.x is our recommended build tool. To build the Configuration
+            jar file, change into the directory where you unzipped the source
+            distribution or where you checked out the sources from SVN and run
+            "maven jar". The result will be in the (newly created) "target"
+            subdirectory.
+          </p><p>
+            To build the Javadocs, run "maven javadoc".
+            The result will be in "target/docs/apidocs".
+          </p><p>
+            To build the full website, run "maven site". <em>Note:</em> For this
+            to work you will also have to checkout the 
+            <a href="http://svn.apache.org/repos/asf/jakarta/commons/proper/commons-build/trunk/">
+            <code>commons-build</code></a> module as a sibling directory to your
+            Configuration root directory.
+            The result will be in "target/docs".
+          </p>
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Ant Goals">Ant Goals</a>
+        </h3>
+      
+      <p>
+            To build a jar file, change into Configuration's root directory and run "ant jar".
+            The result will be in the "target" subdirectory.
+          </p><p>
+            To build the Javadocs, run "ant javadoc".
+            The result will be in "target/docs/apidocs".
+          </p>
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Building with JDK 1.3">Building with JDK 1.3</a>
+        </h3>
+      
+      <p>
+            If you want to build Commons Configuration on a JDK 1.3, you will
+            face two problems:
+          </p><p>
+            The first problem is that JDK 1.3 does not contain the JDBC 2.0
+            standard extensions, which are used by the
+            <code>DatabaseConfiguration</code> class. Unfortunately, due to legal
+            issues, the jar file containing these extensions cannot be
+            distributed through the typical maven repositories and automatically
+            downloaded. To resolve this issue perform the following steps:
+          </p><p>
+            <ul>
+              <li>Download the JDBC 2.0 Optional Package from
+              <a href="http://java.sun.com/products/jdbc/download.html">
+              http://java.sun.com/products/jdbc/download.html</a> and store
+              the jdbc-stdext-2.0.jar somewhere on your hard disk.</li>
+              <li>Create a <code>build.properties</code> file in the Configuration
+              root directory that must contain the following line:<br></br>
+              <code>dependency.jdbc = <em>&lt;path to jdbc-stdext-2.0.jar&gt;</em></code></li>
+            </ul>
+          </p><p>
+            The second problem is related to a test class for
+            <code>DatabaseConfiguration</code> that makes use of
+            <a href="http://hsqldb.org">hsqldb</a>. At the time of writing this, the
+            hsqldb jar files distributed on the ibiblio maven repository only
+            support JDK 1.4 and higher. This makes the tests fail with a class
+            not found exception for <code>java.sql.SavePoint</code>. There are
+            some workarounds for this problem:
+          </p><p>
+            <ul>
+              <li>Disable the failing test class
+              (<code>org.apache.commons.configuration.TestDatabaseConfiguration</code>)
+              in the build script. For instance if building with maven, this can
+              be done with an <code>excludes</code> element in the
+              <code>unitTest</code> section of <code>project.xml</code>.</li>
+              <li>It is possible to download a hsqldb distribution and recompile
+              on JDK 1.3. The jar that is created this way will cause no
+              problems on a JDK 1.3.</li>
+              <li>Another solution would be to run maven on a JDK 1.4 or higher and use
+              the <code>maven.compile.executable</code> property to point to
+              a JDK 1.3 compiler. This will ensure that the classes are compiled
+              on JDK 1.3, but the tests are run on the JDK maven is executing.
+              Refer to the documentation of the
+              <a href="http://maven.apache.org/maven-1.x/reference/plugins/java/">
+              Maven Java Plug-in</a> for further information.</li>
+            </ul>
+          </p><p>
+            If these problems are solved, the build can be performed as
+            described above.
+          </p>
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Setting custom build parameters">Setting custom build parameters</a>
+        </h3>
+      
+      <p>
+            Both the maven and the ant build script support a file called
+            <code>build.properties</code> that can contain custom properties
+            definitions. If this file exists in the project's root directory,
+            it will be read and the properties it defines will be added to the
+            running build script. This mechanism allows for customizing the
+            build process without the need of changing the main build scripts.
+          </p><p>
+            One use case for setting custom build properties would be to build
+            for a specific JDK version: If you build the jar on a JDK 1.5 for
+            instance, the classes won't be compatible with older JDK versions.
+            To enforce compatibility you can create a <code>build.properties</code>
+            file containing the following maven specific settings:
+          </p>
+    <div id="source">
+      <pre>
+maven.compile.source = 1.3
+maven.compile.target = 1.3
+</pre>
+    </div>
+  
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2005, The Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

@@ -1,0 +1,4126 @@
+<html>
+<head>
+<title>unit tests coverage</title>
+<link rel ="stylesheet" type="text/css" href="../../../../style.css" title="Style">
+</head>
+<body>
+<span class="title">Coverage report</span>
+<p>
+  <table cellspacing="0" cellpadding="0" class="report">
+  <tr class="report">
+    <th class="report">&nbsp;</th>
+    <th class="report">%line</th>
+    <th class="report">%branch</th>
+  </tr>
+  <tr class="report">
+    <td class="reportText"><span class="text">org.apache.commons.configuration.AbstractFileConfiguration</span></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">92%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="92"></td><td class="percentUnCovered" width="8.0"></td></tr></table></td></tr></table></td>
+    <td class="reportValue"><table class="percentGraph" cellpadding="0" cellspacing="0" align="right"><tr><td><span class="text">100%&nbsp;</span></td><td><table class="percentGraph" cellpadding="0" cellspacing="0"><tr><td class="percentCovered" width="100"></td><td class="percentUnCovered" width="0.0"></td></tr></table></td></tr></table></td>
+  </tr>
+  </table>
+  <p>
+  <table cellspacing="0" cellpadding="0" class="src">
+    <tr>
+      <td class="numLine">&nbsp;1</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;2</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Copyright 2004-2005 The Apache Software Foundation.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;3</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;4</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the "License")</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;5</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * you may not use this file except in compliance with the License.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;6</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * You may obtain a copy of the License at</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;7</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;8</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *     http://www.apache.org/licenses/LICENSE-2.0</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;9</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;10</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;11</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * distributed under the License is distributed on an "AS IS" BASIS,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;12</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;13</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * See the License for the specific language governing permissions and</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;14</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * limitations under the License.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;15</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;16</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;17</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">package</span> org.apache.commons.configuration;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;18</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;19</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.File;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;20</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.FileOutputStream;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;21</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.IOException;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;22</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.InputStream;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;23</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.InputStreamReader;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;24</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.OutputStream;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;25</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.OutputStreamWriter;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;26</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.Reader;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;27</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.UnsupportedEncodingException;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;28</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.io.Writer;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;29</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.net.URL;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;30</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> java.util.Iterator;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;31</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;32</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> org.apache.commons.configuration.reloading.InvariantReloadingStrategy;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;33</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> org.apache.commons.configuration.reloading.ReloadingStrategy;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;34</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">import</span> org.apache.commons.lang.StringUtils;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;35</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;36</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;37</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;Partial implementation of the &#60;code&#62;FileConfiguration&#60;/code&#62; interface.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;38</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * Developpers of file based configuration may want to extend this class,</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;39</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * the two methods left to implement are &#60;code&#62;{@link FileConfiguration#load(Reader)}&#60;/code&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;40</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * and &#60;code&#62;{@link FileConfiguration#save(Writer)}.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;41</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;This base class already implements a couple of ways to specify the location</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;42</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * of the file this configuration is based on. The following possibilities</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;43</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * exist:</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;44</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;ul&#62;&#60;li&#62;URLs: With the method &#60;code&#62;setURL()&#60;/code&#62; a full URL to the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;45</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * configuration source can be specified. This is the most flexible way. Note</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;46</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * that the &#60;code&#62;save()&#60;/code&#62; methods support only &#60;em&#62;file:&#60;/em&#62; URLs.&#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;47</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;li&#62;Files: The &#60;code&#62;setFile()&#60;/code&#62; method allows to specify the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;48</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * configuration source as a file. This can be either a relative or an</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;49</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * absolute file. In the former case the file is resolved based on the current</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;50</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * directory.&#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;51</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;li&#62;As file paths in string form: With the &#60;code&#62;setPath()&#60;/code&#62; method a</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;52</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * full path to a configuration file can be provided as a string.&#60;/li&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;53</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;li&#62;Separated as base path and file name: This is the native form in which</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;54</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * the location is stored. The base path is a string defining either a local</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;55</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * directory or a URL. It can be set using the &#60;code&#62;setBasePath()&#60;/code&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;56</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * method. The file name, non surprisingly, defines the name of the configuration</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;57</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * file.&#60;/li&#62;&#60;/ul&#62;&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;58</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;Note that the &#60;code&#62;load()&#60;/code&#62; methods do not wipe out the configuration's</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;59</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * content before the new configuration file is loaded. Thus it is very easy to</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;60</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * construct a union configuration by simply loading multiple configuration</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;61</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * files, e.g.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;62</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;&#60;pre&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;63</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * config.load(configFile1);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;64</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * config.load(configFile2);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;65</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;/pre&#62;&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;66</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * &#60;p&#62;After executing this code fragment, the resulting configuration will</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;67</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * contain both the properties of configFile1 and configFile2. On the other</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;68</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * hand, if the current configuration file is to be reloaded, &#60;code&#62;clear()&#60;/code&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;69</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * should be called first. Otherwise the properties are doubled. This behavior</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;70</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * is analogous to the behavior of the &#60;code&#62;load(InputStream)&#60;/code&#62; method</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;71</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * in &#60;code&#62;java.util.Properties&#60;/code&#62;.&#60;/p&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;72</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;73</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @author Emmanuel Bourg</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;74</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @version $Revision$, $Date: 2005-12-14 20:59:07 +0100 (Wed, 14 Dec 2005) $</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;75</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> * @since 1.0-rc2</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;76</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment"> */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;77</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> AbstractFileConfiguration <span class="keyword">extends</span> BaseConfiguration implements FileConfiguration</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;78</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;{</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;79</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* Stores the file name.*/</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;80</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> String fileName;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;81</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;82</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* Stores the base path.*/</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;83</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> String basePath;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;84</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;85</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* The auto save flag.*/</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;86</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">boolean</span> autoSave;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;87</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;88</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* Holds a reference to the reloading strategy.*/</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;89</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> ReloadingStrategy strategy;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;90</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;91</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* A lock object for protecting reload operations.*/</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;92</td>
+      <td class="nbHitsCovered">&nbsp;1720</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> Object reloadLock = <span class="keyword">new</span> Object();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;93</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;94</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* Stores the encoding of the configuration file.*/</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;95</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> String encoding;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;96</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;97</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* Stores the URL from which the configuration file was loaded.*/</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;98</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> URL sourceURL;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;99</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;100</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">* A counter that prohibits reloading.*/</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;101</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">int</span> noReload;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;102</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;103</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;104</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Default constructor</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;105</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;106</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @since 1.1</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;107</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;108</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> AbstractFileConfiguration()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;109</td>
+      <td class="nbHitsCovered">&nbsp;1720</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;110</td>
+      <td class="nbHitsCovered">&nbsp;1720</td>
+      <td class="src"><pre class="src">&nbsp;        setReloadingStrategy(<span class="keyword">new</span> InvariantReloadingStrategy());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;111</td>
+      <td class="nbHitsCovered">&nbsp;1720</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;112</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;113</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;114</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Creates and loads the configuration from the specified file. The passed</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;115</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * in string must be a valid file name, either absolute or relativ.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;116</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;117</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param fileName The name of the file to load.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;118</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;119</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException Error while loading the file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;120</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @since 1.1</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;121</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;122</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> AbstractFileConfiguration(String fileName) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;123</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;124</td>
+      <td class="nbHitsCovered">&nbsp;579</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;125</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;126</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// store the file name</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;127</td>
+      <td class="nbHitsCovered">&nbsp;579</td>
+      <td class="src"><pre class="src">&nbsp;        setPath(fileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;128</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;129</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// load the file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;130</td>
+      <td class="nbHitsCovered">&nbsp;579</td>
+      <td class="src"><pre class="src">&nbsp;        load();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;131</td>
+      <td class="nbHitsCovered">&nbsp;573</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;132</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;133</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;134</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Creates and loads the configuration from the specified file.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;135</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;136</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param file The file to load.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;137</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException Error while loading the file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;138</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @since 1.1</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;139</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;140</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> AbstractFileConfiguration(File file) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;141</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;142</td>
+      <td class="nbHitsCovered">&nbsp;15</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;143</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;144</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// set the file and update the url, the base path and the file name</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;145</td>
+      <td class="nbHitsCovered">&nbsp;15</td>
+      <td class="src"><pre class="src">&nbsp;        setFile(file);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;146</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;147</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// load the file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;148</td>
+      <td class="nbHitsCovered">&nbsp;15</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (file.exists())</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;149</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;150</td>
+      <td class="nbHitsCovered">&nbsp;12</td>
+      <td class="src"><pre class="src">&nbsp;            load();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;151</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;152</td>
+      <td class="nbHitsCovered">&nbsp;12</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;153</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;154</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;155</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Creates and loads the configuration from the specified URL.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;156</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;157</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param url The location of the file to load.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;158</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException Error while loading the file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;159</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @since 1.1</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;160</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;161</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> AbstractFileConfiguration(URL url) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;162</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;163</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;164</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;165</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// set the URL and update the base path and the file name</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;166</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;        setURL(url);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;167</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;168</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// load the file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;169</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;        load();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;170</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;171</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;172</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;173</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Load the configuration from the underlying location.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;174</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;175</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if loading of the configuration fails</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;176</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;177</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> load() throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;178</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;179</td>
+      <td class="nbHitsCovered">&nbsp;1236</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (sourceURL != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;180</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;181</td>
+      <td class="nbHitsCovered">&nbsp;44</td>
+      <td class="src"><pre class="src">&nbsp;            load(sourceURL);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;182</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;183</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;184</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;185</td>
+      <td class="nbHitsCovered">&nbsp;1192</td>
+      <td class="src"><pre class="src">&nbsp;            load(getFileName());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;186</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;187</td>
+      <td class="nbHitsCovered">&nbsp;1200</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;188</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;189</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;190</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Locate the specified file and load the configuration. This does not</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;191</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * change the source of the configuration (i.e. the internally maintained file name).</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;192</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Use one of the setter methods for this purpose.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;193</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;194</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param fileName the name of the file to be loaded</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;195</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;196</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;197</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> load(String fileName) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;198</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;199</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;200</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;201</td>
+      <td class="nbHitsCovered">&nbsp;1207</td>
+      <td class="src"><pre class="src">&nbsp;            URL url = ConfigurationUtils.locate(basePath, fileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;202</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;203</td>
+      <td class="nbHitsCovered">&nbsp;1207</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (url == <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;204</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;205</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(<span class="string">"Cannot locate configuration source "</span> + fileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;206</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;207</td>
+      <td class="nbHitsCovered">&nbsp;1180</td>
+      <td class="src"><pre class="src">&nbsp;            load(url);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;208</td>
+      <td class="nbHitsCovered">&nbsp;1168</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;209</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">catch</span> (ConfigurationException e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;210</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;211</td>
+      <td class="nbHitsCovered">&nbsp;39</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">throw</span> e;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;212</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;213</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">catch</span> (Exception e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;214</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;215</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(e.getMessage(), e);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;216</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;217</td>
+      <td class="nbHitsCovered">&nbsp;1168</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;218</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;219</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;220</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Load the configuration from the specified file. This does not change</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;221</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * the source of the configuration (i.e. the internally maintained file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;222</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * name). Use one of the setter methods for this purpose.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;223</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;224</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param file the file to load</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;225</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;226</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;227</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> load(File file) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;228</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;229</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;230</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;231</td>
+      <td class="nbHitsCovered">&nbsp;36</td>
+      <td class="src"><pre class="src">&nbsp;            load(file.toURL());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;232</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;233</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">catch</span> (ConfigurationException e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;234</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;235</td>
+      <td class="nbHitsCovered">&nbsp;9</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">throw</span> e;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;236</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;237</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">catch</span> (Exception e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;238</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;239</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(e.getMessage(), e);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;240</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;241</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;242</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;243</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;244</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Load the configuration from the specified URL. This does not change the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;245</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * source of the configuration (i.e. the internally maintained file name).</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;246</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Use on of the setter methods for this purpose.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;247</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;248</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param url the URL of the file to be loaded</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;249</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;250</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;251</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> load(URL url) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;252</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;253</td>
+      <td class="nbHitsCovered">&nbsp;1710</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (sourceURL == <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;254</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;255</td>
+      <td class="nbHitsCovered">&nbsp;1216</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (StringUtils.isEmpty(getBasePath()))</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;256</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;257</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="comment">// ensure that we have a valid base path</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;258</td>
+      <td class="nbHitsCovered">&nbsp;186</td>
+      <td class="src"><pre class="src">&nbsp;                setBasePath(url.toString());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;259</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;260</td>
+      <td class="nbHitsCovered">&nbsp;1216</td>
+      <td class="src"><pre class="src">&nbsp;            sourceURL = url;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;261</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;262</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;263</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="comment">// throw an exception if the target URL is a directory</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;264</td>
+      <td class="nbHitsCovered">&nbsp;1710</td>
+      <td class="src"><pre class="src">&nbsp;        File file = ConfigurationUtils.fileFromURL(url);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;265</td>
+      <td class="nbHitsCovered">&nbsp;1710</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (file != <span class="keyword">null</span> &#38;&#38; file.isDirectory())</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;266</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;267</td>
+      <td class="nbHitsCovered">&nbsp;12</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(<span class="string">"Cannot load a configuration from a directory"</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;268</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;269</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;270</td>
+      <td class="nbHitsCovered">&nbsp;1698</td>
+      <td class="src"><pre class="src">&nbsp;        InputStream in = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;271</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;272</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;273</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;274</td>
+      <td class="nbHitsCovered">&nbsp;1698</td>
+      <td class="src"><pre class="src">&nbsp;            in = url.openStream();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;275</td>
+      <td class="nbHitsCovered">&nbsp;1698</td>
+      <td class="src"><pre class="src">&nbsp;            load(in);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;276</td>
+      <td class="nbHitsCovered">&nbsp;1689</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;277</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">catch</span> (ConfigurationException e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;278</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;279</td>
+      <td class="nbHitsCovered">&nbsp;9</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">throw</span> e;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;280</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;281</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">catch</span> (Exception e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;282</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;283</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(e.getMessage(), e);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;284</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;285</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">finally</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;286</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;287</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="comment">// close the input stream</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;288</td>
+      <td class="nbHitsCovered">&nbsp;9</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;289</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;290</td>
+      <td class="nbHitsCovered">&nbsp;1698</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (in != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;291</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;292</td>
+      <td class="nbHitsCovered">&nbsp;1698</td>
+      <td class="src"><pre class="src">&nbsp;                    in.close();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;293</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;294</td>
+      <td class="nbHitsCovered">&nbsp;1698</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;295</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">catch</span> (IOException e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;296</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;297</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                e.printStackTrace();</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;298</td>
+      <td class="nbHitsCovered">&nbsp;1698</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;299</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;300</td>
+      <td class="nbHitsCovered">&nbsp;1689</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;301</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;302</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;303</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Load the configuration from the specified stream, using the encoding</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;304</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * returned by {@link #getEncoding()}.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;305</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;306</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param in the input stream</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;307</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;308</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs during the load operation</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;309</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;310</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> load(InputStream in) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;311</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;312</td>
+      <td class="nbHitsCovered">&nbsp;1251</td>
+      <td class="src"><pre class="src">&nbsp;        load(in, getEncoding());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;313</td>
+      <td class="nbHitsCovered">&nbsp;1248</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;314</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;315</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;316</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Load the configuration from the specified stream, using the specified</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;317</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * encoding. If the encoding is null the default encoding is used.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;318</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;319</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param in the input stream</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;320</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param encoding the encoding used. &#60;code&#62;null&#60;/code&#62; to use the default encoding</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;321</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;322</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs during the load operation</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;323</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;324</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> load(InputStream in, String encoding) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;325</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;326</td>
+      <td class="nbHitsCovered">&nbsp;1254</td>
+      <td class="src"><pre class="src">&nbsp;        Reader reader = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;327</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;328</td>
+      <td class="nbHitsCovered">&nbsp;1254</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (encoding != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;329</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;330</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;331</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;332</td>
+      <td class="nbHitsCovered">&nbsp;207</td>
+      <td class="src"><pre class="src">&nbsp;                reader = <span class="keyword">new</span> InputStreamReader(in, encoding);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;333</td>
+      <td class="nbHitsCovered">&nbsp;207</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;334</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">catch</span> (UnsupportedEncodingException e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;335</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;336</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;337</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="string">"The requested encoding is not supported, try the default encoding."</span>, e);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;338</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;339</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;340</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;341</td>
+      <td class="nbHitsCovered">&nbsp;1254</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (reader == <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;342</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;343</td>
+      <td class="nbHitsCovered">&nbsp;1047</td>
+      <td class="src"><pre class="src">&nbsp;            reader = <span class="keyword">new</span> InputStreamReader(in);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;344</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;345</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;346</td>
+      <td class="nbHitsCovered">&nbsp;1254</td>
+      <td class="src"><pre class="src">&nbsp;        load(reader);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;347</td>
+      <td class="nbHitsCovered">&nbsp;1251</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;348</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;349</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;350</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Save the configuration. Before this method can be called a valid file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;351</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * name must have been set.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;352</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;353</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs or no file name has</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;354</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * been set yet</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;355</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;356</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> save() throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;357</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;358</td>
+      <td class="nbHitsCovered">&nbsp;51</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (getFileName() == <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;359</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;360</td>
+      <td class="nbHitsCovered">&nbsp;12</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(<span class="string">"No file name has been set!"</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;361</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;362</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;363</td>
+      <td class="nbHitsCovered">&nbsp;39</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (sourceURL != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;364</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;365</td>
+      <td class="nbHitsCovered">&nbsp;15</td>
+      <td class="src"><pre class="src">&nbsp;            save(sourceURL);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;366</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;367</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;368</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;369</td>
+      <td class="nbHitsCovered">&nbsp;24</td>
+      <td class="src"><pre class="src">&nbsp;            save(fileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;370</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;371</td>
+      <td class="nbHitsCovered">&nbsp;39</td>
+      <td class="src"><pre class="src">&nbsp;        strategy.init();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;372</td>
+      <td class="nbHitsCovered">&nbsp;39</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;373</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;374</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;375</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Save the configuration to the specified file. This doesn't change the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;376</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * source of the configuration, use setFileName() if you need it.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;377</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;378</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param fileName the file name</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;379</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;380</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs during the save operation</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;381</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;382</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> save(String fileName) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;383</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;384</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;385</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;386</td>
+      <td class="nbHitsCovered">&nbsp;42</td>
+      <td class="src"><pre class="src">&nbsp;            File file = ConfigurationUtils.getFile(basePath, fileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;387</td>
+      <td class="nbHitsCovered">&nbsp;42</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (file == <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;388</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;389</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(<span class="string">"Invalid file name for save: "</span> + fileName);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;390</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;391</td>
+      <td class="nbHitsCovered">&nbsp;39</td>
+      <td class="src"><pre class="src">&nbsp;            save(file);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;392</td>
+      <td class="nbHitsCovered">&nbsp;39</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;393</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">catch</span> (ConfigurationException e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;394</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;395</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">throw</span> e;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;396</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;397</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">catch</span> (Exception e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;398</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;399</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(e.getMessage(), e);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;400</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;401</td>
+      <td class="nbHitsCovered">&nbsp;39</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;402</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;403</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;404</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Save the configuration to the specified URL if it's a file URL.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;405</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * This doesn't change the source of the configuration, use setURL()</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;406</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * if you need it.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;407</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;408</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param url the URL</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;409</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;410</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs during the save operation</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;411</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;412</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> save(URL url) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;413</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;414</td>
+      <td class="nbHitsCovered">&nbsp;21</td>
+      <td class="src"><pre class="src">&nbsp;        File file = ConfigurationUtils.fileFromURL(url);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;415</td>
+      <td class="nbHitsCovered">&nbsp;21</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (file != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;416</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;417</td>
+      <td class="nbHitsCovered">&nbsp;18</td>
+      <td class="src"><pre class="src">&nbsp;            save(file);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;418</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;419</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;420</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;421</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(<span class="string">"Could not save to URL "</span> + url);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;422</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;423</td>
+      <td class="nbHitsCovered">&nbsp;18</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;424</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;425</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;426</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Save the configuration to the specified file. The file is created</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;427</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * automatically if it doesn't exist. This doesn't change the source</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;428</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * of the configuration, use {@link #setFile} if you need it.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;429</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;430</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param file the target file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;431</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;432</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs during the save operation</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;433</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;434</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> save(File file) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;435</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;436</td>
+      <td class="nbHitsCovered">&nbsp;81</td>
+      <td class="src"><pre class="src">&nbsp;        OutputStream out = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;437</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;438</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;439</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;440</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="comment">// create the file if necessary</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;441</td>
+      <td class="nbHitsCovered">&nbsp;81</td>
+      <td class="src"><pre class="src">&nbsp;            createPath(file);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;442</td>
+      <td class="nbHitsCovered">&nbsp;81</td>
+      <td class="src"><pre class="src">&nbsp;            out = <span class="keyword">new</span> FileOutputStream(file);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;443</td>
+      <td class="nbHitsCovered">&nbsp;81</td>
+      <td class="src"><pre class="src">&nbsp;            save(out);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;444</td>
+      <td class="nbHitsCovered">&nbsp;81</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;445</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">catch</span> (IOException e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;446</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;447</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(e.getMessage(), e);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;448</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;449</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">finally</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;450</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;451</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="comment">// close the output stream</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;452</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;            <span class="keyword">try</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;453</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;454</td>
+      <td class="nbHitsCovered">&nbsp;81</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (out != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;455</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;456</td>
+      <td class="nbHitsCovered">&nbsp;81</td>
+      <td class="src"><pre class="src">&nbsp;                    out.close();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;457</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;458</td>
+      <td class="nbHitsCovered">&nbsp;81</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;459</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">catch</span> (IOException e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;460</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;461</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                e.printStackTrace();</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;462</td>
+      <td class="nbHitsCovered">&nbsp;81</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;463</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;464</td>
+      <td class="nbHitsCovered">&nbsp;81</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;465</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;466</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;467</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Save the configuration to the specified stream, using the encoding</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;468</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * returned by {@link #getEncoding()}.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;469</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;470</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param out the output stream</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;471</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;472</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs during the save operation</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;473</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;474</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> save(OutputStream out) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;475</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;476</td>
+      <td class="nbHitsCovered">&nbsp;84</td>
+      <td class="src"><pre class="src">&nbsp;        save(out, getEncoding());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;477</td>
+      <td class="nbHitsCovered">&nbsp;84</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;478</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;479</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;480</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Save the configuration to the specified stream, using the specified</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;481</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * encoding. If the encoding is null the default encoding is used.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;482</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;483</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param out the output stream</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;484</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param encoding the encoding to use</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;485</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @throws ConfigurationException if an error occurs during the save operation</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;486</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;487</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> save(OutputStream out, String encoding) throws ConfigurationException</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;488</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;489</td>
+      <td class="nbHitsCovered">&nbsp;87</td>
+      <td class="src"><pre class="src">&nbsp;        Writer writer = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;490</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;491</td>
+      <td class="nbHitsCovered">&nbsp;87</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (encoding != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;492</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;493</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;494</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;495</td>
+      <td class="nbHitsCovered">&nbsp;42</td>
+      <td class="src"><pre class="src">&nbsp;                writer = <span class="keyword">new</span> OutputStreamWriter(out, encoding);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;496</td>
+      <td class="nbHitsCovered">&nbsp;42</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;497</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">catch</span> (UnsupportedEncodingException e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;498</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;499</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationException(</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;500</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="string">"The requested encoding is not supported, try the default encoding."</span>, e);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;501</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;502</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;503</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;504</td>
+      <td class="nbHitsCovered">&nbsp;87</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (writer == <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;505</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;506</td>
+      <td class="nbHitsCovered">&nbsp;45</td>
+      <td class="src"><pre class="src">&nbsp;            writer = <span class="keyword">new</span> OutputStreamWriter(out);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;507</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;508</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;509</td>
+      <td class="nbHitsCovered">&nbsp;87</td>
+      <td class="src"><pre class="src">&nbsp;        save(writer);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;510</td>
+      <td class="nbHitsCovered">&nbsp;87</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;511</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;512</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;513</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Return the name of the file.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;514</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;515</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return the file name</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;516</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;517</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getFileName()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;518</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;519</td>
+      <td class="nbHitsCovered">&nbsp;1579</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> fileName;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;520</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;521</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;522</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;523</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Set the name of the file. The passed in file name should not contain a</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;524</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * path. Use &#60;code&#62;{@link AbstractFileConfiguration#setPath(String)</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;525</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * setPath()}&#60;/code&#62; to set a full qualified file name.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;526</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;527</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param fileName the name of the file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;528</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;529</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setFileName(String fileName)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;530</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;531</td>
+      <td class="nbHitsCovered">&nbsp;1396</td>
+      <td class="src"><pre class="src">&nbsp;        sourceURL = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;532</td>
+      <td class="nbHitsCovered">&nbsp;1396</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.fileName = fileName;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;533</td>
+      <td class="nbHitsCovered">&nbsp;1396</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;534</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;535</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;536</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Return the base path.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;537</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;538</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return the base path</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;539</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;540</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getBasePath()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;541</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;542</td>
+      <td class="nbHitsCovered">&nbsp;1744</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> basePath;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;543</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;544</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;545</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;546</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Set the base path. Relative configurations are loaded from this path. The</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;547</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * base path can be either a path to a directory or a URL.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;548</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;549</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param basePath the base path.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;550</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;551</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setBasePath(String basePath)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;552</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;553</td>
+      <td class="nbHitsCovered">&nbsp;1315</td>
+      <td class="src"><pre class="src">&nbsp;        sourceURL = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;554</td>
+      <td class="nbHitsCovered">&nbsp;1315</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.basePath = basePath;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;555</td>
+      <td class="nbHitsCovered">&nbsp;1315</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;556</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;557</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;558</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Return the file where the configuration is stored. If the base path is a</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;559</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * URL with a protocol different than &#38;quot;file&#38;quot;, the return value</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;560</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * will not point to a valid file object.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;561</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;562</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return the file where the configuration is stored; this can be &#60;b&#62;null&#60;/b&#62;</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;563</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;564</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> File getFile()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;565</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;566</td>
+      <td class="nbHitsCovered">&nbsp;33</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (getFileName() == <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;567</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;568</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">return</span> <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;569</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;570</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;571</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;572</td>
+      <td class="nbHitsCovered">&nbsp;30</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (sourceURL != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;573</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;574</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">return</span> ConfigurationUtils.fileFromURL(sourceURL);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;575</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;576</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">else</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;577</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;578</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">return</span> ConfigurationUtils.getFile(getBasePath(), getFileName());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;579</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;580</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;581</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;582</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;583</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;584</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Set the file where the configuration is stored. The passed in file is</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;585</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * made absolute if it is not yet. Then the file's path component becomes</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;586</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * the base path and its name component becomes the file name.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;587</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;588</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param file the file where the configuration is stored</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;589</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;590</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setFile(File file)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;591</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;592</td>
+      <td class="nbHitsCovered">&nbsp;924</td>
+      <td class="src"><pre class="src">&nbsp;        sourceURL = <span class="keyword">null</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;593</td>
+      <td class="nbHitsCovered">&nbsp;924</td>
+      <td class="src"><pre class="src">&nbsp;        setFileName(file.getName());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;594</td>
+      <td class="nbHitsCovered">&nbsp;924</td>
+      <td class="src"><pre class="src">&nbsp;        setBasePath((file.getParentFile() != <span class="keyword">null</span>) ? file.getParentFile()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;595</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                .getAbsolutePath() : <span class="keyword">null</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;596</td>
+      <td class="nbHitsCovered">&nbsp;924</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;597</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;598</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;599</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Returns the full path to the file this configuration is based on. The</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;600</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * return value is valid only if this configuration is based on a file on</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;601</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * the local disk.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;602</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;603</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return the full path to the configuration file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;604</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;605</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getPath()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;606</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;607</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> getFile().getAbsolutePath();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;608</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;609</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;610</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;611</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Sets the location of this configuration as a full path name. The passed</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;612</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * in path should represent a valid file name.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;613</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;614</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param path the full path name of the configuration file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;615</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;616</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setPath(String path)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;617</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;618</td>
+      <td class="nbHitsCovered">&nbsp;582</td>
+      <td class="src"><pre class="src">&nbsp;        setFile(<span class="keyword">new</span> File(path));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;619</td>
+      <td class="nbHitsCovered">&nbsp;582</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;620</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;621</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;622</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Return the URL where the configuration is stored.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;623</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;624</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @return the configuration's location as URL</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;625</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;626</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> URL getURL()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;627</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;628</td>
+      <td class="nbHitsCovered">&nbsp;592</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> (sourceURL != <span class="keyword">null</span>) ? sourceURL</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;629</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                : ConfigurationUtils.locate(getBasePath(), getFileName());</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;630</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;631</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;632</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;633</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Set the location of this configuration as a URL. For loading this can be</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;634</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * an arbitrary URL with a supported protocol. If the configuration is to</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;635</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * be saved, too, a URL with the &#38;quot;file&#38;quot; protocol should be</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;636</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * provided.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;637</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;638</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param url the location of this configuration as URL</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;639</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;640</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setURL(URL url)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;641</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;642</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        setBasePath(ConfigurationUtils.getBasePath(url));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;643</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        setFileName(ConfigurationUtils.getFileName(url));</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;644</td>
+      <td class="nbHitsCovered">&nbsp;16</td>
+      <td class="src"><pre class="src">&nbsp;        sourceURL = url;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;645</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;646</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;647</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setAutoSave(<span class="keyword">boolean</span> autoSave)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;648</td>
+      <td class="nbHitsCovered">&nbsp;1554</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;649</td>
+      <td class="nbHitsCovered">&nbsp;2331</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.autoSave = autoSave;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;650</td>
+      <td class="nbHitsCovered">&nbsp;777</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;651</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;652</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> isAutoSave()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;653</td>
+      <td class="nbHitsCovered">&nbsp;778</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;654</td>
+      <td class="nbHitsCovered">&nbsp;389</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> autoSave;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;655</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;656</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;657</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;658</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Save the configuration if the automatic persistence is enabled</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;659</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * and if a file is specified.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;660</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;661</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">void</span> possiblySave()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;662</td>
+      <td class="nbHitsCovered">&nbsp;19196</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;663</td>
+      <td class="nbHitsCovered">&nbsp;9598</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (autoSave &#38;&#38; fileName != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;664</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;665</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;666</td>
+      <td class="nbHitsCovered">&nbsp;10</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;667</td>
+      <td class="nbHitsCovered">&nbsp;15</td>
+      <td class="src"><pre class="src">&nbsp;                save();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;668</td>
+      <td class="nbHitsCovered">&nbsp;5</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;669</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">catch</span> (ConfigurationException e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;670</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;671</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                <span class="keyword">throw</span> <span class="keyword">new</span> ConfigurationRuntimeException(<span class="string">"Failed to auto-save"</span>, e);</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;672</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;673</td>
+      <td class="nbHitsCovered">&nbsp;19196</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;674</td>
+      <td class="nbHitsCovered">&nbsp;9598</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;675</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;676</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">void</span> addPropertyDirect(String key, Object obj)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;677</td>
+      <td class="nbHitsCovered">&nbsp;18816</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;678</td>
+      <td class="nbHitsCovered">&nbsp;28224</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">super</span>.addPropertyDirect(key, obj);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;679</td>
+      <td class="nbHitsCovered">&nbsp;28224</td>
+      <td class="src"><pre class="src">&nbsp;        possiblySave();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;680</td>
+      <td class="nbHitsCovered">&nbsp;9408</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;681</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;682</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> clearProperty(String key)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;683</td>
+      <td class="nbHitsCovered">&nbsp;60</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;684</td>
+      <td class="nbHitsCovered">&nbsp;90</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">super</span>.clearProperty(key);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;685</td>
+      <td class="nbHitsCovered">&nbsp;90</td>
+      <td class="src"><pre class="src">&nbsp;        possiblySave();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;686</td>
+      <td class="nbHitsCovered">&nbsp;30</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;687</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;688</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> ReloadingStrategy getReloadingStrategy()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;689</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;690</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> strategy;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;691</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;692</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;693</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setReloadingStrategy(ReloadingStrategy strategy)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;694</td>
+      <td class="nbHitsCovered">&nbsp;1160</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;695</td>
+      <td class="nbHitsCovered">&nbsp;1741</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.strategy = strategy;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;696</td>
+      <td class="nbHitsCovered">&nbsp;1741</td>
+      <td class="src"><pre class="src">&nbsp;        strategy.setConfiguration(<span class="keyword">this</span>);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;697</td>
+      <td class="nbHitsCovered">&nbsp;1741</td>
+      <td class="src"><pre class="src">&nbsp;        strategy.init();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;698</td>
+      <td class="nbHitsCovered">&nbsp;581</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;699</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;700</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> reload()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;701</td>
+      <td class="nbHitsCovered">&nbsp;22532</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;702</td>
+      <td class="nbHitsCovered">&nbsp;11266</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">synchronized</span> (reloadLock)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;703</td>
+      <td class="nbHitsCovered">&nbsp;22532</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;704</td>
+      <td class="nbHitsCovered">&nbsp;11266</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (noReload == 0)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;705</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;706</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">try</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;707</td>
+      <td class="nbHitsCovered">&nbsp;22122</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;708</td>
+      <td class="nbHitsCovered">&nbsp;11061</td>
+      <td class="src"><pre class="src">&nbsp;                    enterNoReload(); <span class="comment">// avoid reentrant calls</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;709</td>
+      <td class="nbHitsCovered">&nbsp;22122</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;710</td>
+      <td class="nbHitsCovered">&nbsp;11061</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="keyword">if</span> (strategy.reloadingRequired())</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;711</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;                    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;712</td>
+      <td class="nbHitsCovered">&nbsp;9</td>
+      <td class="src"><pre class="src">&nbsp;                        clear();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;713</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;                        load();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;714</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;715</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;                        <span class="comment">// notify the strategy</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;716</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;                        strategy.reloadingPerformed();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;717</td>
+      <td class="nbHitsCovered">&nbsp;22122</td>
+      <td class="src"><pre class="src">&nbsp;                    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;718</td>
+      <td class="nbHitsCovered">&nbsp;11061</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;719</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">catch</span> (Exception e)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;720</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;721</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                    e.printStackTrace();</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;722</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                    <span class="comment">// todo rollback the changes if the file can't be reloaded</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;723</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                }</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;724</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">finally</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;725</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;726</td>
+      <td class="nbHitsUncovered">&nbsp;0</td>
+      <td class="src"><pre class="src"><span class="srcUncovered">&nbsp;                    exitNoReload();</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;727</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;728</td>
+      <td class="nbHitsCovered">&nbsp;22532</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;729</td>
+      <td class="nbHitsCovered">&nbsp;33798</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;730</td>
+      <td class="nbHitsCovered">&nbsp;11266</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;731</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;732</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;733</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Enters the &#38;quot;No reloading mode&#38;quot;. As long as this mode is active</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;734</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * no reloading will be performed. This is necessary for some</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;735</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * implementations of &#60;code&#62;save()&#60;/code&#62; in derived classes, which may</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;736</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * cause a reload while accessing the properties to save. This may cause the</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;737</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * whole configuration to be erased. To avoid this, this method can be</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;738</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * called first. After a call to this method there always must be a</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;739</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * corresponding call of &#60;code&#62;{@link #exitNoReload()}&#60;/code&#62; later! (If</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;740</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * necessary, &#60;code&#62;finally&#60;/code&#62; blocks must be used to ensure this.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;741</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;742</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">void</span> enterNoReload()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;743</td>
+      <td class="nbHitsCovered">&nbsp;22146</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;744</td>
+      <td class="nbHitsCovered">&nbsp;11073</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">synchronized</span> (reloadLock)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;745</td>
+      <td class="nbHitsCovered">&nbsp;22146</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;746</td>
+      <td class="nbHitsCovered">&nbsp;33219</td>
+      <td class="src"><pre class="src">&nbsp;            noReload++;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;747</td>
+      <td class="nbHitsCovered">&nbsp;33219</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;748</td>
+      <td class="nbHitsCovered">&nbsp;11073</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;749</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;750</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;751</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Leaves the &#38;quot;No reloading mode&#38;quot;.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;752</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;753</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @see #enterNoReload()</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;754</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;755</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">protected</span> <span class="keyword">void</span> exitNoReload()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;756</td>
+      <td class="nbHitsCovered">&nbsp;22146</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;757</td>
+      <td class="nbHitsCovered">&nbsp;11073</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">synchronized</span> (reloadLock)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;758</td>
+      <td class="nbHitsCovered">&nbsp;22146</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;759</td>
+      <td class="nbHitsCovered">&nbsp;11073</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (noReload &#62; 0) <span class="comment">// paranoia check</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;760</td>
+      <td class="nbHitsCovered">&nbsp;22146</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;761</td>
+      <td class="nbHitsCovered">&nbsp;11073</td>
+      <td class="src"><pre class="src">&nbsp;                noReload--;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;762</td>
+      <td class="nbHitsCovered">&nbsp;22146</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;763</td>
+      <td class="nbHitsCovered">&nbsp;33219</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;764</td>
+      <td class="nbHitsCovered">&nbsp;11073</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;765</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;766</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> Object getProperty(String key)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;767</td>
+      <td class="nbHitsCovered">&nbsp;19702</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;768</td>
+      <td class="nbHitsCovered">&nbsp;29553</td>
+      <td class="src"><pre class="src">&nbsp;        reload();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;769</td>
+      <td class="nbHitsCovered">&nbsp;9851</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">super</span>.getProperty(key);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;770</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;771</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;772</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> isEmpty()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;773</td>
+      <td class="nbHitsCovered">&nbsp;12</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;774</td>
+      <td class="nbHitsCovered">&nbsp;18</td>
+      <td class="src"><pre class="src">&nbsp;        reload();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;775</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">super</span>.isEmpty();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;776</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;777</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;778</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">boolean</span> containsKey(String key)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;779</td>
+      <td class="nbHitsCovered">&nbsp;646</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;780</td>
+      <td class="nbHitsCovered">&nbsp;969</td>
+      <td class="src"><pre class="src">&nbsp;        reload();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;781</td>
+      <td class="nbHitsCovered">&nbsp;323</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">super</span>.containsKey(key);</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;782</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;783</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;784</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> Iterator getKeys()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;785</td>
+      <td class="nbHitsCovered">&nbsp;112</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;786</td>
+      <td class="nbHitsCovered">&nbsp;168</td>
+      <td class="src"><pre class="src">&nbsp;        reload();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;787</td>
+      <td class="nbHitsCovered">&nbsp;56</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> <span class="keyword">super</span>.getKeys();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;788</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;789</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;790</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="comment">/*<span class="comment">*</span></span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;791</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * Create the path to the specified file.</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;792</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     *</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;793</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     * @param file the target file</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;794</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;<span class="comment">     */</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;795</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">private</span> <span class="keyword">void</span> createPath(File file)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;796</td>
+      <td class="nbHitsCovered">&nbsp;54</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;797</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">if</span> (file != <span class="keyword">null</span>)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;798</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;        {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;799</td>
+      <td class="nbHitsCovered">&nbsp;54</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="comment">// create the path to the file if the file doesn't exist</span></pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;800</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;            <span class="keyword">if</span> (!file.exists())</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;801</td>
+      <td class="nbHitsCovered">&nbsp;40</td>
+      <td class="src"><pre class="src">&nbsp;            {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;802</td>
+      <td class="nbHitsCovered">&nbsp;60</td>
+      <td class="src"><pre class="src">&nbsp;                File parent = file.getParentFile();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;803</td>
+      <td class="nbHitsCovered">&nbsp;20</td>
+      <td class="src"><pre class="src">&nbsp;                <span class="keyword">if</span> (parent != <span class="keyword">null</span> &#38;&#38; !parent.exists())</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;804</td>
+      <td class="nbHitsCovered">&nbsp;6</td>
+      <td class="src"><pre class="src">&nbsp;                {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;805</td>
+      <td class="nbHitsCovered">&nbsp;3</td>
+      <td class="src"><pre class="src">&nbsp;                    parent.mkdirs();</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;806</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;                }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;807</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;            }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;808</td>
+      <td class="nbHitsCovered">&nbsp;54</td>
+      <td class="src"><pre class="src">&nbsp;        }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;809</td>
+      <td class="nbHitsCovered">&nbsp;27</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;810</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;811</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> String getEncoding()</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;812</td>
+      <td class="nbHitsCovered">&nbsp;938</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;813</td>
+      <td class="nbHitsCovered">&nbsp;469</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">return</span> encoding;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;814</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;815</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;816</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;    <span class="keyword">public</span> <span class="keyword">void</span> setEncoding(String encoding)</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;817</td>
+      <td class="nbHitsCovered">&nbsp;530</td>
+      <td class="src"><pre class="src">&nbsp;    {</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;818</td>
+      <td class="nbHitsCovered">&nbsp;796</td>
+      <td class="src"><pre class="src">&nbsp;        <span class="keyword">this</span>.encoding = encoding;</pre></td>
+    </tr>
+    <tr>
+      <td class="numLineCover">&nbsp;819</td>
+      <td class="nbHitsCovered">&nbsp;266</td>
+      <td class="src"><pre class="src">&nbsp;    }</pre></td>
+    </tr>
+    <tr>
+      <td class="numLine">&nbsp;820</td>
+      <td class="nbHits">&nbsp;</td>
+      <td class="src"><pre class="src">&nbsp;}</pre></td>
+    </tr>
+  </table>
+<p><table cellpadding="0" cellspacing="0" class="report">  <tr class="report">    <td class="reportText"><span class="text">    This report is generated by <a href="http://www.jcoverage.com">jcoverage</a>, <a href="http://maven.apache.org">Maven</a> and <a href="http://maven.apache.org/reference/plugins/jcoverage/">Maven JCoverage Plugin</a>.    </span></td>  </tr></table>
+</body>
+</html>

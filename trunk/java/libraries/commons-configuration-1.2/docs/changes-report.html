@@ -1,0 +1,4131 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+  
+  
+  
+
+
+
+    
+	
+	
+
+    
+    
+
+    
+    
+      
+      
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+          <title>
+            Configuration - 
+          Changes
+        
+          </title>
+        
+        
+        
+        
+        
+          <style type="text/css" media="all">
+             @import url("./style/tigris.css");
+             @import url("./style/maven.css");
+             @import url("./style/project.css");
+          </style>
+          <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        
+
+        
+
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+
+
+       
+          <meta name="author" content="Eric Pugh"></meta>
+          <meta name="email" content="epugh@upstate.com"></meta>
+        
+        
+        
+        
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org">
+                    <img border="0" name="organization-logo" alt="The Apache Software Foundation" src="http://jakarta.apache.org/images/original-jakarta-logo.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/configuration/">
+                      <img border="0" alt="Commons Configuration" src="./images/logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+<script type="text/javascript">
+<!--
+  var myWidth = 0, myHeight = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else if( document.documentElement &&
+      ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    //IE 6+ in 'standards compliant mode'
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    //IE 4 compatible
+    myWidth = document.body.clientWidth;
+    myHeight = document.body.clientHeight;
+  }
+  // window.alert( 'Width = ' + myWidth );
+  if (myWidth < 850) {
+    document['organization-logo'].src='http://jakarta.apache.org/images/original-jakarta-logo.gif';
+  }
+// -->
+</script>
+
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: Dec 17, 2005
+                  | Doc for 1.2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                    
+    
+    
+      
+      
+      
+      <a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Jakarta Commons</a>
+      
+    
+  
+                  
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+				
+    <div>
+      <strong>About Us</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Home</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/contributors.html" class="externalLink" title="External Link">Contributors</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/license.html" class="externalLink" title="External Link">License</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/components.html" class="externalLink" title="External Link">Components</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/sandbox/index.html" class="externalLink" title="External Link">Sandbox</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/dormant/index.html" class="externalLink" title="External Link">Dormant</a>
+      	
+      </small>
+	  
+    </div>
+  
+    </div>
+  
+                
+    <div>
+      <strong>Configuration</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html">Home</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/downloads/downloads_commons-configuration.cgi" class="externalLink" title="External Link">Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="overview.html">Using Configuration</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_properties.html">Properties Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_xml.html">XML Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_configurationfactory.html">ConfigurationFactory Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_compositeconfiguration.html">Composite Config Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="dependencies.html">Runtime Dependencies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="building.html">Building</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tasks-report.html">Roadmap</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html">Javadoc (latest)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs_1.1/index.html">Javadoc (Release 1.1)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs_1.0/index.html">Javadoc (Release 1.0)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://svn.apache.org/repos/asf/jakarta/commons/proper/configuration/" class="externalLink" title="External Link">SVN</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Extensions</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/turbine/fulcrum/fulcrum-configuration/index.html" class="externalLink" title="External Link">Avalon Component</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html">About Commons Configuration</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="downloads.html">Downloads</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="project-info.html">Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="maven-reports.html">Project Reports</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="jdepend-report.html">Metrics</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="checkstyle-report.html">Checkstyle</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="changes-report.html">Changes</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="changelog-report.html">Change Log</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="file-activity-report.html">File Activity</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="developer-activity-report.html">Developer Activity</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html">JavaDocs</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="javadoc.html">JavaDoc Report</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="javadoc-warnings-report.html">JavaDoc Warnings Report</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref/index.html">Source Xref</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref-test/index.html">Test Xref</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="junit-report.html">Unit Tests</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="task-list.html">Task List</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="pmd-report.html">PMD Report</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="jcoverage/index.html">JCoverage</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tasks-report.html">Tasks</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+    <div>
+      <strong>General Information</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Charter</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/volunteering.html" class="externalLink" title="External Link">Volunteering</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/patches.html" class="externalLink" title="External Link">Contributing Patches</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/building.html" class="externalLink" title="External Link">Building Components</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/releases/index.html" class="externalLink" title="External Link">Releasing Components</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://wiki.apache.org/jakarta-commons/FrontPage" class="externalLink" title="External Link">Wiki</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Jakarta Community</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/getinvolved.html" class="externalLink" title="External Link">Get Involved</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/mail.html" class="externalLink" title="External Link">Mailing Lists</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Related</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://db.apache.org/commons/" class="externalLink" title="External Link">DB Commons</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://xml.apache.org/commons/" class="externalLink" title="External Link">XML Commons</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Built by Maven"><img style="border: 1px solid black" alt="Built by Maven" src="./images/logos/maven-feather.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Release History">Release History</a>
+        </h3>
+      
+      
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><th style="width:50px">Version</th><th>Date</th><th>Description</th></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <a href="#1_2">1.2</a>
+          </td><td>2005-12-17</td><td>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <a href="#1_2-rc3">1.2-rc3</a>
+          </td><td>2005-12-07</td><td>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <a href="#1_2-rc2">1.2-rc2</a>
+          </td><td>2005-11-23</td><td>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <a href="#1_2-rc1">1.2-rc1</a>
+          </td><td>2005-11-11</td><td>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <a href="#1_1">1.1</a>
+          </td><td>2005-04-02</td><td>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <a href="#1_1-rc2">1.1-rc2</a>
+          </td><td>2005-03-06</td><td>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <a href="#1_1-rc1">1.1-rc1</a>
+          </td><td>2005-02-13</td><td>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <a href="#1_0">1.0</a>
+          </td><td>2004-10-11</td><td>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <a href="#1_0-rc2">1.0-rc2</a>
+          </td><td>2004-09-24</td><td>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <a href="#1_0-rc1">1.0-rc1</a>
+          </td><td>2004-08-14</td><td>
+          </td></tr>
+  
+    </table>
+  <p>Get the RSS feed of the last changes
+        <a href="changes.rss">
+          <img src="images/rss.png">
+          </img>
+        </a>
+      </p>
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Release 1.2 - 2005-12-17">Release 1.2 - 2005-12-17</a>
+        </h3>
+      
+      <a name="1_2">
+      </a>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr>
+  
+    </table>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Release 1.2-rc3 - 2005-12-07">Release 1.2-rc3 - 2005-12-07</a>
+        </h3>
+      
+      <a name="1_2-rc3">
+      </a>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Commons Configuration now declares a dependency to Xalan. As with Xerces this dependency is only needed for JDK 1.3. It was introduced in a process of making Configuration buildable on a JDK 1.3. Documentation about the build process was also added.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>The dependency to Commons Beanutils Collections was unnecessary and thus removed.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Commons Configuration now depends on Commons Digester 1.6 instead of 1.5. (This was done only to pick up the latest available release of digester.)</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    </table>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Release 1.2-rc2 - 2005-11-23">Release 1.2-rc2 - 2005-11-23</a>
+        </h3>
+      
+      <a name="1_2-rc2">
+      </a>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>ConfigurationDynaBean now implements the java.util.Map interface (as was stated in the javadocs). This was done by deriving the class from ConfigurationMap. Fixes
+            <a href="http://issues.apache.org/bugzilla/37486">37486</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    </table>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Release 1.2-rc1 - 2005-11-11">Release 1.2-rc1 - 2005-11-11</a>
+        </h3>
+      
+      <a name="1_2-rc1">
+      </a>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>The reload() method in AbstractFileConfiguration was updated to prevent reentrant invocation, which may be caused by some methods when they are called during a reloading operation. Fixes
+            <a href="http://issues.apache.org/bugzilla/36665">36665</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>AbstractHierarchicalFileConfiguration, a new base class for file based hierarchical configurations, was introduced. XMLConfiguration now extends this class.</td><td>
+            <a href="team-list.html#ebourg, oheger">ebourg, oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>XMLConfiguration now prints the used encoding in the xml declaration of generated files. In earlier versions always the default encoding was written. PropertiesConfiguration now always uses the platform specific line separator when saving files. Fixes
+            <a href="http://issues.apache.org/bugzilla/37293">37293</a>. Thanks to Kay Doebl .</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>PropertiesConfiguration now translates properly the escaped unicode characters (like \u1234) used in the property keys. This complies with the specification of java.util.Properties. Fixes
+            <a href="http://issues.apache.org/bugzilla/36991">36991</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>ConfigurationConverter.getProperties() now uses the delimiter of the specified configuration to convert the list properties into strings. Fixes
+            <a href="http://issues.apache.org/bugzilla/36784">36784</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>The interpolation of variables (${foo}) is now performed in all property getters of AbstractConfiguration and DataConfiguration. As a side effect the Properties object returned by ConfigurationConverter.getProperties() contains only interpolated values. Fixes
+            <a href="http://issues.apache.org/bugzilla/36784">36784</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>PropertiesConfiguration now uses the ISO-8859-1 encoding by default instead of the system encoding to comply with the specification of java.util.Properties. Fixes
+            <a href="http://issues.apache.org/bugzilla/36699">36699</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>JNDIConfiguration no longer logs an error when attem pting to get a property that doesn't exist in the configuration. Fixes
+            <a href="http://issues.apache.org/bugzilla/36664">36664</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Attempting to load a configuration from a directory instead of a file will now throw a ConfigurationException. Fixes
+            <a href="http://issues.apache.org/bugzilla/36488">36488</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>If a multi-valued property was involved in an interpolation operation, AbstractConfiguration created a string representation of the list of all values. This was changed to only use the first value, which makes more sense in this context and is consistent with other getters for single valued properties. Fixes
+            <a href="http://issues.apache.org/bugzilla/36447">36447</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>If an include file with a relative path cannot be found in the base path, PropertiesConfiguration now also tries to resolve it based on its own location. Fixes
+            <a href="http://issues.apache.org/bugzilla/36383">36383</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Fixed MapConfiguration to store the list of values added under a same key instead of the last value added. Fixes
+            <a href="http://issues.apache.org/bugzilla/35945">35945</a>. Thanks to Steve Bate .</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Fixed a bug in the handling of relative file names in ConfigurationFactory: In most cases relative file names were not resolved relative to the location of the configuration definition file as stated in the documentation. This behavior was now changed to always be in sync with the documentation. This may have an impact on existing code which uses workarounds for the erroneous resolving mechanism. Fixes
+            <a href="http://issues.apache.org/bugzilla/35316">35316</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Empty elements or elements whose content consists only of comments or whitespace are now taken into account by XMLConfiguration. They are added to the configuration; their value is an empty string. Fixes
+            <a href="http://issues.apache.org/bugzilla/35963">35963</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>XMLConfiguration now sets a valid system id in the InputSource used for loading files. This enables XML parsers to correctly resolve relative files, e.g. DTDs.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>getKeys() in HierarchicalConfiguration now returns the keys in the same order the properties were inserted. Fixes
+            <a href="http://issues.apache.org/bugzilla/35903">35903</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Commons Configuration now depends on Commons Collections 3.1 instead of 3.0</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>New configurations implementing the "property list" format used in NeXT/OpenStep and its XML variant used in Mac OS X. (PropertyListConfiguration and XMLPropertyListConfiguration) Fixes
+            <a href="http://issues.apache.org/bugzilla/32633">32633</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Resolved some issues with XMLConfiguration and properties containing the delimiter character. These properties are now correctly treated, escaping the delimiter will work, too. Fixes
+            <a href="http://issues.apache.org/bugzilla/35938">35938</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added support for XMLPropertiesConfiguration in ConfigurationFactory. A &lt; properties&gt; element will generate a XMLPropertiesConfiguration if the filename ends with ".xml".</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>PropertiesConfiguration now supports escaped key/value separators in the keys (i.e foo\:key = bar). Fixes
+            <a href="http://issues.apache.org/bugzilla/29192">29192</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>PropertiesConfiguration now supports all key/value separators supported by java.util.Properties ('=', ':' and white space characters). Fixes
+            <a href="http://issues.apache.org/bugzilla/29171">29171</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Commons Configuration now depends on Commons Lang 2.1 instead of 2.0</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Comment lines for PropertiesConfiguration can start with the '!' char (compatibility with java.util.Properties) Fixes
+            <a href="http://issues.apache.org/bugzilla/35888">35888</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Because ConfigurationUtils.copy() does not fully support hierarchical configurations a clone() method was added to HierarchicalConfiguration that can be used instead. Fixes
+            <a href="http://issues.apache.org/bugzilla/35772">35772</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>XMLConfiguration now provides some support for validating XML documents. With the setValidating() method DTD validation can be enabled. It is also possible to set a custom DocumentBuilder allowing a caller to perform enhanced configuration of the XML loading process. Fixes
+            <a href="http://issues.apache.org/bugzilla/31616">31616</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>AbstractFileConfiguration now always sets a valid base path if the configuration file could be located. This allows PropertiesConfiguration to resolve include files even when loaded from class path. Fixes
+            <a href="http://issues.apache.org/bugzilla/35621">35621</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Updated XMLConfiguration to correctly deal with properties containing dots in their names. Such properties could not be accessed before. Fixes
+            <a href="http://issues.apache.org/bugzilla/35509">35509</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>PropertiesConfiguration's handling of backslash characters at the end of line was incorrect when there was an even number of trailing backslashes. This is now fixed. Fixes
+            <a href="http://issues.apache.org/bugzilla/35119">35119</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Fixed a problem related to file based configurations that are loaded from a URL which is application/x-www-form-urlencoded: the save() method would store such files at a wrong location. Fixes
+            <a href="http://issues.apache.org/bugzilla/35210">35210</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Updated FileChangedReloadingStrategy to use the file based configuration's source URL to find the file to watch. Before that it was possible that the strategy checked the wrong file. For configuration files loaded from a jar FileChangedReloadingStrategy now checks the jar file itself for changes. Finally a bug was fixed which caused the strategy to check the watched file's last change date on every invocation of its reloadingRequired() method ignoring its refresh delay. Thanks to Jorge Ferrer. Fixes
+            <a href="http://issues.apache.org/bugzilla/34289">34289</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Fixed a bug in the collaboration between XMLConfiguration and its reloading strategy: The configuration did not check its reloading strategy, so no reload was performed. Fixes
+            <a href="http://issues.apache.org/bugzilla/35118">35118</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Disabled auto save mode during PropertiesConfiguration.load(). Prior it was possible that the properties file to be loaded was immideately overwritten. Fixes
+            <a href="http://issues.apache.org/bugzilla/34410">34410</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Under certain circumstances it was possible that a reloading strategy set for PropertiesConfiguration interferred with the save() method causing the configuration file to be erased. This has now been fixed. Fixes
+            <a href="http://issues.apache.org/bugzilla/34441">34441</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>AbstractFileConfiguration now stores the URL of the config file in the load() methods. This URL is reused by the save() method to ensure that the same file is written. Fixes
+            <a href="http://issues.apache.org/bugzilla/34362">34362</a>. Thanks to Jamie M. Guillemette .</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>XMLPropertiesConfiguration no longer depends on Digester to parse the configuration file, it's now implemented with a pure SAX parser. Thanks to Alistair Young .</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Fixed a bug which causes XMLConfiguration.save to lose attribute values under some circumstances. The clear() method now also ensures that the associated DOM document is always cleared. Fixes
+            <a href="http://issues.apache.org/bugzilla/34442">34442</a>. Thanks to Mi Zhang .</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>XMLConfiguration now parse the configuration using the encoding declared in the XML header instead of the OS default encoding. Fixes
+            <a href="http://issues.apache.org/bugzilla/34204">34204</a>. Thanks to Kunihara Tetsuya .</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>XMLConfiguration now uses the delimiter set by setDelimiter(char). Thanks to Zsolt Koppany .</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    </table>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Release 1.1 - 2005-04-02">Release 1.1 - 2005-04-02</a>
+        </h3>
+      
+      <a name="1_1">
+      </a>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Fixed a ConcurrentModificationException thrown when calling clear() on a SubsetConfiguration applied to a BaseConfiguration. Fixes
+            <a href="http://issues.apache.org/bugzilla/33925">33925</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>The resolveContainerStore() method in AbstractConfiguration now works properly with arrays of objects and arrays of primitives. This means it is possible to store an array of value in the configuration and retrieve the first element with the getString(), getInt()... methods. Fixes
+            <a href="http://issues.apache.org/bugzilla/34104">34104</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    </table>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Release 1.1-rc2 - 2005-03-06">Release 1.1-rc2 - 2005-03-06</a>
+        </h3>
+      
+      <a name="1_1-rc2">
+      </a>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Updated documentation for FileConfiguration's load() methods. Fixed a problem in XMLConfiguration with the output of the save() method when multiple files were loaded. Fixes
+            <a href="http://issues.apache.org/bugzilla/33814">33814</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Fixed a bug in FileChangedReloadingStrategy preventing the detection of a file change in some cases.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Changed getXXXArray() and getXXXList() in DataConfiguration to return an empty array/list for empty values.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Fixed getLongArray(), getFloatArray() and getDoubleArray() in DataConfiguration, the values were cast into integers. Fixes
+            <a href="http://issues.apache.org/bugzilla/33524">33524</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    </table>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Release 1.1-rc1 - 2005-02-13">Release 1.1-rc1 - 2005-02-13</a>
+        </h3>
+      
+      <a name="1_1-rc1">
+      </a>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>ConfigurationFactory now always configures digester to use the context classloader. This avoids problem s in application server environments, which use their own version of digester. Thanks to Mike Colbert for the patch! Fixes
+            <a href="http://issues.apache.org/bugzilla/33475">33475</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added a new configuration, XMLPropertiesConfiguration, supporting the new XML format for java.util.Properties introduced in Java 1.5. A 1.5 runtime is not required to use this class. Fixes
+            <a href="http://issues.apache.org/bugzilla/32318">32318</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added a comment header to PropertiesConfiguration. The header is not parsed when the file is loaded yet. Fixes
+            <a href="http://issues.apache.org/bugzilla/26092">26092</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added the setEncoding(String) and the getEncoding() methods to the FileConfiguration interface to control the encoding of the configuration file.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Access to the top level element of the XML document is now provided. For newly created configurations this element can be changed before the document is written. Fixes
+            <a href="http://issues.apache.org/bugzilla/31136">31136</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Merged the two XML related configuration classes into one new class XMLConfiguration. This new class should provide the best of its ancestors. Fixes
+            <a href="http://issues.apache.org/bugzilla/31429">31429</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Replaced the PropertyTokenizer inner class in AbstractConfiguration with the split method in PropertyConverter. Also moved the method building an iterator on the elements of a composite value in PropertyConverter as toIterator().</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Some cleanup of the handling of the base path in file based configurations. The base path is now always taken into account. Fixes
+            <a href="http://issues.apache.org/bugzilla/30858">30858</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Calling getProperties on a JNDIConfiguration no longer throws an UnsupportedOperationException.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="remove" title="remove" src="images/remove.gif">
+            </img>
+          </td><td>Removed the getPropertyDirect method from AbstractConfiguration, concrete configurations now implement directly the getProperty method from the Configuration interface.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added implementation of a save() method for HierarchicalXMLConfiguration. Fixes
+            <a href="http://issues.apache.org/bugzilla/31130">31130</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Constructing a file based configuration with a File no longer throws an exception when the file doesn't exist.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Saving a configuration now creates the path to the file if it doesn't exist.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>AbstractFileConfiguration.save(File) no longer fails silently when an error occurs, a ConfigurationException is thrown instead. Fixes
+            <a href="http://issues.apache.org/bugzilla/32020">32020</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>ConfigurationUtils.locate() now checks if the URL based resources exist. This fixes a bug preventing configuration files from being found if the configuration descriptor is in a JAR file (reported by Grant Ingersoll).</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Fixed NPE that were caused in the constructors of file based configurations if an invalid file name was specified. Fixes
+            <a href="http://issues.apache.org/bugzilla/32236">32236</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added support for optional configuration sources in definition files for ConfigurationFactory. A new optional attribute allows to specify whether a configuration source is mandatory or optional. Fixes
+            <a href="http://issues.apache.org/bugzilla/31797">31797</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>JNDIConfiguration.getKeys() now returns an empty iterator instead of throwing a ConfigurationRuntimeException when a NamingException occurs. The NamingExceptions are now logged.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>DatabaseConfiguration.i sEmpty() now returns true if an SQLException occurs.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added two methods copy(Configuration, Configuration) and append(Configuration, Configuration) in ConfigurationUtils to copy properties between configurations.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Moved the constructors implementations from PropertiesConfiguration and XMLConfiguration to AbstractFileConfiguration.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="remove" title="remove" src="images/remove.gif">
+            </img>
+          </td><td>Remove deprecated getVector() implementations.</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>File based configurations can now be automatically reloaded when the underlying file is modified. Fixes
+            <a href="http://issues.apache.org/bugzilla/25661">25661</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added a clear() method to the Configuration interface to remove all properties. Fixes
+            <a href="http://issues.apache.org/bugzilla/26102">26102</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added a SystemConfiguration wrapping the system properties. ConfigurationFactory recognizes the corresponding &lt; system/ &gt; element. Fixes
+            <a href="http://issues.apache.org/bugzilla/26066">26066</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added a MapConfiguration to turn any Map into a Configuration. The getConfiguration() methods in ConfigurationConverter now use MapConfiguration, as a result the Configuration returned is always synchronized with the underlying Properties or ExtendedProperties, changes made to the Configuration are available in the Properties, and reciprocally.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>The "autoSave" feature of XMLConfiguration has been generalized to all file based configurations. Fixes
+            <a href="http://issues.apache.org/bugzilla/31532">31532</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Numeric properties can now be specified in hexadecimal format, for example "number = 0xC5F0". Fixes
+            <a href="http://issues.apache.org/bugzilla/28026">28026</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Fixed HierarchicalConfiguration.getKeys(String), it returned an empty iterator if the prefix string contained indices. Fixes
+            <a href="http://issues.apache.org/bugzilla/31745">31745</a>.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added a DataConfiguration decorator providing getters for all useful types found in a configuration (URL, Locale, Date, Calendar, Color, lists and arrays)</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added 5 new configurations to be used in a web environment: AppletConfiguration, ServletConfiguration, ServletContextConfiguration, ServletRequestConfiguration, ServletFilterConfiguration.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    </table>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Release 1.0 - 2004-10-11">Release 1.0 - 2004-10-11</a>
+        </h3>
+      
+      <a name="1_0">
+      </a>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>The getStringArray() method in CompositeConfiguration now interpolates the strings. Fixes
+            <a href="http://issues.apache.org/bugzilla/29616">29616</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>SubsetConfiguration now shares the "throwExceptionOnMissing" property with its parent. Fixes
+            <a href="http://issues.apache.org/bugzilla/31540">31540</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Removed "file:" at the beginning of the base path when calling setFile() on a FileConfiguration. This prevented auto saving an XMLConfiguration loaded from a File (issue reported by Mark Roth).</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>All NamingEnumerations in JNDIConfiguraiton are now properly closed (Suggested by Eric Jung).</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Properties added to an XMLConfiguration are no longer duplicated in the resulting XML file. Fixes
+            <a href="http://issues.apache.org/bugzilla/30799">30799</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    </table>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Release 1.0-rc2 - 2004-09-24">Release 1.0-rc2 - 2004-09-24</a>
+        </h3>
+      
+      <a name="1_0-rc2">
+      </a>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Unified the mechanisms for loading and saving file based configurations. PropertiesConfiguration, XMLConfiguration and HierarchicalXMLConfiguration now implement the same FileConfiguration interface. BasePathLoader, Bas ePathConfiguration, ClassPropertiesConfiguration and BasePropertiesConfiguration have been removed.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Replaced the calls to Boolean.booleanValue(boolean) in AbstractConfiguration and ConfigurationDynaBean to be Java 1.3 compatible. Fixes
+            <a href="http://issues.apache.org/bugzilla/31346">31346</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Changing the prefix of a JNDIConfiguration will now reset the base context used. Fixes
+            <a href="http://issues.apache.org/bugzilla/31345">31345</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>The context used by JNDIConfiguration can be specified in its constructor or through the setContext() method. The context can be accessed with the getContext() method which is now public. Thanks to Eric Jung .</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Make the behaviour on missing properties for the get methods that return objects configurable. A property
+            <code>throwExceptionOnMissing</code>can be set and then the getters throw an
+            <code>NoSuchElementException</code>. The old default behaviour of returning a
+            <code>null</code>value has been restored.</td><td>
+            <a href="team-list.html#henning">henning</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Allow configurations extending AbstractConfiguration to change the delimiter used from "," to something else. Fixes
+            <a href="http://issues.apache.org/bugzilla/29714">29714</a>.</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>PropertiesConfiguration.save() method has issues with preserving the filename</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Test cases for HierarchicalConfigurationXMLReader stores comments as text nodes Fixes
+            <a href="http://issues.apache.org/bugzilla/30597">30597</a>. Thanks to Mark Woodman .</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Clarify for ConfigurationDynaBean that the get method should throw an illegalArgumentException if there is no property specified. Fixes
+            <a href="http://issues.apache.org/bugzilla/30545">30545</a>. Thanks to Ricardo Gladwell .</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Fixed a ClassCastException when adding a no n String property to an XMLConfiguration. Fixes
+            <a href="http://issues.apache.org/bugzilla/30839">30839</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Fixed the handling of attribute properties by HierarchicalConfigurationConverter. Fixes
+            <a href="http://issues.apache.org/bugzilla/30655">30655</a>. Thanks to Oliver Heger .</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Fixed a ClassCastException thrown on adding a non string property in a DatabaseConfiguration. Fixes
+            <a href="http://issues.apache.org/bugzilla/30676">30676</a>.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Bring back the getVector() methods in the Configuration interface. These methods are needed for " drop-on " replacement of the various pre-1.0 commons-configuration snapshots and are already deprecated. These methods will be removed for 1.1.</td><td>
+            <a href="team-list.html#henning">henning</a>
+          </td></tr>
+  
+    </table>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Release 1.0-rc1 - 2004-08-14">Release 1.0-rc1 - 2004-08-14</a>
+        </h3>
+      
+      <a name="1_0-rc1">
+      </a>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><th style="width:50px">Type</th><th>Changes</th><th style="width:70px">By</th></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>HierarchicalConfigurationXMLReader stores comments as text nodes Fixes
+            <a href="http://issues.apache.org/bugzilla/30597">30597</a>. Thanks to Oliver Heger .</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>project.xml contains bad dependencies Fixes
+            <a href="http://issues.apache.org/bugzilla/30648">30648</a>. Thanks to Ricardo Gladwell .</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>clearXmlProperty doesn't remove list properties completely Fixes
+            <a href="http://issues.apache.org/bugzilla/30234">30234</a>. Thanks to Brent Worden .</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>new ConfigurationDynaBean Fixes
+            <a href="http://issues.apache.org/bugzilla/30545">30545</a>. Thanks to Ricardo Gladwell .</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>new ConfigurationMap and ConfigurationSet Fixes
+            <a href="http://issues.apache.org/bugzilla/29611">29611</a>. Thanks to Ricardo Gladwell .</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Problem adding property XMLConfiguration Fixes
+            <a href="http://issues.apache.org/bugzilla/30598">30598</a>. Thanks to Ricardo Gladwell .</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="remove" title="remove" src="images/remove.gif">
+            </img>
+          </td><td>ConfigurationXMLDocument removed until post 1.0.</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>DatabaseConfiguration doesn't support List properties. Fixes
+            <a href="http://issues.apache.org/bugzilla/29734">29734</a>.</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Fixed several bugs related to XMLConfiguration:
+            <ul>
+              <li>30074 - Can't add a new property as an attribute in XMLConfiguration</li>
+              <li>30205 - XMLConfiguration doesn't support attribute names with a dot</li>
+              <li>30209 - XMLConfiguration doesn't ignore comments</li>
+              <li>30212 - XMLConfiguration.save() doesn't escape reserved characters</li>
+            </ul>
+          </td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added save methods in XMLConfiguration similar to PropertiesConfiguration to save the configuration to another file (bug 29721).</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Removed the DOM4J implementations in favor of the DOM ones. DOMConfiguration has been renamed to XMLConfiguration, and HierarchicalDOMConfiguration to HierarchicalXMLConfiguration. The elements parsed by the ConfigurationFactory have been changed accordingly.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added a save() method to PropertiesConfiguration and save(Writer out), save(OutputStream out), save(OutputStream out, String encoding) to BasePropertiesConfiguration.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>List values are now properly stored as comma separated values in the Properties object returned by ConfigurationConverter.getProperties() (Bug 29607)</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Introduced a ConversionException thrown when the value of a property is not compatible the type requested. It replaces the ClassCastException and the NumberFormatException thrown previously.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Tokens like ${ref} in a PropertyConfiguration are now properly saved (Bug 29366).</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>The getList() method of a CompositeConfiguration now returns the list composed of the elements in the first matching configuration and the additional elements foun d in the in memory configuration (Bug 28660).</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>SubsetConfiguration returns a List on getList(). AbstractConfiguration wouldn't properly deal with a List, only with a Container for getList()! Thanks to jschaible for the unit test.</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Direct support of XML via DOM. New classes DOMConfiguration and HierarchicalDOMConfiguration.</td><td>
+            <a href="team-list.html#jschaible">jschaible</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Update build to not include test configuration files in resulting jar.</td><td>
+            <a href="team-list.html#jschaible">jschaible</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Refactored JNDIConfiguration to use AbstractConfiguration.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Fixed bug 27427 by refactoring out the subset logic into a SubsetConfiguration.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>Reapply the ConfigurationXMLDocument that went missing during migration out of sandbox.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Apply ASL 2.0 license. Thanks to Jeff Painter for scripting the conversion!</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Changed CompositeConfiguration to extend from AbstractConfiuration. This means that the behavior of CompositeConfiguration is much similar to others like PropertiesConfiguration in handling of missing keys, interpolation, etc.. Previously CompositeConfiguration had quite a few differences.</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Removed "defaults" from BaseConfiguration. Defaults are now done via using a CompositeConfiguration, either directly or via a ConfigurationFactory. if you want to save changes made to a Configuration, then you use a CompositeConfiguration and get back the inMemoryConfiguration that has the delta of changes. Added a bit of documentation on this.</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Bugzill a 16504 Enhancement: Configuration Comparator</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Bugzilla 26694 (BaseConfiguration: containsKey ignores default properties). I have changed it so that now the defaults are paid attention to.</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>The Configuration interface now supports BigDecimal and BigInteger numbers.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>ConfigurationException is now thrown by public methods instead of Exception or IOException or whatnot.</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>For configuration based on properties files, allow characters like \n etc to be escaped and unescaped.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>New DatabaseConfiguration that uses a database to store the properties. It supports 2 table structures :
+            <ul>
+              <li>one table per configuration (2 colums key/value)</li>
+              <li>one table for multiple configurations (2 columns key/value + 1 column for the name of the configuration)</li>
+            </ul>
+          </td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>ConfigurationFactory now supports the hierarchicalDom4j element in configuration definition file</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Change all Vector objects to List objects.</td><td>
+            <a href="team-list.html#ebourg">ebourg</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>ConfigurationFactory now supports two types of properties files, additional and override. Additional properties add each other together. Override override each other. This allows you to have a single property that is either aggregated from a number of sources, or have a property that is overridden according to a specific order of sources.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>AbstractConfiguration addProperty now delegates to an abstract addPropertyDirect implemented by BaseCo nfiguration.</td><td>
+            <a href="team-list.html#oheger">oheger</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="update" title="update" src="images/update.gif">
+            </img>
+          </td><td>Changed getString() method to throw a NoSuchElementException instead of "" if the configuration property doesn't exist.</td><td>
+            <a href="team-list.html#kshaposhnikov">kshaposhnikov</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="add" title="add" src="images/add.gif">
+            </img>
+          </td><td>Added AbstractConfiguration to make it easier to create subclasses by only having to implement the methods required.</td><td>
+            <a href="team-list.html#kshaposhnikov">kshaposhnikov</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>
+            <strong>ClassPropertiesConfiguration Additions</strong>
+            <ul>
+              <li>Use the classloader of class that is provided by the constructor.</li>
+              <li>Add a constructor that indicates whether to use relative or absolute.</li>
+              <li>Change getPropertyStream to utilize the relative or absolute flag.</li>
+              <li>Add a test case that checks that absolute paths work.</li>
+            </ul>
+          </td><td>
+            <a href="team-list.html#bdunbar">bdunbar</a>
+          </td></tr>
+  
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>
+            <strong>JNDIConfiguration.getKeys() Addition</strong>The JNDIConfiguration.getKeys() method was returning an unsupported operation error. However, this is an important method to have supported.</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+            <img alt="fix" title="fix" src="images/fix.gif">
+            </img>
+          </td><td>
+            <strong>CompositeConfiguration.getKeys() Fix</strong>The CompositeConfiguration.getKeys() method was returning an unordered list of configuration values. However, many apps expect the order that keys are returned to be the order they are added into the properties file.</td><td>
+            <a href="team-list.html#epugh">epugh</a>
+          </td></tr>
+  
+    </table>
+  
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2005, The Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

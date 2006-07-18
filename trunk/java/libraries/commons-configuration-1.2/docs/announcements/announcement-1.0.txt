@@ -1,0 +1,30 @@
+The commons-configuration team is pleased to announce the Commons 
+Configuration 1.0 release! 
+
+http://jakarta.apache.org/commons/configuration/
+
+Tools to assist in the reading of configuration/preferences files in various 
+formats 
+
+Changes in this version include:
+
+  Fixed bugs:
+
+o The getStringArray() method in CompositeConfiguration now interpolates the 
+  strings. Issue: 29616. 
+o SubsetConfiguration now shares the "throwExceptionOnMissing" property with 
+  its parent. Issue: 31540. 
+o Removed "file:" at the beginning of the base path when calling setFile() on 
+  a FileConfiguration. This prevented auto saving an XMLConfiguration loaded 
+  from a File (issue reported by Mark Roth). 
+o Properties added to an XMLConfiguration are no longer duplicated in the 
+  resulting XML file. Issue: 30799. 
+
+  Changes:
+
+o All NamingEnumerations in JNDIConfiguraiton are now properly closed 
+  (Suggested by Eric Jung).  
+
+Have fun!
+-The commons-configuration team
+      

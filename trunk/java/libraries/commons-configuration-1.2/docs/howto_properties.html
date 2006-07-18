@@ -1,0 +1,1429 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+  
+  
+  
+
+
+
+    
+	
+	
+
+    
+    
+
+    
+    
+      
+      
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+          <title>
+            Configuration - 
+          Properties files
+        
+          </title>
+        
+        
+        
+        
+        
+          <style type="text/css" media="all">
+             @import url("./style/tigris.css");
+             @import url("./style/maven.css");
+             @import url("./style/project.css");
+          </style>
+          <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        
+
+        
+
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+
+
+       
+          <meta name="author" content="Emmanuel Bourg"></meta>
+          <meta name="email" content="smanux@lfjr.net"></meta>
+        
+          <meta name="author" content="Oliver Heger"></meta>
+          <meta name="email" content="oliver.heger@t-online.de"></meta>
+        
+        
+        
+        
+      </head>
+
+      <body class="composite">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org">
+                    <img border="0" name="organization-logo" alt="The Apache Software Foundation" src="http://jakarta.apache.org/images/original-jakarta-logo.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/configuration/">
+                      <img border="0" alt="Commons Configuration" src="./images/logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+<script type="text/javascript">
+<!--
+  var myWidth = 0, myHeight = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else if( document.documentElement &&
+      ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    //IE 6+ in 'standards compliant mode'
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    //IE 4 compatible
+    myWidth = document.body.clientWidth;
+    myHeight = document.body.clientHeight;
+  }
+  // window.alert( 'Width = ' + myWidth );
+  if (myWidth < 850) {
+    document['organization-logo'].src='http://jakarta.apache.org/images/original-jakarta-logo.gif';
+  }
+// -->
+</script>
+
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: Dec 17, 2005
+                  | Doc for 1.2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                    
+    
+    
+      
+      
+      
+      <a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Jakarta Commons</a>
+      
+    
+  
+                  
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+				
+    <div>
+      <strong>About Us</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Home</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/contributors.html" class="externalLink" title="External Link">Contributors</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/license.html" class="externalLink" title="External Link">License</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/components.html" class="externalLink" title="External Link">Components</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/sandbox/index.html" class="externalLink" title="External Link">Sandbox</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/dormant/index.html" class="externalLink" title="External Link">Dormant</a>
+      	
+      </small>
+	  
+    </div>
+  
+    </div>
+  
+                
+    <div>
+      <strong>Configuration</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html">Home</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/downloads/downloads_commons-configuration.cgi" class="externalLink" title="External Link">Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="overview.html">Using Configuration</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="howto_properties.html">Properties Howto</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_xml.html">XML Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_configurationfactory.html">ConfigurationFactory Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_compositeconfiguration.html">Composite Config Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="dependencies.html">Runtime Dependencies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="building.html">Building</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tasks-report.html">Roadmap</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html">Javadoc (latest)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs_1.1/index.html">Javadoc (Release 1.1)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs_1.0/index.html">Javadoc (Release 1.0)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://svn.apache.org/repos/asf/jakarta/commons/proper/configuration/" class="externalLink" title="External Link">SVN</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Extensions</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/turbine/fulcrum/fulcrum-configuration/index.html" class="externalLink" title="External Link">Avalon Component</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html">About Commons Configuration</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="downloads.html">Downloads</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="project-info.html">Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="maven-reports.html">Project Reports</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+    <div>
+      <strong>General Information</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Charter</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/volunteering.html" class="externalLink" title="External Link">Volunteering</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/patches.html" class="externalLink" title="External Link">Contributing Patches</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/building.html" class="externalLink" title="External Link">Building Components</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/releases/index.html" class="externalLink" title="External Link">Releasing Components</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://wiki.apache.org/jakarta-commons/FrontPage" class="externalLink" title="External Link">Wiki</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Jakarta Community</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/getinvolved.html" class="externalLink" title="External Link">Get Involved</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/mail.html" class="externalLink" title="External Link">Mailing Lists</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Related</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://db.apache.org/commons/" class="externalLink" title="External Link">DB Commons</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://xml.apache.org/commons/" class="externalLink" title="External Link">XML Commons</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Built by Maven"><img style="border: 1px solid black" alt="Built by Maven" src="./images/logos/maven-feather.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Properties files">Properties files</a>
+        </h3>
+      
+      <p>
+        Properties files are a popular mean of configuring applications. Of course Commons Configuration
+        supports this format and enhance significantly the basic <code>java.util.Properties</code> class.
+        This section introduces the features of the  <code>PropertiesConfiguration</code> class.
+      </p>
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Loading">Loading</a>
+        </h4>
+      
+      <p>
+          At first lets consider that the whole configuration data of an application consists in
+          a single properties file named <code>usergui.properties</code> with the following content:
+        </p>
+    <div id="source">
+      <pre>
+# Properties definining the GUI
+colors.background = #FFFFFF
+</pre>
+    </div>
+  <p>
+          To load this file, you'll write:
+        </p>
+    <div id="source">
+      <pre>
+Configuration config = new PropertiesConfiguration("usergui.properties");
+</pre>
+    </div>
+  <p>
+          If you do not specify an absolute path, the file will be searched automatically
+          in the following locations:
+          <ul>
+            <li>in the current directory</li>
+            <li>in the user home directory</li>
+            <li>in the classpath</li>
+          </ul>
+        </p><p>
+          Instead of using a constructor that takes a file name you can also
+          invoke one of the <code>load()</code> methods. There are several
+          overloaded variants that allow to load properties from
+          <ul>
+            <li>a file, specified by either a path or a <code>java.io.File</code>
+            object</li>
+            <li>a URL</li>
+            <li>an input stream or a reader.</li>
+          </ul>
+        </p><p>
+          Note that the <code>load()</code> methods do not empty the
+          configuration before new data is loaded. This makes it easy to
+          construct union configurations by simply calling <code>load()</code>
+          multiple times. But if you want to reuse a <code>Configuration</code>
+          object and load a different file, remember to call the
+          <code>clear()</code> method first to ensure that old properties are
+          wiped out.
+        </p>
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Includes">Includes</a>
+        </h4>
+      
+      <p>
+          If a property is named "<code>include</code>" and the value of that property is the
+          name of a file on the disk, that file will be included into the configuration. Here is
+          an example:
+        </p>
+    <div id="source">
+      <pre>
+# usergui.properties
+
+include = colors.properties
+include = sizes.properties
+</pre>
+    </div>
+  
+    <div id="source">
+      <pre>
+# colors.properties
+
+colors.background = #FFFFFF
+</pre>
+    </div>
+  
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Automatic Reloading">Automatic Reloading</a>
+        </h4>
+      
+      <p>
+          A common issue with properties file is to handle the reloading of the file when it
+          changes. Typically you would use a thread monitoring the date of the file and reloading
+          the <code>Properties</code> when a more recent date is detected. Commons Configuration
+          integrates this mechanism out of the box, to enable it, just specify a reloading strategy
+          on your configuration:
+        </p>
+    <div id="source">
+      <pre>
+PropertiesConfiguration config = new PropertiesConfiguration("usergui.properties");
+config.setReloadingStrategy(new FileChangedReloadingStrategy());
+</pre>
+    </div>
+  <p>
+          Now everytime you edit manually the <code>usergui.properties</code> file, the
+          configuration is automatically refreshed and the modified values are immediately
+          available to your application.
+        </p>
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Saving">Saving</a>
+        </h4>
+      
+      <p>
+          To save your configuration, just call the <code>save()</code> method:
+        </p>
+    <div id="source">
+      <pre>
+PropertiesConfiguration config = new PropertiesConfiguration("usergui.properties");
+config.setProperty("colors.background", "#000000);
+config.save();
+</pre>
+    </div>
+  <p>
+          You can also save a copy of the configuration to another file:
+        </p>
+    <div id="source">
+      <pre>
+PropertiesConfiguration config = new PropertiesConfiguration("usergui.properties");
+config.setProperty("colors.background", "#000000);
+config.save("usergui.backup.properties);
+</pre>
+    </div>
+  <p>
+          And if you don't want to bother saving your configuration everytime it changes,
+          you can enable the automatic saving mode:
+        </p>
+    <div id="source">
+      <pre>
+PropertiesConfiguration config = new PropertiesConfiguration("usergui.properties");
+config.setAutoSave(true);
+config.setProperty("colors.background", "#000000); // the configuration is saved after this call
+</pre>
+    </div>
+  
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Lists and arrays">Lists and arrays</a>
+        </h4>
+      
+      <p>
+          Commons Configuration has the ability to return easily a list of values,
+          for example if your file contains a list of comma separated values:
+        </p>
+    <div id="source">
+      <pre>
+# chart colors
+colors.pie = #FF0000, #00FF00, #0000FF
+</pre>
+    </div>
+  <p>
+          You don't have to split the value manually, you can retrieve an array directly with:
+        </p>
+    <div id="source">
+      <pre>
+String[] colors = config.getStringArray("colors.pie");
+</pre>
+    </div>
+  <p>
+          Alternatively, you can specify a list of values in your properties file by using
+          the same key on several lines:
+        </p>
+    <div id="source">
+      <pre>
+# chart colors
+colors.pie = #FF0000;
+colors.pie = #00FF00;
+colors.pie = #0000FF;
+</pre>
+    </div>
+  
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Variable Interpolation">Variable Interpolation</a>
+        </h4>
+      
+      <p>
+          If you are familiar with Ant or Maven, you have most certainly already encountered
+          the variables (like <code>${token}</code>) that are automatically expanded when the
+          configuration file is loaded. Commons Configuration supports this feature as well,
+          here is an example:
+        </p>
+    <div id="source">
+      <pre>
+application.name = Killer App
+application.version = 1.6.2
+
+application.title = ${application.name} ${application.version}
+</pre>
+    </div>
+  
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="Special Characters">Special Characters</a>
+        </h4>
+      
+      <p>
+          If you need a special character in a property like a line feed, a tabulation or
+          an unicode character, you can specify it with the same escaped notation used for
+          Java Strings. The list separator ("," by default), can also be escaped:
+        </p>
+    <div id="source">
+      <pre>
+key = This \n string \t contains \, escaped \\ characters \u0020
+</pre>
+    </div>
+  
+    </div>
+  
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2005, The Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  

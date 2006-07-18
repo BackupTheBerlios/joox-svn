@@ -1,0 +1,13 @@
+The commons-configuration team is pleased to announce the Commons 
+Configuration 1.2 release! 
+
+http://jakarta.apache.org/commons/configuration/
+
+Tools to assist in the reading of configuration/preferences files in various 
+formats 
+
+Changes in this version include: 
+
+Have fun!
+-The commons-configuration team
+      

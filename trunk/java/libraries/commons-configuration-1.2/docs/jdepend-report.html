@@ -1,0 +1,2771 @@
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  
+      
+  
+
+      
+      
+      
+      
+      
+      
+        
+         
+      
+      
+
+      
+      
+      
+      
+
+      
+      
+      
+
+      
+
+  
+  
+
+  
+  
+
+   
+   
+
+   
+   
+
+  
+  
+  
+
+
+
+    
+	
+	
+
+    
+    
+
+    
+    
+      
+      
+    
+      
+	
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+    <html>
+      <head>
+        
+        
+          <title>
+            Configuration - 
+          JDepend Source Code Analysis
+        
+          </title>
+        
+        
+        
+        
+        
+          <style type="text/css" media="all">
+             @import url("./style/tigris.css");
+             @import url("./style/maven.css");
+             @import url("./style/project.css");
+          </style>
+          <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+        
+
+        
+
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+
+
+       
+        
+        <style type="text/css">.jdepend td ul, .jdepend td ul li { margin:0; padding:0; list-style-type: none; }</style>
+        
+      </head>
+
+      <body class="jdepend">
+
+        <div id="banner">
+          <table border="0" width="100%" cellpadding="8" cellspacing="0">
+            <tr>
+              
+              <td>
+                
+                
+                  
+                  
+                  
+                    
+                  
+                  
+                  
+                  
+                  
+                  <a href="http://jakarta.apache.org">
+                    <img border="0" name="organization-logo" alt="The Apache Software Foundation" src="http://jakarta.apache.org/images/original-jakarta-logo.gif" align="left"></img>
+                  </a>
+                
+              </td>
+
+              
+              <td>
+                <div id="login" align="right">
+                  
+                  
+                    
+                    
+                    
+                      
+                    
+
+                    <a href="http://jakarta.apache.org/commons/configuration/">
+                      <img border="0" alt="Commons Configuration" src="./images/logo.png" align="right"></img>
+                    </a>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+<script type="text/javascript">
+<!--
+  var myWidth = 0, myHeight = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else if( document.documentElement &&
+      ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    //IE 6+ in 'standards compliant mode'
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    //IE 4 compatible
+    myWidth = document.body.clientWidth;
+    myHeight = document.body.clientHeight;
+  }
+  // window.alert( 'Width = ' + myWidth );
+  if (myWidth < 850) {
+    document['organization-logo'].src='http://jakarta.apache.org/images/original-jakarta-logo.gif';
+  }
+// -->
+</script>
+
+        <div id="breadcrumbs">
+          <table border="0" width="100%" cellpadding="4" cellspacing="0">
+            <tr>
+              
+                
+                <td>Last published: Dec 17, 2005
+                  | Doc for 1.2
+                </td>
+              
+              <td>
+                <div align="right">
+                  
+                  
+                  
+                    
+    
+    
+      
+      
+      
+      <a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Jakarta Commons</a>
+      
+    
+  
+                  
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        
+        <table border="0" width="100%" cellpadding="8" cellspacing="0"> 
+          <tr valign="top">
+            <td width="20%" id="leftcol">
+              <div id="navcolumn">
+                
+
+				
+    <div>
+      <strong>About Us</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/" class="externalLink" title="External Link">Home</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/contributors.html" class="externalLink" title="External Link">Contributors</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/license.html" class="externalLink" title="External Link">License</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/components.html" class="externalLink" title="External Link">Components</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/sandbox/index.html" class="externalLink" title="External Link">Sandbox</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/dormant/index.html" class="externalLink" title="External Link">Dormant</a>
+      	
+      </small>
+	  
+    </div>
+  
+    </div>
+  
+                
+    <div>
+      <strong>Configuration</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html">Home</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/downloads/downloads_commons-configuration.cgi" class="externalLink" title="External Link">Download</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="overview.html">Using Configuration</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_properties.html">Properties Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_xml.html">XML Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_configurationfactory.html">ConfigurationFactory Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="howto_compositeconfiguration.html">Composite Config Howto</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="dependencies.html">Runtime Dependencies</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="building.html">Building</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tasks-report.html">Roadmap</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html">Javadoc (latest)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs_1.1/index.html">Javadoc (Release 1.1)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs_1.0/index.html">Javadoc (Release 1.0)</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://svn.apache.org/repos/asf/jakarta/commons/proper/configuration/" class="externalLink" title="External Link">SVN</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Extensions</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/turbine/fulcrum/fulcrum-configuration/index.html" class="externalLink" title="External Link">Avalon Component</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+				
+    <div>
+      <strong>Project Documentation</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="index.html">About Commons Configuration</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="downloads.html">Downloads</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+		
+          
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="project-info.html">Project Info</a>
+      	
+      </small>
+	  
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		
+          
+		
+		
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="maven-reports.html">Project Reports</a>
+      	
+      </small>
+	  
+        
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      		<b><a href="jdepend-report.html">Metrics</a></b>
+      	
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="checkstyle-report.html">Checkstyle</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="changes-report.html">Changes</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="changelog-report.html">Change Log</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="file-activity-report.html">File Activity</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="developer-activity-report.html">Developer Activity</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="apidocs/index.html">JavaDocs</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="javadoc.html">JavaDoc Report</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="javadoc-warnings-report.html">JavaDoc Warnings Report</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref/index.html">Source Xref</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="xref-test/index.html">Test Xref</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="junit-report.html">Unit Tests</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="task-list.html">Task List</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="pmd-report.html">PMD Report</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="jcoverage/index.html">JCoverage</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="tasks-report.html">Tasks</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Development Process</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+                
+    <div>
+      <strong>General Information</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/charter.html" class="externalLink" title="External Link">Charter</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/volunteering.html" class="externalLink" title="External Link">Volunteering</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/patches.html" class="externalLink" title="External Link">Contributing Patches</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/building.html" class="externalLink" title="External Link">Building Components</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/commons/releases/index.html" class="externalLink" title="External Link">Releasing Components</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://wiki.apache.org/jakarta-commons/FrontPage" class="externalLink" title="External Link">Wiki</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Jakarta Community</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/getinvolved.html" class="externalLink" title="External Link">Get Involved</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://jakarta.apache.org/site/mail.html" class="externalLink" title="External Link">Mailing Lists</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+    <div>
+      <strong>Related</strong>
+      
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://db.apache.org/commons/" class="externalLink" title="External Link">DB Commons</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    
+    
+    
+    
+	
+	
+	
+	
+	
+		   
+	
+    <div>
+      <small>
+      	
+      	
+      		<a href="http://xml.apache.org/commons/" class="externalLink" title="External Link">XML Commons</a>
+      	
+      </small>
+	  
+        
+      
+    </div>
+  
+    </div>
+  
+
+                
+                
+
+                
+                
+                
+                
+                	<div style="margin-top: 20px; width: 100%; text-align: center;">
+                		<a href="http://maven.apache.org/" title="Built by Maven"><img style="border: 1px solid black" alt="Built by Maven" src="./images/logos/maven-feather.png"></img></a>
+                	</div>
+                
+              
+                
+              </div>
+            </td>
+            <td rowspan="2">
+              <div id="bodycol">
+                
+                <div class="app">
+                  
+                  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Metric Results">Metric Results</a>
+        </h3>
+      
+      <p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Packages">packages</a>] [
+        <a href="#Cycles">cycles</a>] [
+        <a href="#Explanations">explanations</a>]</p><p>The following document contains the results of a
+        <a href="http://www.clarkware.com/software/JDepend.html">JDepend</a>metric analysis. The various metrics are defined at the bottom of this document.</p>
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Summary">Summary</a>
+        </h3>
+      
+      <p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Packages">packages</a>] [
+        <a href="#Cycles">cycles</a>] [
+        <a href="#Explanations">explanations</a>]</p>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+          
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th title="Package">Package</th><th style="text-align:right">
+              <acronym title="Total Classes">TC</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Abstract Classes">AC</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Concrete Classes">CC</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Afferent Couplings">AC</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Efferent Couplings">EC</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Abstractness">A</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Instability">I</acronym>
+            </th><th style="text-align:right">
+              <acronym title="Distance">D</acronym>
+            </th></tr>
+  
+        </thead><tbody>
+          
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+              <a href="#org.apache.commons.configuration">org.apache.commons.configuration</a>
+            </td><td style="text-align:right">68</td><td style="text-align:right">9</td><td style="text-align:right">59</td><td style="text-align:right">4</td><td style="text-align:right">28</td><td style="text-align:right">0,13</td><td style="text-align:right">88%</td><td style="text-align:right">1%</td></tr>
+  
+          
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+              <a href="#org.apache.commons.configuration.beanutils">org.apache.commons.configuration.beanutils</a>
+            </td><td style="text-align:right">2</td><td style="text-align:right">0</td><td style="text-align:right">2</td><td style="text-align:right">0</td><td style="text-align:right">6</td><td style="text-align:right">0</td><td style="text-align:right">100%</td><td style="text-align:right">0%</td></tr>
+  
+          
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+              <a href="#org.apache.commons.configuration.plist">org.apache.commons.configuration.plist</a>
+            </td><td style="text-align:right">15</td><td style="text-align:right">1</td><td style="text-align:right">14</td><td style="text-align:right">1</td><td style="text-align:right">11</td><td style="text-align:right">0,07</td><td style="text-align:right">92%</td><td style="text-align:right">2%</td></tr>
+  
+          
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>
+              <a href="#org.apache.commons.configuration.reloading">org.apache.commons.configuration.reloading</a>
+            </td><td style="text-align:right">3</td><td style="text-align:right">1</td><td style="text-align:right">2</td><td style="text-align:right">1</td><td style="text-align:right">4</td><td style="text-align:right">0,33</td><td style="text-align:right">80%</td><td style="text-align:right">13%</td></tr>
+  
+          
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+              <a href="#org.apache.commons.configuration.web">org.apache.commons.configuration.web</a>
+            </td><td style="text-align:right">6</td><td style="text-align:right">1</td><td style="text-align:right">5</td><td style="text-align:right">0</td><td style="text-align:right">6</td><td style="text-align:right">0,17</td><td style="text-align:right">100%</td><td style="text-align:right">17%</td></tr>
+  
+        </tbody>
+    </table>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Packages">Packages</a>
+        </h3>
+      
+      <p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Packages">packages</a>] [
+        <a href="#Cycles">cycles</a>] [
+        <a href="#Explanations">explanations</a>]</p>
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="org.apache.commons.configuration">org.apache.commons.configuration</a>
+        </h4>
+      
+      
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+            
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th>Afferent Couplings</th><th>Efferent Couplings</th><th>Abstractness</th><th>Instability</th><th>Distance</th></tr>
+  
+          </thead><tbody>
+            
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>4</td><td>28</td><td>13%</td><td>88%</td><td>1%</td></tr>
+  
+          </tbody>
+    </table>
+  
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+            
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th></tr>
+  
+          </thead><tbody>
+            
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+                <ul>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/AbstractConfiguration.html">AbstractConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/AbstractFileConfiguration.html">AbstractFileConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/AbstractHierarchicalFileConfiguration.html">AbstractHierarchicalFileConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/Configuration.html">Configuration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationComparator.html">ConfigurationComparator</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationXMLReader.html">ConfigurationXMLReader</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/FileConfiguration.html">FileConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/HierarchicalConfiguration.html">HierarchicalConfiguration$BuilderVisitor</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/HierarchicalConfigurationConverter.html">HierarchicalConfigurationConverter</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/AbstractConfiguration.html">AbstractConfiguration$1</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/AbstractHierarchicalFileConfiguration.html">AbstractHierarchicalFileConfiguration$FileConfigurationDelegate</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/BaseConfiguration.html">BaseConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/BaseConfigurationXMLReader.html">BaseConfigurationXMLReader</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/BaseConfigurationXMLReader.html">BaseConfigurationXMLReader$SAXConverter</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/CompositeConfiguration.html">CompositeConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationConverter.html">ConfigurationConverter</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationException.html">ConfigurationException</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationFactory.html">ConfigurationFactory</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationFactory.html">ConfigurationFactory$AdditionalConfigurationData</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationFactory.html">ConfigurationFactory$ConfigurationBuilder</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationFactory.html">ConfigurationFactory$DigesterConfigurationFactory</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationFactory.html">ConfigurationFactory$FileConfigurationFactory</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationFactory.html">ConfigurationFactory$HierarchicalConfigurationNodeConverter</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationFactory.html">ConfigurationFactory$JNDIConfigurationFactory</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationFactory.html">ConfigurationFactory$PropertiesConfigurationFactory</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationFactory.html">ConfigurationFactory$PropertyListConfigurationFactory</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationFactory.html">ConfigurationFactory$SystemConfigurationFactory</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationKey.html">ConfigurationKey</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationKey.html">ConfigurationKey$KeyIterator</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationMap.html">ConfigurationMap</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationMap.html">ConfigurationMap$1</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationMap.html">ConfigurationMap$ConfigurationSet</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationMap.html">ConfigurationMap$ConfigurationSet$ConfigurationSetIterator</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationMap.html">ConfigurationMap$ConfigurationSet$Entry</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationRuntimeException.html">ConfigurationRuntimeException</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConfigurationUtils.html">ConfigurationUtils</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/ConversionException.html">ConversionException</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/DataConfiguration.html">DataConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/DatabaseConfiguration.html">DatabaseConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/HierarchicalConfiguration.html">HierarchicalConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/HierarchicalConfiguration.html">HierarchicalConfiguration$CloneVisitor</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/HierarchicalConfiguration.html">HierarchicalConfiguration$DefinedKeysVisitor</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/HierarchicalConfiguration.html">HierarchicalConfiguration$DefinedVisitor</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/HierarchicalConfiguration.html">HierarchicalConfiguration$Node</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/HierarchicalConfiguration.html">HierarchicalConfiguration$NodeVisitor</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/HierarchicalConfigurationXMLReader.html">HierarchicalConfigurationXMLReader</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/HierarchicalConfigurationXMLReader.html">HierarchicalConfigurationXMLReader$SAXVisitor</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/HierarchicalXMLConfiguration.html">HierarchicalXMLConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/JNDIConfiguration.html">JNDIConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/MapConfiguration.html">MapConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/PropertiesConfiguration.html">PropertiesConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/PropertiesConfiguration.html">PropertiesConfiguration$PropertiesReader</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/PropertiesConfiguration.html">PropertiesConfiguration$PropertiesWriter</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/PropertyConverter.html">PropertyConverter</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/StrictConfigurationComparator.html">StrictConfigurationComparator</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/SubsetConfiguration.html">SubsetConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/SubsetConfiguration.html">SubsetConfiguration$1</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/SubsetConfiguration.html">SubsetConfiguration$2</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/SystemConfiguration.html">SystemConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/XMLConfiguration.html">XMLConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/XMLConfiguration.html">XMLConfiguration$1</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/XMLConfiguration.html">XMLConfiguration$2</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/XMLConfiguration.html">XMLConfiguration$XMLBuilderVisitor</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/XMLConfiguration.html">XMLConfiguration$XMLFileConfigurationDelegate</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/XMLConfiguration.html">XMLConfiguration$XMLNode</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/XMLPropertiesConfiguration.html">XMLPropertiesConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/XMLPropertiesConfiguration.html">XMLPropertiesConfiguration$1</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/XMLPropertiesConfiguration.html">XMLPropertiesConfiguration$XMLPropertiesHandler</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#org.apache.commons.configuration.beanutils">org.apache.commons.configuration.beanutils</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.configuration.plist">org.apache.commons.configuration.plist</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.configuration.reloading">org.apache.commons.configuration.reloading</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.configuration.web">org.apache.commons.configuration.web</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#java.awt">java.awt</a>
+                  </li>
+                  <li>
+                    <a href="#java.io">java.io</a>
+                  </li>
+                  <li>
+                    <a href="#java.lang">java.lang</a>
+                  </li>
+                  <li>
+                    <a href="#java.math">java.math</a>
+                  </li>
+                  <li>
+                    <a href="#java.net">java.net</a>
+                  </li>
+                  <li>
+                    <a href="#java.sql">java.sql</a>
+                  </li>
+                  <li>
+                    <a href="#java.text">java.text</a>
+                  </li>
+                  <li>
+                    <a href="#java.util">java.util</a>
+                  </li>
+                  <li>
+                    <a href="#javax.naming">javax.naming</a>
+                  </li>
+                  <li>
+                    <a href="#javax.sql">javax.sql</a>
+                  </li>
+                  <li>
+                    <a href="#javax.xml.parsers">javax.xml.parsers</a>
+                  </li>
+                  <li>
+                    <a href="#javax.xml.transform">javax.xml.transform</a>
+                  </li>
+                  <li>
+                    <a href="#javax.xml.transform.dom">javax.xml.transform.dom</a>
+                  </li>
+                  <li>
+                    <a href="#javax.xml.transform.stream">javax.xml.transform.stream</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.collections">org.apache.commons.collections</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.collections.iterators">org.apache.commons.collections.iterators</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.collections.map">org.apache.commons.collections.map</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.collections.set">org.apache.commons.collections.set</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.configuration.plist">org.apache.commons.configuration.plist</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.configuration.reloading">org.apache.commons.configuration.reloading</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.digester">org.apache.commons.digester</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.digester.xmlrules">org.apache.commons.digester.xmlrules</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.lang">org.apache.commons.lang</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.lang.exception">org.apache.commons.lang.exception</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.logging">org.apache.commons.logging</a>
+                  </li>
+                  <li>
+                    <a href="#org.w3c.dom">org.w3c.dom</a>
+                  </li>
+                  <li>
+                    <a href="#org.xml.sax">org.xml.sax</a>
+                  </li>
+                  <li>
+                    <a href="#org.xml.sax.helpers">org.xml.sax.helpers</a>
+                  </li>
+                </ul>
+              </td></tr>
+  
+          </tbody>
+    </table>
+  
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="org.apache.commons.configuration.beanutils">org.apache.commons.configuration.beanutils</a>
+        </h4>
+      
+      
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+            
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th>Afferent Couplings</th><th>Efferent Couplings</th><th>Abstractness</th><th>Instability</th><th>Distance</th></tr>
+  
+          </thead><tbody>
+            
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>0</td><td>6</td><td>0%</td><td>100%</td><td>0%</td></tr>
+  
+          </tbody>
+    </table>
+  
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+            
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th></tr>
+  
+          </thead><tbody>
+            
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+                <em>None</em>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/beanutils/ConfigurationDynaBean.html">ConfigurationDynaBean</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/beanutils/ConfigurationDynaClass.html">ConfigurationDynaClass</a>
+                  </li>
+                </ul>
+              </td><td>
+                <em>None</em>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#java.lang">java.lang</a>
+                  </li>
+                  <li>
+                    <a href="#java.util">java.util</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.beanutils">org.apache.commons.beanutils</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.configuration">org.apache.commons.configuration</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.lang">org.apache.commons.lang</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.logging">org.apache.commons.logging</a>
+                  </li>
+                </ul>
+              </td></tr>
+  
+          </tbody>
+    </table>
+  
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="org.apache.commons.configuration.plist">org.apache.commons.configuration.plist</a>
+        </h4>
+      
+      
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+            
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th>Afferent Couplings</th><th>Efferent Couplings</th><th>Abstractness</th><th>Instability</th><th>Distance</th></tr>
+  
+          </thead><tbody>
+            
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>1</td><td>11</td><td>7%</td><td>92%</td><td>2%</td></tr>
+  
+          </tbody>
+    </table>
+  
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+            
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th></tr>
+  
+          </thead><tbody>
+            
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+                <ul>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/PropertyListParserConstants.html">PropertyListParserConstants</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/ParseException.html">ParseException</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/PropertyListConfiguration.html">PropertyListConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/PropertyListParser.html">PropertyListParser</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/PropertyListParserTokenManager.html">PropertyListParserTokenManager</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/SimpleCharStream.html">SimpleCharStream</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/Token.html">Token</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/TokenMgrError.html">TokenMgrError</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/XMLPropertyListConfiguration.html">XMLPropertyListConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/XMLPropertyListConfiguration.html">XMLPropertyListConfiguration$1</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/XMLPropertyListConfiguration.html">XMLPropertyListConfiguration$2</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/XMLPropertyListConfiguration.html">XMLPropertyListConfiguration$3</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/XMLPropertyListConfiguration.html">XMLPropertyListConfiguration$ArrayNode</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/XMLPropertyListConfiguration.html">XMLPropertyListConfiguration$PListNode</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/plist/XMLPropertyListConfiguration.html">XMLPropertyListConfiguration$SetNextAndPopRule</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#org.apache.commons.configuration">org.apache.commons.configuration</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#java.io">java.io</a>
+                  </li>
+                  <li>
+                    <a href="#java.lang">java.lang</a>
+                  </li>
+                  <li>
+                    <a href="#java.math">java.math</a>
+                  </li>
+                  <li>
+                    <a href="#java.net">java.net</a>
+                  </li>
+                  <li>
+                    <a href="#java.text">java.text</a>
+                  </li>
+                  <li>
+                    <a href="#java.util">java.util</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.codec.binary">org.apache.commons.codec.binary</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.configuration">org.apache.commons.configuration</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.digester">org.apache.commons.digester</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.lang">org.apache.commons.lang</a>
+                  </li>
+                  <li>
+                    <a href="#org.xml.sax">org.xml.sax</a>
+                  </li>
+                </ul>
+              </td></tr>
+  
+          </tbody>
+    </table>
+  
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="org.apache.commons.configuration.reloading">org.apache.commons.configuration.reloading</a>
+        </h4>
+      
+      
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+            
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th>Afferent Couplings</th><th>Efferent Couplings</th><th>Abstractness</th><th>Instability</th><th>Distance</th></tr>
+  
+          </thead><tbody>
+            
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>1</td><td>4</td><td>33%</td><td>80%</td><td>13%</td></tr>
+  
+          </tbody>
+    </table>
+  
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+            
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th></tr>
+  
+          </thead><tbody>
+            
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+                <ul>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/reloading/ReloadingStrategy.html">ReloadingStrategy</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/reloading/FileChangedReloadingStrategy.html">FileChangedReloadingStrategy</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/reloading/InvariantReloadingStrategy.html">InvariantReloadingStrategy</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#org.apache.commons.configuration">org.apache.commons.configuration</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#java.io">java.io</a>
+                  </li>
+                  <li>
+                    <a href="#java.lang">java.lang</a>
+                  </li>
+                  <li>
+                    <a href="#java.net">java.net</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.configuration">org.apache.commons.configuration</a>
+                  </li>
+                </ul>
+              </td></tr>
+  
+          </tbody>
+    </table>
+  
+    </div>
+  
+    <div class="h4">
+      
+      
+        <h4>
+          <a name="org.apache.commons.configuration.web">org.apache.commons.configuration.web</a>
+        </h4>
+      
+      
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+            
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th>Afferent Couplings</th><th>Efferent Couplings</th><th>Abstractness</th><th>Instability</th><th>Distance</th></tr>
+  
+          </thead><tbody>
+            
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>0</td><td>6</td><td>17%</td><td>100%</td><td>17%</td></tr>
+  
+          </tbody>
+    </table>
+  
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+            
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th>Abstract Classes</th><th>Concrete Classes</th><th>Used by Packages</th><th>Uses Packages</th></tr>
+  
+          </thead><tbody>
+            
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>
+                <ul>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/web/BaseWebConfiguration.html">BaseWebConfiguration</a>
+                  </li>
+                </ul>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/web/AppletConfiguration.html">AppletConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/web/ServletConfiguration.html">ServletConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/web/ServletContextConfiguration.html">ServletContextConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/web/ServletFilterConfiguration.html">ServletFilterConfiguration</a>
+                  </li>
+                  <li>
+                    <a href="xref/org/apache/commons/configuration/web/ServletRequestConfiguration.html">ServletRequestConfiguration</a>
+                  </li>
+                </ul>
+              </td><td>
+                <em>None</em>
+              </td><td>
+                <ul>
+                  <li>
+                    <a href="#java.applet">java.applet</a>
+                  </li>
+                  <li>
+                    <a href="#java.lang">java.lang</a>
+                  </li>
+                  <li>
+                    <a href="#java.util">java.util</a>
+                  </li>
+                  <li>
+                    <a href="#javax.servlet">javax.servlet</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.collections.iterators">org.apache.commons.collections.iterators</a>
+                  </li>
+                  <li>
+                    <a href="#org.apache.commons.configuration">org.apache.commons.configuration</a>
+                  </li>
+                </ul>
+              </td></tr>
+  
+          </tbody>
+    </table>
+  
+    </div>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Cycles">Cycles</a>
+        </h3>
+      
+      <p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Packages">packages</a>] [
+        <a href="#Cycles">cycles</a>] [
+        <a href="#Explanations">explanations</a>]</p>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+          
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th>Package</th><th>Cyclic Dependencies</th></tr>
+  
+        </thead><tbody>
+          
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>org.apache.commons.configuration</td><td>
+              <ul>
+                <li>org.apache.commons.configuration.reloading</li>
+                <li>org.apache.commons.configuration</li>
+              </ul>
+            </td></tr>
+  
+          
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>org.apache.commons.configuration.beanutils</td><td>
+              <ul>
+                <li>org.apache.commons.configuration</li>
+                <li>org.apache.commons.configuration.reloading</li>
+                <li>org.apache.commons.configuration</li>
+              </ul>
+            </td></tr>
+  
+          
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>org.apache.commons.configuration.plist</td><td>
+              <ul>
+                <li>org.apache.commons.configuration</li>
+                <li>org.apache.commons.configuration.reloading</li>
+                <li>org.apache.commons.configuration</li>
+              </ul>
+            </td></tr>
+  
+          
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>org.apache.commons.configuration.reloading</td><td>
+              <ul>
+                <li>org.apache.commons.configuration</li>
+                <li>org.apache.commons.configuration.reloading</li>
+              </ul>
+            </td></tr>
+  
+          
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>org.apache.commons.configuration.web</td><td>
+              <ul>
+                <li>org.apache.commons.configuration</li>
+                <li>org.apache.commons.configuration.reloading</li>
+                <li>org.apache.commons.configuration</li>
+              </ul>
+            </td></tr>
+  
+        </tbody>
+    </table>
+  
+    </div>
+  
+    <div class="h3">
+      
+      
+        <h3>
+          <a name="Explanations">Explanations</a>
+        </h3>
+      
+      <p>[
+        <a href="#Summary">summary</a>] [
+        <a href="#Packages">packages</a>] [
+        <a href="#Cycles">cycles</a>] [
+        <a href="#Explanations">explanations</a>]</p><p>The following explanations are for quick reference and are lifted directly from the original
+        <a href="http://www.clarkware.com/software/JDepend.html">JDepend documentation</a>.</p>
+    
+    <table border="1" width="100%" cellspacing="2" cellpadding="3">
+      <thead>
+          
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><th>Term</th><th>Description</th></tr>
+  
+        </thead><tbody>
+          
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>Number of Classes</td><td>The number of concrete and abstract classes (and interfaces) in the package is an indicator of the extensibility of the package.</td></tr>
+  
+          
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>Afferent Couplings</td><td>The number of other packages that depend upon classes within the package is an indicator of the package's responsibility.</td></tr>
+  
+          
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>Efferent Couplings</td><td>The number of other packages that the classes in the package depend upon is an indicator of the package's independence.</td></tr>
+  
+          
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>Abstractness</td><td>The ratio of the number of abstract classes (and interfaces) in the analyzed package to the total number of classes in the analyzed package. The range for this metric is 0 to 1, with A=0 indicating a completely concrete package and A=1 indicating a completely abstract package.</td></tr>
+  
+          
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>Instability</td><td>The ratio of efferent coupling (Ce) to total coupling (Ce / (Ce + Ca)). This metric is an indicator of the package's resilience to change. The range for this metric is 0 to 1, with I=0 indicating a completely stable package and I=1 indicating a completely instable package.</td></tr>
+  
+          
+    
+      
+      
+        
+      
+    
+
+    
+    <tr class="a"><td>Distance</td><td>The perpendicular distance of a package from the idealized line A + I = 1. This metric is an indicator of the package's balance between abstractness and stability. A package squarely on the main sequence is optimally balanced with respect to its abstractness and stability. Ideal packages are either completely abstract and stable (x=0, y=1) or completely concrete and instable (x=1, y=0). The range for this metric is 0 to 1, with D=0 indicating a package that is coincident with the main sequence and D=1 indicating a package that is as far from the main sequence as possible.</td></tr>
+  
+          
+    
+      
+        
+      
+      
+    
+
+    
+    <tr class="b"><td>Cycles</td><td>Packages participating in a package dependency cycle are in a deadly embrace with respect to reusability and their release cycle. Package dependency cycles can be easily identified by reviewing the textual reports of dependency cycles. Once these dependency cycles have been identified with JDepend, they can be broken by employing various object-oriented techniques.</td></tr>
+  
+        </tbody>
+    </table>
+  
+    </div>
+  
+                  
+                  
+                  
+                  
+                  
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div id="footer">
+          <table border="0" style="width:100%" cellpadding="4" cellspacing="0">
+            
+            <tr>
+              <td>
+                
+                  
+                    
+                    
+                      © 2001-2005, The Apache Software Foundation
+                    
+                  
+                  
+                
+
+                
+              </td>
+              
+            </tr>
+          </table>
+        </div>
+      </body>
+    </html>
+  
