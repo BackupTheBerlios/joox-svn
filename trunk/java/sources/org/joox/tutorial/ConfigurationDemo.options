@@ -1,0 +1,85 @@
+#config.properties
+#Tue Nov 22 18:00:45 CET 2005
+
+##############################################################################
+
+option.groups=version help files verbose
+
+##############################################################################
+
+#splash only possible if verb=true (verb has to be Boolean)
+#[] is optional
+groups.verbose=verb [splash].verb
+
+groups.version=vers
+
+#only one of help or manual or tutorial
+#groups can be nested (here verbose is nested in help)
+groups.help=help|manual|tutorial [verbose]
+
+#() Bundle a group of options (the meaning here: the order inside the bundle is not important)
+#<> Order is important
+#ordered means that the order of the parameters shows their meanings
+#ordered means here the last dir of the list is the aim. The dirs/files before are the sources.
+groups.files=<files+ dir> [verbose]
+
+##############################################################################
+# Possible Types of values
+# java.lang.Boolean
+# java.lang.Integer
+# java.lang.Double
+# java.lang.String
+# java.lang.Date
+# java.lang.File
+# java.lang.URL
+#
+
+verb.key=v
+verb.name=verbose
+verb.type=java.lang.Boolean
+verb.default=false
+verb.description=Verbose Output
+
+vers.key=V
+vers.name=version
+vers.type=java.lang.Boolean
+vers.default=false
+vers.description=Version Output
+
+help.key=h
+help.name=help
+help.type=java.lang.Boolean
+help.default=false
+help.description=Shows a brief Help message
+
+manual.key=m
+manual.name=manual
+manual.type=java.lang.Boolean
+manual.default=false
+manual.description=Shows a Manual
+
+tutorial.key=t
+tutorial.name=tutorial
+tutorial.type=java.lang.Boolean
+tutorial.default=false
+tutorial.description=Shows a Tutorial
+
+files.key=[f]
+files.name=files
+files.type=java.lang.File
+files.default="*.*"
+files.description=The Files to copy
+
+dir.key=[d]
+dir.name=dir
+dir.type=java.lang.File
+dir.default="."
+dir.description=A List of directories. If there are more than one than the last one ist the aim. All others are sources.
+
+splash.key=s
+splash.name=splash
+splash.type=java.lang.Boolean
+splash.default=true
+splash.description=Shows the Splash screen during program start
+
+##############################################################################
