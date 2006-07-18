@@ -1,0 +1,18 @@
+BEGIN:VCARD 
+VERSION:2.1
+X-PLAXO-VERSION:1.0
+N:Sheppard;Philip;;;
+FN:Philip Sheppard
+ORG:Siemens
+TITLE:IT integration Engineer
+ADR;WORK;ENCODING=QUOTED-PRINTABLE:;;c/o Royal Mail Building=0D=0AAxis Park=0D=0ASutton Lane;Langley;Berkshire;SL3 8AG;United Kingdom
+TEL;CELL;VOICE:+44 (779) 506 2004
+EMAIL;PREF;INTERNET;WORK:philip.sheppard@siemens.com
+URL;WORK:http://www.shepps.com
+ADR;HOME;ENCODING=QUOTED-PRINTABLE:;;6 Firs Avenue;Windsor;Berkshire;SL4 4BL;United Kingdom
+TEL;HOME;VOICE:+44 (1753) 861977
+TEL;CELL;VOICE:+44 (779) 506 2004
+EMAIL;INTERNET;HOME:philip@shepps.com
+URL;HOME:http://www.shepps.com
+BDAY:2004-12-27
+END:VCARD
